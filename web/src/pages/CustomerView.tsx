@@ -8,6 +8,7 @@ import { cn, inr } from "@/lib/utils"
 import MachineSilhouette from "@/components/MachineSilhouette"
 import Explain from "@/components/Explain"
 import HireDetail from "@/components/HireDetail"
+import SOSBanner from "@/components/SOSBanner"
 
 /**
  * What the customer sees.
@@ -362,6 +363,9 @@ export default function CustomerView() {
           {showNewModal ? "Cancel" : "+ Book New Machine"}
         </button>
       </header>
+
+      {/* Prominent SOS Warning Banner in Middle of Customer Dashboard */}
+      <SOSBanner />
 
       {showNewModal && (
         <section className="border border-hazard/50 bg-hazard/[0.06] px-6 py-5">

@@ -13,6 +13,7 @@ import DemandForecast from "@/components/DemandForecast"
 import FleetBriefing from "@/components/FleetBriefing"
 import FleetMap from "@/components/FleetMap"
 import MetricReport, { type MetricKey } from "@/components/MetricReport"
+import SOSBanner from "@/components/SOSBanner"
 
 const RANK: Record<string, number> = {
   OVERDUE: 0, UNASSIGNED: 1, IDLE: 2, IN_SERVICE: 3, ACTIVE: 4, AT_YARD: 5,
@@ -83,6 +84,9 @@ export default function FleetBoard() {
       <FleetBriefing briefing={brief} onDrill={setReport} />
 
       <DemandForecast forecast={forecast} />
+
+      {/* Prominent SOS Warning Banner in Middle of Fleet Dashboard */}
+      <SOSBanner />
 
       {/* fleet-level readout */}
       <section className="grid gap-px bg-hairline sm:grid-cols-2 lg:grid-cols-4">
