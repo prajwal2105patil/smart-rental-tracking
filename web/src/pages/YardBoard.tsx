@@ -256,6 +256,9 @@ export default function YardBoard() {
 
   const shared = { now, config, onAct: act, busy }
 
+  const { data: sosAlerts } = useQuery({ queryKey: ["sos-alerts"], queryFn: () => api.listSOS(), refetchInterval: 2000 })
+  const activeSOSList = (sosAlerts ?? []).filter((s) => s.status === "ACTIVE_EMERGENCY")
+
   return (
     <div className="flex flex-col gap-6">
       <header className="flex flex-wrap items-end justify-between gap-4 border border-hairline bg-surface px-6 py-6">
@@ -277,6 +280,67 @@ export default function YardBoard() {
           Open the scanner
         </button>
       </header>
+
+      {/* Caterpillar Safety First SOS Active Incident Banner */}
+      {activeSOSList.length > 0 && (
+        <div className="border-2 border-critical bg-critical/15 p-5 shadow-2xl flex flex-col gap-3 rise-in">
+          <div className="flex items-center justify-between border-b border-critical/40 pb-2.5">
+            <div className="flex items-center gap-2">
+              <span className="relative flex h-3 w-3">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-critical opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-critical"></span>
+              </span>
+              <h2 className="font-mono text-[14px] font-extrabold uppercase tracking-wider text-critical">
+                🚨 CRITICAL SAFETY SOS INCIDENT REPORTED ({activeSOSList.length} ACTIVE)
+              </h2>
+            </div>
+            <span className="font-mono text-[11px] bg-critical text-ground font-bold px-2 py-0.5 uppercase">
+              Caterpillar Safety First Protocol
+            </span>
+          </div>
+
+          {activeSOSList.map((sos) => (
+            <div key={sos.sos_id} className="flex flex-wrap items-center justify-between gap-4 border border-critical/50 bg-ground/80 p-4">
+              <div>
+                <div className="flex items-center gap-2">
+                  <span className="font-mono text-[16px] font-bold text-chalk">{sos.equipment_id}</span>
+                  <span className="px-2 py-0.5 font-mono text-[10px] font-bold uppercase bg-critical/20 text-critical border border-critical/40">
+                    {sos.alert_type}
+                  </span>
+                  {sos.offline_mode && (
+                    <span className="px-2 py-0.5 font-mono text-[10px] font-bold uppercase bg-warning/20 text-warning border border-warning/40">
+                      📡 Satellite SMS Relay
+                    </span>
+                  )}
+                </div>
+                <p className="mt-1 text-[13px] text-chalk font-medium">
+                  {sos.location_name} — GPS: ({sos.lat}, {sos.lng})
+                </p>
+                <p className="text-[11.5px] text-steel mt-0.5">
+                  Details: {sos.details} · Operator: <strong>{sos.actor}</strong>
+                </p>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <div className="border border-nominal/50 bg-nominal/10 px-3.5 py-2 text-right">
+                  <span className="block font-mono text-[9px] text-nominal font-bold uppercase">DISPATCH STATUS</span>
+                  <span className="font-mono text-[12px] font-bold text-chalk">{sos.nearest_hospital.name}</span>
+                  <span className="block font-mono text-[10px] text-nominal font-bold">Ambulance ETA: {sos.nearest_hospital.eta_minutes} MIN</span>
+                </div>
+                <button
+                  onClick={async () => {
+                    await api.resolveSOS(sos.sos_id)
+                    await qc.invalidateQueries()
+                  }}
+                  className="border border-nominal bg-nominal px-4 py-2 font-mono text-[11px] font-bold uppercase text-ground hover:opacity-90"
+                >
+                  Mark Resolved
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
 
       {note && (
         <p className="border border-nominal/40 bg-nominal/10 px-5 py-3 text-[13px] text-nominal">{note}</p>

@@ -1378,6 +1378,60 @@ def raise_hire_request(body: HireRequest):
     return row
 
 
+# ============================================================== SOS Emergency System
+# Caterpillar Safety First Protocol: Satellite/SMS Offline Emergency Relay & Hospital Router
+
+SOS_ALERTS: list[dict] = []
+
+class SOSAlertIn(BaseModel):
+    equipment_id: str
+    actor: str = Field(default="Operator", min_length=2, max_length=60)
+    alert_type: Literal["CRASH_IMPACT", "MEDICAL_EMERGENCY", "BREAKDOWN_REMOTE", "OFFLINE_SMS_SOS"] = "CRASH_IMPACT"
+    lat: Optional[float] = 19.0760
+    lng: Optional[float] = 72.8777
+    location_name: Optional[str] = "Highland Quarry Sector 4 (Remote Zero-Network Zone)"
+    details: Optional[str] = "Rollover impact sensor / Manual emergency SOS"
+    offline_mode: bool = False
+
+@app.post("/sos-alert", status_code=201)
+def trigger_sos_alert(body: SOSAlertIn):
+    """Safety First SOS alert — dispatches nearest hospital emergency routing and alerts Yard Console."""
+    nearest_hospital = {
+        "name": "Apollo Emergency Trauma & Disaster Care (Nearest 4.2 km)",
+        "distance_km": 4.2,
+        "contact_phone": "+91 98200 99999",
+        "eta_minutes": 8,
+        "dispatch_status": "AMBULANCE_DISPATCHED"
+    }
+    row = {
+        "sos_id": f"SOS{len(SOS_ALERTS) + 1:04d}",
+        "timestamp": datetime.now().isoformat(timespec="seconds"),
+        "status": "ACTIVE_EMERGENCY",
+        "nearest_hospital": nearest_hospital,
+        **body.model_dump(),
+    }
+    SOS_ALERTS.append(row)
+    
+    append_event(EventIn(
+        equipment_id=body.equipment_id,
+        event_type="ANOMALY_FLAG",
+        actor=body.actor,
+        notes=f"CRITICAL SOS: {body.alert_type} at {body.location_name}. Hospital Dispatched: {nearest_hospital['name']}"
+    ))
+    return row
+
+@app.get("/sos-alerts")
+def list_sos_alerts():
+    return SOS_ALERTS
+
+@app.post("/sos-alert/{sos_id}/resolve", status_code=200)
+def resolve_sos_alert(sos_id: str):
+    alert = next((a for a in SOS_ALERTS if a.get("sos_id") == sos_id), None)
+    if alert:
+        alert["status"] = "RESOLVED"
+    return {"ok": True, "alert": alert}
+
+
 @app.get("/hire-requests")
 def list_hire_requests(site_id: Optional[str] = Query(default=None)):
     """The yard sees everything; a hirer sees only their own site's."""

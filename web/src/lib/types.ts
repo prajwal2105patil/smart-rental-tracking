@@ -100,6 +100,27 @@ export interface RentalEvent {
   notes?: string | null
 }
 
+export interface SOSAlert {
+  sos_id: string
+  timestamp: string
+  equipment_id: string
+  actor: string
+  alert_type: "CRASH_IMPACT" | "MEDICAL_EMERGENCY" | "BREAKDOWN_REMOTE" | "OFFLINE_SMS_SOS"
+  lat: number
+  lng: number
+  location_name: string
+  details: string
+  offline_mode: boolean
+  status: "ACTIVE_EMERGENCY" | "RESOLVED"
+  nearest_hospital: {
+    name: string
+    distance_km: number
+    contact_phone: string
+    eta_minutes: number
+    dispatch_status: string
+  }
+}
+
 export interface TelemetryPoint {
   date: string
   coolant_temp_c: number

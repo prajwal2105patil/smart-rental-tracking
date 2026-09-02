@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils"
 import ValueLedger from "@/components/ValueLedger"
 import ErrorBoundary from "@/components/ErrorBoundary"
 import AlertBell from "@/components/AlertBell"
+import SOSModal from "@/components/SOSModal"
 import Landing from "@/pages/Landing"
 import FleetBoard from "@/pages/FleetBoard"
 import AssetPanel from "@/pages/AssetPanel"
@@ -85,6 +86,7 @@ function Chrome({ children }: { children: React.ReactNode }) {
             <span className="label hidden sm:inline">
               clock <span className="text-steel">{health?.now ?? "—"}</span>
             </span>
+            <SOSModal />
             {session && <AlertBell alerts={alerts} requests={requests} />}
             {dealer && <ValueLedger ledger={ledger} compact />}
             <AccountMenu />

@@ -2,7 +2,7 @@
 import { accessKey } from "./session"
 import type {
   AssetRow, AssetDetail, Anomaly, Alert, MaintenanceRisk, AvailabilityAnswer,
-  Ledger, Config, UsageSummary, Briefing, AskAnswer, Forecast, Role, SessionInfo, HireRequestRow,
+  Ledger, Config, UsageSummary, Briefing, AskAnswer, Forecast, Role, SessionInfo, HireRequestRow, SOSAlert,
 } from "./types"
 
 const BASE = (import.meta.env.VITE_API_URL ?? "http://localhost:8000").replace(/\/$/, "")
@@ -87,4 +87,10 @@ export const api = {
   patchConfig: (patch: Record<string, unknown>) =>
     req<Config>(`/config`, { method: "PUT", body: JSON.stringify(patch) }),
   reset: () => req<{ ok: boolean }>(`/reset`, { method: "POST" }),
+
+  sendSOS: (data: { equipment_id: string; actor: string; alert_type?: string; lat?: number; lng?: number; location_name?: string; details?: string; offline_mode?: boolean }) =>
+    req<SOSAlert>(`/sos-alert`, { method: "POST", body: JSON.stringify(data) }),
+  listSOS: () => req<SOSAlert[]>(`/sos-alerts`),
+  resolveSOS: (sos_id: string) => req<{ ok: boolean }>(`/sos-alert/${sos_id}/resolve`, { method: "POST" }),
 }
+
