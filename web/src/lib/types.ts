@@ -241,9 +241,10 @@ export interface HireRequestRow {
   raised_at: string
   status: string
   equipment_id: string
-  kind: "EXTEND" | "COLLECT"
+  kind: "EXTEND" | "COLLECT" | "NEW_HIRE"
   actor: string
   site_id: string | null
   days: number | null
   note: string | null
+  rejection_reason?: string | null
 }

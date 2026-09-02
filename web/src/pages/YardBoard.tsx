@@ -178,8 +178,6 @@ export default function YardBoard() {
   }, [assets, config, now])
 
   async function act(id: string, kind: "IN" | "OUT") {
-    // Ref, not state: a second click lands before React has re-rendered the disabled
-    // attribute, and two check-ins write two events.
     if (inFlight.current) return
     inFlight.current = true
     setBusy(id)
@@ -197,6 +195,47 @@ export default function YardBoard() {
       await qc.invalidateQueries()
     } catch (err) {
       setError(err instanceof Error ? err.message : "that did not go through")
+    } finally {
+      setBusy(null)
+      inFlight.current = false
+    }
+  }
+
+  const [rejectingId, setRejectingId] = useState<string | null>(null)
+  const [rejectReason, setRejectReason] = useState<string>("Equipment currently undergoing scheduled maintenance")
+  const [checkingAvailId, setCheckingAvailId] = useState<string | null>(null)
+
+  async function approveRequest(r: { request_id: string; equipment_id: string; kind: string; site_id?: string | null }) {
+    if (inFlight.current) return
+    inFlight.current = true
+    setBusy(r.request_id)
+    setError(null)
+    setNote(null)
+    try {
+      await api.actionHireRequest(r.request_id, "ACCEPT", actor())
+      setNote(`Request ${r.request_id} accepted — ${r.equipment_id} processed for ${r.site_id ?? "site"}.`)
+      await qc.invalidateQueries()
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "could not approve request")
+    } finally {
+      setBusy(null)
+      inFlight.current = false
+    }
+  }
+
+  async function rejectRequest(request_id: string, reason: string) {
+    if (inFlight.current) return
+    inFlight.current = true
+    setBusy(request_id)
+    setError(null)
+    setNote(null)
+    try {
+      await api.actionHireRequest(request_id, "DECLINE", actor(), reason || "Equipment unavailable")
+      setNote(`Request ${request_id} rejected — Notification sent to customer.`)
+      setRejectingId(null)
+      await qc.invalidateQueries()
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "could not reject request")
     } finally {
       setBusy(null)
       inFlight.current = false
@@ -265,26 +304,136 @@ export default function YardBoard() {
         <section className="border border-hazard/40 bg-hazard/[0.05]">
           <header className="flex flex-wrap items-baseline justify-between gap-3 border-b border-hazard/30 px-5 py-3.5">
             <h2 className="font-mono text-[11px] uppercase tracking-[0.16em] text-hazard">
-              Customers have asked for these
+              Customers have asked for these (Pending System Verification & Decision)
             </h2>
             <span className="num text-[13px] font-semibold text-hazard">{requests!.length}</span>
           </header>
           <ul className="flex flex-col">
-            {requests!.map((r) => (
-              <li key={r.request_id} className="flex flex-wrap items-baseline gap-x-3 gap-y-1 border-b border-hairline/60 px-5 py-3 last:border-0">
-                <span className="num text-[13px] font-semibold text-chalk">{r.equipment_id}</span>
-                <span className={cn("border px-1.5 py-px font-mono text-[9.5px] uppercase tracking-[0.12em]",
-                  r.kind === "COLLECT" ? "border-info/50 text-info" : "border-warning/50 text-warning")}>
-                  {r.kind === "COLLECT" ? "collect it" : "extend it"}
-                </span>
-                <span className="text-[13px] text-steel">{r.actor}</span>
-                {r.site_id && <span className="num text-[12px] text-slate">{r.site_id}</span>}
-                {r.note && <span className="text-[12.5px] text-slate">— {r.note}</span>}
-                <span className="num ml-auto text-[11.5px] text-slate">
-                  {r.raised_at.replace("T", " ")}
-                </span>
-              </li>
-            ))}
+            {requests!.map((r) => {
+              const eqAsset = (assets ?? []).find((a) => a.equipment_id === r.equipment_id)
+              const isAvailableInYard = eqAsset ? (eqAsset.status === "AT_YARD" || !eqAsset.site_id) : true
+
+              return (
+                <li key={r.request_id} className="flex flex-col border-b border-hairline/60 p-4 last:border-0 gap-3">
+                  <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+                    <span className="num text-[14px] font-bold text-chalk">{r.equipment_id}</span>
+                    <span className={cn("border px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.12em]",
+                      r.kind === "COLLECT" ? "border-info/50 text-info" : r.kind === "NEW_HIRE" ? "border-nominal/60 text-nominal bg-nominal/10" : "border-warning/50 text-warning")}>
+                      {r.kind === "COLLECT" ? "collect it" : r.kind === "NEW_HIRE" ? "request new hire" : "extend it"}
+                    </span>
+                    <span className="text-[13px] text-steel font-medium">Hirer: {r.actor}</span>
+                    {r.site_id && <span className="num text-[12px] text-slate font-mono">Target Site: {r.site_id}</span>}
+                    {r.note && <span className="text-[12.5px] text-slate">— {r.note}</span>}
+
+                    {/* System Availability Check Indicator */}
+                    <div className="flex items-center gap-2 ml-auto">
+                      <span className={cn("px-2 py-0.5 font-mono text-[10px] uppercase font-semibold border",
+                        isAvailableInYard
+                          ? "border-nominal/60 bg-nominal/10 text-nominal"
+                          : "border-warning/60 bg-warning/10 text-warning")}>
+                        {isAvailableInYard ? "✓ Available in Yard" : `⚠ Assigned to ${eqAsset?.site_id || "site"}`}
+                      </span>
+                      <button
+                        onClick={() => setCheckingAvailId(checkingAvailId === r.request_id ? null : r.request_id)}
+                        className="font-mono text-[10px] uppercase tracking-wider text-steel underline hover:text-chalk"
+                      >
+                        {checkingAvailId === r.request_id ? "Hide Audit" : "System Audit"}
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Detailed System Availability Breakdown */}
+                  {checkingAvailId === r.request_id && (
+                    <div className="border border-hairline bg-ground p-3 text-[12px] grid sm:grid-cols-3 gap-3">
+                      <div>
+                        <span className="label block text-[10px]">Machine Type</span>
+                        <span className="num font-semibold text-chalk">{r.equipment_id} ({eqAsset?.type ?? "Equipment"})</span>
+                      </div>
+                      <div>
+                        <span className="label block text-[10px]">Yard Condition</span>
+                        <span className="text-steel font-mono">{eqAsset?.status ?? "UNKNOWN"} (Grade {eqAsset?.condition_grade ?? "A"})</span>
+                      </div>
+                      <div>
+                        <span className="label block text-[10px]">System Recommendation</span>
+                        <span className={isAvailableInYard ? "text-nominal font-semibold" : "text-warning font-semibold"}>
+                          {isAvailableInYard ? "✓ Ready to Assign & Dispatch" : "⚠ Conflict: Deployed elsewhere"}
+                        </span>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Actions: Approve / Reject */}
+                  <div className="flex flex-wrap items-center justify-between gap-3 pt-1 border-t border-hairline/30">
+                    <span className="num text-[11.5px] text-slate">
+                      Raised: {r.raised_at.replace("T", " ")}
+                    </span>
+                    {r.status === "OPEN" ? (
+                      <div className="flex items-center gap-2.5">
+                        <button
+                          onClick={() => approveRequest(r)}
+                          disabled={busy !== null}
+                          className="border border-nominal bg-nominal/15 px-3 py-1 font-mono text-[10.5px] font-semibold uppercase tracking-[0.12em] text-nominal hover:bg-nominal hover:text-ground transition-colors disabled:opacity-40"
+                        >
+                          {busy === r.request_id ? "…" : "Approve & Assign"}
+                        </button>
+                        <button
+                          onClick={() => {
+                            if (rejectingId === r.request_id) {
+                              setRejectingId(null)
+                            } else {
+                              setRejectingId(r.request_id)
+                              setRejectReason("Equipment currently undergoing scheduled maintenance")
+                            }
+                          }}
+                          disabled={busy !== null}
+                          className="border border-critical bg-critical/15 px-3 py-1 font-mono text-[10.5px] font-semibold uppercase tracking-[0.12em] text-critical hover:bg-critical hover:text-ground transition-colors disabled:opacity-40"
+                        >
+                          Reject
+                        </button>
+                      </div>
+                    ) : r.status === "ACCEPTED" ? (
+                      <span className="label text-nominal font-semibold">✓ ACCEPTED</span>
+                    ) : (
+                      <span className="label text-critical font-semibold">✖ DECLINED ({r.rejection_reason || "Rejected"})</span>
+                    )}
+                  </div>
+
+                  {/* Inline Reject Reason Form */}
+                  {rejectingId === r.request_id && (
+                    <div className="mt-2 border border-critical/40 bg-critical/[0.05] p-3 flex flex-col gap-2">
+                      <p className="font-mono text-[11px] uppercase tracking-wider text-critical font-semibold">
+                        Reject Request {r.request_id} — Specify Reason for Customer
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        <select
+                          value={rejectReason}
+                          onChange={(e) => setRejectReason(e.target.value)}
+                          className="border border-hairline bg-ground px-2.5 py-1 text-[12px] text-chalk font-mono focus:outline-none flex-1"
+                        >
+                          <option value="Equipment currently undergoing scheduled maintenance">Equipment undergoing scheduled maintenance</option>
+                          <option value="Requested equipment currently deployed at another face">Deployed at another face / site</option>
+                          <option value="Target site operator certification review required">Target site operator certification review required</option>
+                          <option value="Hire period conflict with existing booking schedule">Hire period conflict with existing booking schedule</option>
+                        </select>
+                        <button
+                          onClick={() => rejectRequest(r.request_id, rejectReason)}
+                          disabled={busy !== null}
+                          className="border border-critical bg-critical px-3 py-1 font-mono text-[10.5px] font-semibold uppercase tracking-wider text-ground"
+                        >
+                          Confirm Reject
+                        </button>
+                        <button
+                          onClick={() => setRejectingId(null)}
+                          className="border border-hairline px-3 py-1 font-mono text-[10.5px] uppercase tracking-wider text-steel hover:text-chalk"
+                        >
+                          Cancel
+                        </button>
+                      </div>
+                    </div>
+                  )}
+                </li>
+              )
+            })}
           </ul>
         </section>
       )}

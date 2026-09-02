@@ -37,9 +37,14 @@ export const api = {
   hireRequests: (site_id?: string) =>
     req<HireRequestRow[]>(`/hire-requests${site_id ? `?site_id=${encodeURIComponent(site_id)}` : ""}`),
   raiseHireRequest: (body: {
-    equipment_id: string; kind: "EXTEND" | "COLLECT"; actor: string
+    equipment_id: string; kind: "EXTEND" | "COLLECT" | "NEW_HIRE"; actor: string
     site_id?: string; days?: number; note?: string
   }) => req<HireRequestRow>("/hire-request", { method: "POST", body: JSON.stringify(body) }),
+  actionHireRequest: (request_id: string, action: "ACCEPT" | "DECLINE" | "FULFILL", actor = "Yard Supervisor", reason?: string) =>
+    req<HireRequestRow>(`/hire-request/${request_id}/action`, {
+      method: "POST",
+      body: JSON.stringify({ action, actor, reason }),
+    }),
 
   roles: () => req<{ roles: Role[]; sites: string[]; admin_required: boolean }>("/auth/roles"),
   session: (name: string, role: string, access_key?: string, site_id?: string) =>

@@ -34,7 +34,13 @@ function Chrome({ children }: { children: React.ReactNode }) {
   const dealer = session?.role === "YARD" || session?.role === "OPS_LEAD"
   const { data: ledger } = useQuery({ queryKey: ["ledger"], queryFn: api.ledger, enabled: dealer })
   const { data: health } = useQuery({ queryKey: ["health"], queryFn: api.health })
-  const { data: alerts } = useQuery({ queryKey: ["alerts"], queryFn: api.alerts, enabled: dealer })
+  const { data: alerts } = useQuery({ queryKey: ["alerts"], queryFn: api.alerts, enabled: dealer, refetchInterval: 3000 })
+  const { data: requests } = useQuery({
+    queryKey: ["hire-requests"],
+    queryFn: () => api.hireRequests(),
+    enabled: !!session,
+    refetchInterval: 2000,
+  })
 
   return (
     <div className="min-h-screen bg-ground">
@@ -79,10 +85,7 @@ function Chrome({ children }: { children: React.ReactNode }) {
             <span className="label hidden sm:inline">
               clock <span className="text-steel">{health?.now ?? "—"}</span>
             </span>
-            {/* Dealer-internal, both of them: the alert count is the whole fleet's and
-                the recovered figure is the dealer's own ledger. A customer seeing
-                either would be seeing other customers' numbers. */}
-            {dealer && <AlertBell alerts={alerts} />}
+            {session && <AlertBell alerts={alerts} requests={requests} />}
             {dealer && <ValueLedger ledger={ledger} compact />}
             <AccountMenu />
           </div>

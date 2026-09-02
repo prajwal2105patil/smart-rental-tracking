@@ -1,119 +1,337 @@
 import { useEffect, useRef, useState } from "react"
 import { Link } from "react-router-dom"
-import type { Alert } from "@/lib/types"
-import { cn, inr } from "@/lib/utils"
+import type { Alert, HireRequestRow } from "@/lib/types"
+import { cn } from "@/lib/utils"
+import { useSession } from "@/lib/session"
 
-/**
- * Notifications, without pretending to be push.
- *
- * The brief lists notifications under "can simulate", and device push would be a claim we
- * cannot back — there is no service worker and no subscription. What is real: the alert
- * feed is polled, and anything that appears which was not there on the previous poll
- * raises a badge and a toast. That is a notification an operator would actually act on,
- * and it is honest about being in-app.
- */
-const TONE: Record<string, string> = {
-  CRITICAL: "text-critical border-critical/50 bg-critical/10",
-  WARNING: "text-warning border-warning/50 bg-warning/10",
-  INFO: "text-info border-info/50 bg-info/10",
+export interface NotificationItem {
+  id: string
+  title: string
+  message: string
+  actor?: string
+  severity: "CRITICAL" | "WARNING" | "INFO" | "ACCEPTED"
+  timestamp: string
+  path: string
+  equipment_id?: string
 }
 
-export default function AlertBell({ alerts }: { alerts?: Alert[] }) {
+export default function AlertBell({
+  alerts,
+  requests,
+}: {
+  alerts?: Alert[]
+  requests?: HireRequestRow[]
+}) {
+  const session = useSession()
   const [open, setOpen] = useState(false)
-  const [fresh, setFresh] = useState<Alert[]>([])
-  const seen = useRef<Set<string> | null>(null)
+  const [readIds, setReadIds] = useState<Set<string>>(() => {
+    try {
+      const stored = localStorage.getItem("cat_read_notifications_v3")
+      return stored ? new Set(JSON.parse(stored)) : new Set()
+    } catch {
+      return new Set()
+    }
+  })
+  const [freshToast, setFreshToast] = useState<NotificationItem[]>([])
+  const seenRef = useRef<Set<string> | null>(null)
 
+  function saveReadIds(newSet: Set<string>) {
+    setReadIds(newSet)
+    try {
+      localStorage.setItem("cat_read_notifications_v3", JSON.stringify(Array.from(newSet)))
+    } catch {
+      // ignore
+    }
+  }
+
+  // Build real-time notification list
+  const items: NotificationItem[] = []
+
+  // 1. Hire Requests Notifications
+  if (requests) {
+    requests.forEach((r) => {
+      const actorName = r.actor || "Customer"
+
+      if (r.status === "OPEN") {
+        if (session?.role === "YARD" || session?.role === "OPS_LEAD") {
+          items.push({
+            id: `req-open-${r.request_id}`,
+            title: `New Hire Request from ${actorName}`,
+            message: `${actorName} requested machine ${r.equipment_id} for Site ${r.site_id ?? "S001"}${
+              r.note ? ` ("${r.note}")` : ""
+            }`,
+            actor: actorName,
+            severity: "WARNING",
+            timestamp: r.raised_at,
+            path: "/yard",
+            equipment_id: r.equipment_id,
+          })
+        } else {
+          items.push({
+            id: `req-open-${r.request_id}`,
+            title: `Hire Request Pending Yard Review`,
+            message: `Your request for machine ${r.equipment_id} (Site ${r.site_id ?? "S001"}) is being reviewed by the Yard Supervisor`,
+            actor: actorName,
+            severity: "INFO",
+            timestamp: r.raised_at,
+            path: "/my-fleet",
+            equipment_id: r.equipment_id,
+          })
+        }
+      } else if (r.status === "ACCEPTED") {
+        items.push({
+          id: `req-acc-${r.request_id}`,
+          title: `✓ Request Approved & Assigned`,
+          message: `Yard Supervisor APPROVED request for ${r.equipment_id} — Assigned to Site ${r.site_id ?? "S001"}`,
+          actor: r.actor,
+          severity: "ACCEPTED",
+          timestamp: r.raised_at,
+          path: session?.role === "YARD" ? "/yard" : "/my-fleet",
+          equipment_id: r.equipment_id,
+        })
+      } else if (r.status === "DECLINED") {
+        items.push({
+          id: `req-dec-${r.request_id}`,
+          title: `✖ Request Rejected`,
+          message: `Yard Supervisor REJECTED request for ${r.equipment_id} — Reason: ${
+            r.rejection_reason || "Equipment unavailable"
+          }`,
+          actor: r.actor,
+          severity: "CRITICAL",
+          timestamp: r.raised_at,
+          path: session?.role === "YARD" ? "/yard" : "/my-fleet",
+          equipment_id: r.equipment_id,
+        })
+      }
+    })
+  }
+
+  // 2. Telemetry Rule Flags
+  if (alerts && (session?.role === "YARD" || session?.role === "OPS_LEAD" || session?.role === "OPERATOR")) {
+    alerts.forEach((a) => {
+      items.push({
+        id: `alert-${a.equipment_id}-${a.rule_id}`,
+        title: `Telemetry Alert: ${a.rule_id}`,
+        message: `${a.equipment_id} — ${a.title}`,
+        severity: a.severity === "CRITICAL" ? "CRITICAL" : "WARNING",
+        timestamp: new Date().toISOString(),
+        path: `/asset/${a.equipment_id}`,
+        equipment_id: a.equipment_id,
+      })
+    })
+  }
+
+  // Filter out read/dismissed items
+  const unread = items.filter((item) => !readIds.has(item.id))
+
+  // Real-time floating toast popup: automatically disappears after 5 seconds
   useEffect(() => {
-    if (!alerts) return
-    const key = (a: Alert) => `${a.equipment_id}:${a.rule_id}`
-    // The first poll establishes the baseline. Without this every existing flag would
-    // toast on load, which is noise, not a notification.
-    if (seen.current === null) {
-      seen.current = new Set(alerts.map(key))
+    if (seenRef.current === null) {
+      seenRef.current = new Set(unread.map((i) => i.id))
       return
     }
-    const added = alerts.filter((a) => !seen.current!.has(key(a)))
-    if (added.length) {
-      added.forEach((a) => seen.current!.add(key(a)))
-      setFresh(added)
-      const t = setTimeout(() => setFresh([]), 6000)
-      return () => clearTimeout(t)
+    const newlyArrived = unread.filter((i) => !seenRef.current!.has(i.id))
+    if (newlyArrived.length > 0) {
+      newlyArrived.forEach((i) => seenRef.current!.add(i.id))
+      setFreshToast(newlyArrived)
+      const timer = setTimeout(() => {
+        setFreshToast([])
+      }, 5000) // Exactly 5 seconds auto-dismiss
+      return () => clearTimeout(timer)
     }
-  }, [alerts])
+  }, [unread])
 
-  const critical = alerts?.filter((a) => a.severity === "CRITICAL").length ?? 0
+  function markAsRead(id: string, e?: React.MouseEvent) {
+    if (e) e.stopPropagation()
+    const next = new Set(readIds)
+    next.add(id)
+    saveReadIds(next)
+  }
+
+  function clearAll() {
+    const next = new Set(readIds)
+    items.forEach((i) => next.add(i.id))
+    saveReadIds(next)
+  }
+
+  const criticalCount = unread.filter((i) => i.severity === "CRITICAL").length
 
   return (
     <>
-      {/* toast — only for flags that appeared since the last poll */}
-      {fresh.length > 0 && (
-        <div className="fixed right-5 top-20 z-50 flex max-w-[340px] flex-col gap-2" role="status">
-          {fresh.slice(0, 3).map((a) => (
-            <Link key={`${a.equipment_id}-${a.rule_id}`} to={`/asset/${a.equipment_id}`}
-                  className="rise-in border border-hairline-bright bg-ground px-4 py-3 shadow-lg">
-              <div className="flex items-baseline gap-2.5">
-                <span className={cn("font-mono text-[10px] font-semibold tracking-[0.12em]",
-                  a.severity === "CRITICAL" ? "text-critical" : "text-warning")}>
-                  {a.rule_id}
+      {/* Floating Screen Toast Popup — Auto-disappears in 5 seconds */}
+      {freshToast.length > 0 && (
+        <div className="fixed right-5 top-16 z-50 flex max-w-[360px] flex-col gap-2" role="status">
+          {freshToast.slice(0, 3).map((item) => (
+            <div
+              key={item.id}
+              className="rise-in border border-hazard bg-ground p-4 shadow-xl flex flex-col gap-1 cursor-pointer hover:border-chalk"
+              onClick={() => {
+                markAsRead(item.id)
+                setFreshToast((prev) => prev.filter((t) => t.id !== item.id))
+              }}
+            >
+              <div className="flex items-center justify-between">
+                <span
+                  className={cn(
+                    "font-mono text-[10px] uppercase font-bold tracking-wider",
+                    item.severity === "CRITICAL"
+                      ? "text-critical"
+                      : item.severity === "ACCEPTED"
+                      ? "text-nominal"
+                      : "text-warning"
+                  )}
+                >
+                  {item.title}
                 </span>
-                <span className="num text-[13px] font-semibold text-chalk">{a.equipment_id}</span>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    markAsRead(item.id)
+                    setFreshToast((prev) => prev.filter((t) => t.id !== item.id))
+                  }}
+                  className="text-steel hover:text-chalk text-[11px] font-mono p-1"
+                >
+                  ✖
+                </button>
               </div>
-              <p className="mt-1 text-[12.5px] leading-snug text-steel">{a.title}</p>
-            </Link>
+              <p className="text-[12.5px] text-chalk font-medium">{item.message}</p>
+              <span className="text-[10px] font-mono text-hazard mt-0.5 opacity-80">
+                Auto-dismissing in 5s · Click to mark read
+              </span>
+            </div>
           ))}
         </div>
       )}
 
+      {/* Navbar Notification Bell Icon */}
       <div className="relative">
         <button
           onClick={() => setOpen((o) => !o)}
-          aria-label={`${alerts?.length ?? 0} alerts, ${critical} critical`}
+          aria-label={`${unread.length} notifications`}
           aria-expanded={open}
-          className={cn("relative flex items-center gap-2 border px-2.5 py-1.5 transition-colors",
-            open ? "border-hazard/60 bg-hazard/10" : "border-hairline-bright hover:border-hazard")}
+          className={cn(
+            "relative flex items-center gap-2 border px-2.5 py-1.5 transition-colors",
+            open ? "border-hazard/60 bg-hazard/10" : "border-hairline-bright hover:border-hazard"
+          )}
         >
           <svg width="14" height="15" viewBox="0 0 14 15" fill="none" aria-hidden>
-            <path d="M7 1.5a4 4 0 0 0-4 4v2.6L1.8 10.4h10.4L11 8.1V5.5a4 4 0 0 0-4-4z"
-                  stroke="currentColor" strokeWidth="1.2" strokeLinejoin="round"
-                  className={critical ? "text-critical" : "text-steel"} />
-            <path d="M5.6 12.2a1.5 1.5 0 0 0 2.8 0" stroke="currentColor" strokeWidth="1.2"
-                  strokeLinecap="round" className={critical ? "text-critical" : "text-steel"} />
+            <path
+              d="M7 1.5a4 4 0 0 0-4 4v2.6L1.8 10.4h10.4L11 8.1V5.5a4 4 0 0 0-4-4z"
+              stroke="currentColor"
+              strokeWidth="1.2"
+              strokeLinejoin="round"
+              className={
+                criticalCount > 0 ? "text-critical" : unread.length > 0 ? "text-hazard" : "text-steel"
+              }
+            />
+            <path
+              d="M5.6 12.2a1.5 1.5 0 0 0 2.8 0"
+              stroke="currentColor"
+              strokeWidth="1.2"
+              strokeLinecap="round"
+              className={
+                criticalCount > 0 ? "text-critical" : unread.length > 0 ? "text-hazard" : "text-steel"
+              }
+            />
           </svg>
-          {critical > 0 && (
-            <span className="num text-[11px] font-semibold text-critical"
-                  style={{ animation: "pulse-mark 2.2s ease-in-out infinite" }}>
-              {critical}
+
+          <span
+            className={cn(
+              "font-mono text-[11px] uppercase tracking-wider font-semibold",
+              unread.length > 0 ? "text-hazard" : "text-steel"
+            )}
+          >
+            {unread.length}
+          </span>
+
+          {unread.length > 0 && (
+            <span className="absolute -top-1 -right-1 flex h-2.5 w-2.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-hazard opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-hazard"></span>
             </span>
           )}
         </button>
 
+        {/* Dropdown Panel */}
         {open && (
-          <div className="absolute right-0 top-[calc(100%+8px)] z-50 max-h-[420px] w-[380px] overflow-y-auto border border-hairline-bright bg-ground">
-            <header className="sticky top-0 flex items-baseline justify-between gap-3 border-b border-hairline bg-ground px-4 py-3">
-              <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-steel">
-                Alert feed
-              </span>
-              <span className="label">{alerts?.length ?? 0} open</span>
+          <div className="absolute right-0 top-[calc(100%+8px)] z-50 max-h-[440px] w-[390px] overflow-y-auto border border-hairline-bright bg-ground shadow-2xl">
+            <header className="sticky top-0 z-10 flex items-center justify-between border-b border-hairline bg-ground px-4 py-3">
+              <div className="flex items-center gap-2">
+                <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-chalk font-semibold">
+                  Notifications
+                </span>
+                <span className="px-1.5 py-0.5 rounded border border-hazard/40 bg-hazard/10 font-mono text-[10px] text-hazard font-bold">
+                  {unread.length} New
+                </span>
+              </div>
+              {unread.length > 0 && (
+                <button
+                  onClick={clearAll}
+                  className="font-mono text-[10.5px] uppercase tracking-wider text-steel underline hover:text-chalk"
+                >
+                  Clear All
+                </button>
+              )}
             </header>
-            {(alerts ?? []).slice(0, 24).map((a) => (
-              <Link key={`${a.equipment_id}-${a.rule_id}`} to={`/asset/${a.equipment_id}`}
-                    onClick={() => setOpen(false)}
-                    className="block border-b border-hairline/60 px-4 py-3 transition-colors last:border-0 hover:bg-surface">
-                <div className="flex flex-wrap items-baseline gap-2">
-                  <span className={cn("border px-1.5 py-px font-mono text-[9.5px] font-semibold tracking-[0.12em]",
-                    TONE[a.severity])}>
-                    {a.source}
-                  </span>
-                  <span className="num text-[12.5px] font-semibold text-chalk">{a.equipment_id}</span>
-                  {a.est_value_inr > 0 && (
-                    <span className="num ml-auto text-[12px] text-hazard">{inr(a.est_value_inr)}</span>
-                  )}
-                </div>
-                <p className="mt-1 text-[12.5px] leading-snug text-steel">{a.title}</p>
-              </Link>
-            ))}
-            {!alerts?.length && (
-              <p className="label px-4 py-8 text-center">nothing open — the board is clean</p>
+
+            {unread.length === 0 ? (
+              <div className="px-4 py-10 text-center flex flex-col items-center gap-2">
+                <span className="text-[20px] text-nominal">✓</span>
+                <p className="font-mono text-[11px] uppercase tracking-wider text-steel">
+                  All caught up — no new notifications
+                </p>
+              </div>
+            ) : (
+              <div className="flex flex-col">
+                {unread.map((item) => (
+                  <div
+                    key={item.id}
+                    className="group relative flex flex-col border-b border-hairline/60 p-3.5 transition-colors hover:bg-surface cursor-pointer"
+                  >
+                    <div className="flex items-start justify-between gap-2">
+                      <Link
+                        to={item.path}
+                        onClick={() => {
+                          markAsRead(item.id)
+                          setOpen(false)
+                        }}
+                        className="flex-1 min-w-0"
+                      >
+                        <div className="flex items-center gap-2">
+                          <span
+                            className={cn(
+                              "border px-1.5 py-0.5 font-mono text-[9px] uppercase font-bold tracking-wider",
+                              item.severity === "CRITICAL"
+                                ? "border-critical/60 bg-critical/10 text-critical"
+                                : item.severity === "ACCEPTED"
+                                ? "border-nominal/60 bg-nominal/10 text-nominal"
+                                : "border-warning/60 bg-warning/10 text-warning"
+                            )}
+                          >
+                            {item.severity}
+                          </span>
+                          <span className="font-mono text-[12px] font-bold text-chalk truncate">
+                            {item.title}
+                          </span>
+                        </div>
+                        <p className="mt-1.5 text-[12.5px] leading-relaxed text-steel">
+                          {item.message}
+                        </p>
+                        <span className="mt-1 block font-mono text-[10px] text-slate">
+                          {item.timestamp.replace("T", " ").slice(0, 19)}
+                        </span>
+                      </Link>
+                      <button
+                        onClick={(e) => markAsRead(item.id, e)}
+                        title="Mark as read / Dismiss"
+                        className="text-slate hover:text-critical font-mono text-[13px] px-1 py-0.5"
+                      >
+                        ✖
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
             )}
           </div>
         )}

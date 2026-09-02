@@ -1356,7 +1356,7 @@ HIRE_REQUESTS: list[dict] = []
 
 class HireRequest(BaseModel):
     equipment_id: str
-    kind: Literal["EXTEND", "COLLECT"]
+    kind: Literal["EXTEND", "COLLECT", "NEW_HIRE"]
     actor: str = Field(min_length=2, max_length=60)
     site_id: Optional[str] = None
     days: Optional[int] = Field(default=None, ge=1, le=365)
@@ -1364,46 +1364,77 @@ class HireRequest(BaseModel):
 
 
 @app.post("/hire-request", status_code=201)
-
 def raise_hire_request(body: HireRequest):
-
     """Raised by a hirer, worked by the yard. Append-only, like everything else here."""
-
     _find(body.equipment_id)          # 404s on a machine that does not exist
-
     row = {
-
         "request_id": f"REQ{len(HIRE_REQUESTS) + 1:04d}",
-
         "raised_at": datetime.now().isoformat(timespec="seconds"),
-
         "status": "OPEN",
-
         **body.model_dump(),
-
     }
-
     HIRE_REQUESTS.append(row)
-
     store.write_hire_request(row)
-
     return row
 
 
-
-
-
 @app.get("/hire-requests")
-
 def list_hire_requests(site_id: Optional[str] = Query(default=None)):
-
     """The yard sees everything; a hirer sees only their own site's."""
-
     if site_id:
-
         return [r for r in HIRE_REQUESTS if r.get("site_id") == site_id]
-
     return HIRE_REQUESTS
+
+
+class HireRequestActionIn(BaseModel):
+    action: Literal["ACCEPT", "DECLINE", "FULFILL"]
+    actor: str = Field(default="yard", max_length=64)
+    reason: Optional[str] = Field(default=None, max_length=MAX_TEXT)
+
+
+@app.post("/hire-request/{request_id}/action", status_code=200)
+def action_hire_request(request_id: str, body: HireRequestActionIn):
+    req = next((r for r in HIRE_REQUESTS if r.get("request_id") == request_id), None)
+    if not req:
+        raise HTTPException(404, "request not found")
+    req["status"] = "ACCEPTED" if body.action == "ACCEPT" else "DECLINED" if body.action == "DECLINE" else "FULFILLED"
+    if body.reason:
+        req["rejection_reason"] = body.reason
+
+    eq_id = req.get("equipment_id")
+    site_id = req.get("site_id")
+    if body.action in ("ACCEPT", "FULFILL") and eq_id:
+        a = next((x for x in ASSETS if x.equipment_id == eq_id), None)
+        if a:
+            if req.get("kind") == "NEW_HIRE":
+                a.on_rent = True
+                if site_id:
+                    a.site_id = site_id
+                append_event(EventIn(
+                    equipment_id=eq_id,
+                    event_type="CHECK_OUT",
+                    actor=body.actor,
+                    site_id=a.site_id,
+                    notes=f"Accepted hire request {request_id}"
+                ))
+                append_event(EventIn(
+                    equipment_id=eq_id,
+                    event_type="ASSIGN",
+                    actor=body.actor,
+                    site_id=a.site_id,
+                    notes=f"Assigned via hire request {request_id}"
+                ))
+            elif req.get("kind") == "COLLECT":
+                append_event(EventIn(
+                    equipment_id=eq_id,
+                    event_type="CHECK_IN",
+                    actor=body.actor,
+                    condition_grade=a.condition_grade,
+                    notes=f"Collected via hire request {request_id}"
+                ))
+    store.write_hire_request(req)
+    return req
+
 
 
 

@@ -193,6 +193,10 @@ export default function CustomerView() {
   const qc = useQueryClient()
   const [busy, setBusy] = useState<string | null>(null)
   const [said, setSaid] = useState<string | null>(null)
+  const [showNewModal, setShowNewModal] = useState(false)
+  const [selectedEqId, setSelectedEqId] = useState("")
+  const [hireDays, setHireDays] = useState(14)
+  const [hireNote, setHireNote] = useState("")
   const inFlight = useRef(false)
 
   const { data: assets, isLoading, error, retry } = useResilientQuery(["assets"], api.assets)
@@ -209,6 +213,35 @@ export default function CustomerView() {
   const mine = useMemo(() => (assets ?? []).filter((a) => a.site_id === site), [assets, site])
   const live = useMemo(() => mine.filter((a) => a.status !== "AT_YARD"), [mine])
   const returned = useMemo(() => mine.filter((a) => a.status === "AT_YARD"), [mine])
+  const availableAssets = useMemo(() => (assets ?? []).filter((a) => a.status === "AT_YARD" || !a.site_id), [assets])
+
+  async function handleRequestNewHire(e: React.FormEvent) {
+    e.preventDefault()
+    if (!selectedEqId || inFlight.current) return
+    inFlight.current = true
+    setBusy(`NEW:${selectedEqId}`)
+    setSaid(null)
+    try {
+      await api.raiseHireRequest({
+        equipment_id: selectedEqId,
+        kind: "NEW_HIRE",
+        actor: session?.actor ?? "a customer",
+        site_id: site ?? undefined,
+        days: hireDays,
+        note: hireNote || "New machine hire request",
+      })
+      setSaid(`Requested ${selectedEqId} for site ${site ?? "S001"}. Sent to the Yard Supervisor in real time.`)
+      setShowNewModal(false)
+      setSelectedEqId("")
+      setHireNote("")
+      await qc.invalidateQueries({ queryKey: ["hire-requests", site] })
+    } catch (err) {
+      setSaid(err instanceof Error ? `Request failed: ${err.message}` : "Request failed.")
+    } finally {
+      setBusy(null)
+      inFlight.current = false
+    }
+  }
 
   const sum = useMemo(() => {
     const hoursOn = live.reduce((n, a) => n + a.engine_hours_day + a.idle_hours_day, 0)
@@ -270,7 +303,6 @@ export default function CustomerView() {
   }, [theirRisk, sum, live, now, config])
 
   async function request(a: AssetRow, kind: "EXTEND" | "COLLECT") {
-    // Ref, not state: a double tap lands before React re-renders the disabled attribute.
     if (inFlight.current) return
     inFlight.current = true
     setBusy(`${a.equipment_id}:${kind}`)
@@ -307,21 +339,97 @@ export default function CustomerView() {
 
   return (
     <div className="flex flex-col gap-6">
-      <header className="border border-hairline bg-surface px-6 py-6">
-        <p className="label">your hire · site {site}</p>
-        <h1 className="mt-2.5 text-[26px] font-bold tracking-tight text-chalk">
-          {isLoading ? "Loading your machines…"
-            : live.length === 0 ? "You have nothing on hire right now."
-              : `You have ${live.length} machine${live.length > 1 ? "s" : ""} on hire.`}
-        </h1>
-        {live.length > 0 && (
-          <p className="mt-2.5 max-w-[70ch] text-[14px] leading-relaxed text-steel">
-            They are working {sum.working}% of the hours they are switched on
-            <Explain what="working" />, at <span className="num">{inr(sum.dayCost)}</span> a
-            day in total.
-          </p>
-        )}
+      <header className="flex flex-wrap items-center justify-between gap-4 border border-hairline bg-surface px-6 py-6">
+        <div>
+          <p className="label">your hire · site {site}</p>
+          <h1 className="mt-2.5 text-[26px] font-bold tracking-tight text-chalk">
+            {isLoading ? "Loading your machines…"
+              : live.length === 0 ? "You have nothing on hire right now."
+                : `You have ${live.length} machine${live.length > 1 ? "s" : ""} on hire.`}
+          </h1>
+          {live.length > 0 && (
+            <p className="mt-2.5 max-w-[70ch] text-[14px] leading-relaxed text-steel">
+              They are working {sum.working}% of the hours they are switched on
+              <Explain what="working" />, at <span className="num">{inr(sum.dayCost)}</span> a
+              day in total.
+            </p>
+          )}
+        </div>
+        <button
+          onClick={() => setShowNewModal((v) => !v)}
+          className="border border-hazard bg-hazard px-4 py-2.5 font-mono text-[11px] font-semibold uppercase tracking-[0.14em] text-ground transition-colors hover:bg-hazard/90"
+        >
+          {showNewModal ? "Cancel" : "+ Book New Machine"}
+        </button>
       </header>
+
+      {showNewModal && (
+        <section className="border border-hazard/50 bg-hazard/[0.06] px-6 py-5">
+          <h2 className="font-mono text-[12px] uppercase tracking-[0.16em] text-hazard font-bold">
+            Book / Request New Machine for Site {site ?? "S001"}
+          </h2>
+          <form onSubmit={handleRequestNewHire} className="mt-4 flex flex-col gap-4 max-w-xl">
+            <div>
+              <label className="label block mb-1">Select Machine from Yard</label>
+              <select
+                value={selectedEqId}
+                onChange={(e) => setSelectedEqId(e.target.value)}
+                required
+                className="w-full border border-hairline bg-ground px-3 py-2 text-[13.5px] text-chalk font-mono focus:border-hazard focus:outline-none"
+              >
+                <option value="">-- Choose an available machine --</option>
+                {availableAssets.map((a) => (
+                  <option key={a.equipment_id} value={a.equipment_id}>
+                    {a.equipment_id} — {a.type} (Grade {a.condition_grade}, {inr(a.day_rate)}/day)
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <label className="label block mb-1">Duration (Days)</label>
+                <input
+                  type="number"
+                  min="1"
+                  max="365"
+                  value={hireDays}
+                  onChange={(e) => setHireDays(parseInt(e.target.value) || 14)}
+                  className="w-full border border-hairline bg-ground px-3 py-2 text-[13.5px] text-chalk font-mono focus:border-hazard focus:outline-none"
+                />
+              </div>
+              <div>
+                <label className="label block mb-1">Target Site</label>
+                <input
+                  type="text"
+                  readOnly
+                  value={site ?? "S001"}
+                  className="w-full border border-hairline bg-surface px-3 py-2 text-[13.5px] text-steel font-mono opacity-80"
+                />
+              </div>
+            </div>
+            <div>
+              <label className="label block mb-1">Requirements / Note for Yard Supervisor</label>
+              <input
+                type="text"
+                placeholder="e.g. Foundation excavation phase starting Monday"
+                value={hireNote}
+                onChange={(e) => setHireNote(e.target.value)}
+                className="w-full border border-hairline bg-ground px-3 py-2 text-[13.5px] text-chalk focus:border-hazard focus:outline-none"
+              />
+            </div>
+            <div className="flex gap-3">
+              <button
+                type="submit"
+                disabled={!selectedEqId || busy !== null}
+                className="border border-hazard bg-hazard px-5 py-2 font-mono text-[11px] font-semibold uppercase tracking-[0.14em] text-ground disabled:opacity-40"
+              >
+                {busy ? "Submitting..." : "Send Request to Yard"}
+              </button>
+            </div>
+          </form>
+        </section>
+      )}
+
 
       {sum.billed > 0 && (
         <section className="grid gap-px border border-hairline bg-hairline sm:grid-cols-3">
@@ -376,16 +484,70 @@ export default function CustomerView() {
         <p className="border border-nominal/40 bg-nominal/10 px-5 py-3 text-[13px] text-nominal">{said}</p>
       )}
 
+      {raised?.some((r) => r.status === "DECLINED" || r.status === "ACCEPTED") && (
+        <div className="flex flex-col gap-2">
+          {raised.filter((r) => r.status === "DECLINED").map((r) => (
+            <div key={r.request_id} className="border border-critical/50 bg-critical/10 px-5 py-3.5 text-[13px] text-critical flex items-start justify-between gap-4">
+              <div>
+                <p className="font-semibold text-[13.5px]">✖ Hire Request Notification: Request Rejected</p>
+                <p className="mt-1 text-[12.5px] text-critical/90">
+                  Your request for machine <span className="num font-bold">{r.equipment_id}</span> for Site {r.site_id ?? site ?? "S001"} was <strong>REJECTED</strong> by the Yard Supervisor.
+                  {r.rejection_reason && <span className="block mt-1 font-mono text-[12px] text-chalk">— Reason: {r.rejection_reason}</span>}
+                </p>
+              </div>
+              <span className="font-mono text-[10.5px] uppercase opacity-80 shrink-0">{r.request_id}</span>
+            </div>
+          ))}
+          {raised.filter((r) => r.status === "ACCEPTED").map((r) => (
+            <div key={r.request_id} className="border border-nominal/50 bg-nominal/10 px-5 py-3.5 text-[13px] text-nominal flex items-start justify-between gap-4">
+              <div>
+                <p className="font-semibold text-[13.5px]">✓ Hire Request Notification: Request Approved & Dispatched</p>
+                <p className="mt-1 text-[12.5px] text-nominal/90">
+                  Your hire request for machine <span className="num font-bold">{r.equipment_id}</span> has been <strong>ACCEPTED</strong> and assigned to your site.
+                </p>
+              </div>
+              <span className="font-mono text-[10.5px] uppercase opacity-80 shrink-0">{r.request_id}</span>
+            </div>
+          ))}
+        </div>
+      )}
+
       {(raised?.length ?? 0) > 0 && (
         <section className="border border-hairline bg-surface px-5 py-4">
-          <p className="label">what you have asked us for</p>
-          <ul className="mt-2.5 flex flex-col gap-1.5">
+          <p className="label">what you have asked us for · request history & notifications</p>
+          <ul className="mt-2.5 flex flex-col gap-2">
             {raised!.map((r) => (
-              <li key={r.request_id} className="flex flex-wrap items-baseline gap-x-3 text-[13px] text-steel">
-                <span className="num text-chalk">{r.equipment_id}</span>
-                <span>{r.kind === "EXTEND" ? "keep it longer" : "collect it"}</span>
-                <span className="label">{r.status.toLowerCase()}</span>
-                <span className="num text-[11.5px] text-slate">{r.raised_at.replace("T", " ")}</span>
+              <li key={r.request_id} className="flex flex-wrap items-center justify-between gap-3 border-b border-hairline/40 py-2.5 last:border-0 text-[13px] text-steel">
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+                  <span className="num font-semibold text-chalk">{r.equipment_id}</span>
+                  <span className="font-mono text-[11px] text-steel">
+                    {r.kind === "EXTEND" ? "keep it longer" : r.kind === "NEW_HIRE" ? "request new machine" : "collect it"}
+                  </span>
+                  {r.note && <span className="text-[12px] text-slate">— {r.note}</span>}
+                  <span className="num text-[11.5px] text-slate">{r.raised_at.replace("T", " ")}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  {r.status === "ACCEPTED" ? (
+                    <span className="border border-nominal/60 bg-nominal/10 px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-wider font-semibold text-nominal">
+                      ✓ ACCEPTED & ASSIGNED
+                    </span>
+                  ) : r.status === "DECLINED" ? (
+                    <div className="flex items-center gap-2">
+                      <span className="border border-critical/60 bg-critical/10 px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-wider font-semibold text-critical">
+                        ✖ REJECTED
+                      </span>
+                      {r.rejection_reason && (
+                        <span className="text-[12px] text-critical font-medium">
+                          ({r.rejection_reason})
+                        </span>
+                      )}
+                    </div>
+                  ) : (
+                    <span className="border border-warning/60 bg-warning/10 px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-wider font-semibold text-warning">
+                      ⏳ PENDING YARD APPROVAL
+                    </span>
+                  )}
+                </div>
               </li>
             ))}
           </ul>
