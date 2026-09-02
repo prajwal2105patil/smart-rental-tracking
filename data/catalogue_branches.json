@@ -1,0 +1,583 @@
+[
+  {
+    "store_id": "AN566",
+    "city": "Luanda",
+    "country": "Angola",
+    "invoice_rows": 9741,
+    "is_india": false
+  },
+  {
+    "store_id": "OC688",
+    "city": "Sydney",
+    "country": "Australia",
+    "invoice_rows": 9550,
+    "is_india": false
+  },
+  {
+    "store_id": "OC689",
+    "city": "Melbourne",
+    "country": "Australia",
+    "invoice_rows": 9836,
+    "is_india": false
+  },
+  {
+    "store_id": "OC690",
+    "city": "Canberra",
+    "country": "Australia",
+    "invoice_rows": 9723,
+    "is_india": false
+  },
+  {
+    "store_id": "OC691",
+    "city": "Wollongong",
+    "country": "Australia",
+    "invoice_rows": 9584,
+    "is_india": false
+  },
+  {
+    "store_id": "OC692",
+    "city": "Adelaide",
+    "country": "Australia",
+    "invoice_rows": 9715,
+    "is_india": false
+  },
+  {
+    "store_id": "OC693",
+    "city": "Launceston",
+    "country": "Australia",
+    "invoice_rows": 9844,
+    "is_india": false
+  },
+  {
+    "store_id": "OC694",
+    "city": "Perth",
+    "country": "Australia",
+    "invoice_rows": 9674,
+    "is_india": false
+  },
+  {
+    "store_id": "BW288",
+    "city": "Gaborone",
+    "country": "Botswana",
+    "invoice_rows": 9704,
+    "is_india": false
+  },
+  {
+    "store_id": "BZ118",
+    "city": "SaoPaulo",
+    "country": "Brazil",
+    "invoice_rows": 9765,
+    "is_india": false
+  },
+  {
+    "store_id": "BZ242",
+    "city": "RiodeJaneiro",
+    "country": "Brazil",
+    "invoice_rows": 9678,
+    "is_india": false
+  },
+  {
+    "store_id": "CH222",
+    "city": "HongKong",
+    "country": "China",
+    "invoice_rows": 9713,
+    "is_india": false
+  },
+  {
+    "store_id": "CH232",
+    "city": "Shanghai",
+    "country": "China",
+    "invoice_rows": 9755,
+    "is_india": false
+  },
+  {
+    "store_id": "CH243",
+    "city": "Taipei",
+    "country": "China",
+    "invoice_rows": 9905,
+    "is_india": false
+  },
+  {
+    "store_id": "CH332",
+    "city": "Shenzhen",
+    "country": "China",
+    "invoice_rows": 9632,
+    "is_india": false
+  },
+  {
+    "store_id": "CG256",
+    "city": "Kinshasa",
+    "country": "Congo",
+    "invoice_rows": 9708,
+    "is_india": false
+  },
+  {
+    "store_id": "EG279",
+    "city": "Cairo",
+    "country": "Egypt",
+    "invoice_rows": 9702,
+    "is_india": false
+  },
+  {
+    "store_id": "EH398",
+    "city": "AddisAbaba",
+    "country": "Ethiopia",
+    "invoice_rows": 9810,
+    "is_india": false
+  },
+  {
+    "store_id": "FR211",
+    "city": "Toulouse",
+    "country": "France",
+    "invoice_rows": 9636,
+    "is_india": false
+  },
+  {
+    "store_id": "FR239",
+    "city": "Brordeaux",
+    "country": "France",
+    "invoice_rows": 9919,
+    "is_india": false
+  },
+  {
+    "store_id": "FR787",
+    "city": "Nantes",
+    "country": "France",
+    "invoice_rows": 9841,
+    "is_india": false
+  },
+  {
+    "store_id": "GN600",
+    "city": "Libreville",
+    "country": "Gabon",
+    "invoice_rows": 9647,
+    "is_india": false
+  },
+  {
+    "store_id": "GR231",
+    "city": "Berlin",
+    "country": "Germany",
+    "invoice_rows": 9616,
+    "is_india": false
+  },
+  {
+    "store_id": "GR443",
+    "city": "Munich",
+    "country": "Germany",
+    "invoice_rows": 9722,
+    "is_india": false
+  },
+  {
+    "store_id": "GR445",
+    "city": "Frankfurt",
+    "country": "Germany",
+    "invoice_rows": 9696,
+    "is_india": false
+  },
+  {
+    "store_id": "GH986",
+    "city": "Accra",
+    "country": "Ghana",
+    "invoice_rows": 9678,
+    "is_india": false
+  },
+  {
+    "store_id": "IN288",
+    "city": "Mumbai",
+    "country": "India",
+    "invoice_rows": 9894,
+    "is_india": true
+  },
+  {
+    "store_id": "IN487",
+    "city": "Bangalore",
+    "country": "India",
+    "invoice_rows": 9696,
+    "is_india": true
+  },
+  {
+    "store_id": "IN488",
+    "city": "Chennai",
+    "country": "India",
+    "invoice_rows": 9645,
+    "is_india": true
+  },
+  {
+    "store_id": "IN489",
+    "city": "Kolkata",
+    "country": "India",
+    "invoice_rows": 9860,
+    "is_india": true
+  },
+  {
+    "store_id": "IT566",
+    "city": "Genoa",
+    "country": "Italy",
+    "invoice_rows": 9721,
+    "is_india": false
+  },
+  {
+    "store_id": "IT576",
+    "city": "Milan",
+    "country": "Italy",
+    "invoice_rows": 9773,
+    "is_india": false
+  },
+  {
+    "store_id": "JP236",
+    "city": "Yokohama",
+    "country": "Japan",
+    "invoice_rows": 9559,
+    "is_india": false
+  },
+  {
+    "store_id": "JP278",
+    "city": "Tokyo",
+    "country": "Japan",
+    "invoice_rows": 9637,
+    "is_india": false
+  },
+  {
+    "store_id": "KN732",
+    "city": "Nairobi",
+    "country": "Kenya",
+    "invoice_rows": 9598,
+    "is_india": false
+  },
+  {
+    "store_id": "KN787",
+    "city": "Mombasa",
+    "country": "Kenya",
+    "invoice_rows": 9719,
+    "is_india": false
+  },
+  {
+    "store_id": "KW100",
+    "city": "KuwaitCity",
+    "country": "Kuwait",
+    "invoice_rows": 9776,
+    "is_india": false
+  },
+  {
+    "store_id": "MX811",
+    "city": "Guadalajara",
+    "country": "Mexico",
+    "invoice_rows": 9775,
+    "is_india": false
+  },
+  {
+    "store_id": "MX812",
+    "city": "Monterrey",
+    "country": "Mexico",
+    "invoice_rows": 9784,
+    "is_india": false
+  },
+  {
+    "store_id": "NM120",
+    "city": "Windhoek",
+    "country": "Namibia",
+    "invoice_rows": 9799,
+    "is_india": false
+  },
+  {
+    "store_id": "NT778",
+    "city": "Randstad",
+    "country": "Netherlands",
+    "invoice_rows": 9469,
+    "is_india": false
+  },
+  {
+    "store_id": "NT779",
+    "city": "Eindhoven",
+    "country": "Netherlands",
+    "invoice_rows": 9801,
+    "is_india": false
+  },
+  {
+    "store_id": "NT780",
+    "city": "Rotterdam",
+    "country": "Netherlands",
+    "invoice_rows": 9783,
+    "is_india": false
+  },
+  {
+    "store_id": "NT781",
+    "city": "Amsterdam",
+    "country": "Netherlands",
+    "invoice_rows": 9711,
+    "is_india": false
+  },
+  {
+    "store_id": "OC712",
+    "city": "Auckland",
+    "country": "NewZealand",
+    "invoice_rows": 9544,
+    "is_india": false
+  },
+  {
+    "store_id": "OC714",
+    "city": "Christchurch",
+    "country": "NewZealand",
+    "invoice_rows": 9815,
+    "is_india": false
+  },
+  {
+    "store_id": "NG455",
+    "city": "Lagos",
+    "country": "Nigeria",
+    "invoice_rows": 9819,
+    "is_india": false
+  },
+  {
+    "store_id": "NW181",
+    "city": "Drammen",
+    "country": "Norway",
+    "invoice_rows": 9782,
+    "is_india": false
+  },
+  {
+    "store_id": "NW182",
+    "city": "Stavanger",
+    "country": "Norway",
+    "invoice_rows": 9742,
+    "is_india": false
+  },
+  {
+    "store_id": "RU355",
+    "city": "Chelyabinsk",
+    "country": "Russia",
+    "invoice_rows": 9583,
+    "is_india": false
+  },
+  {
+    "store_id": "RU356",
+    "city": "Magnitogorsk",
+    "country": "Russia",
+    "invoice_rows": 9664,
+    "is_india": false
+  },
+  {
+    "store_id": "RU367",
+    "city": "Norilsk",
+    "country": "Russia",
+    "invoice_rows": 9741,
+    "is_india": false
+  },
+  {
+    "store_id": "RW908",
+    "city": "Kigali",
+    "country": "Rwanda",
+    "invoice_rows": 9768,
+    "is_india": false
+  },
+  {
+    "store_id": "SA206",
+    "city": "Capetown",
+    "country": "SouthAfrica",
+    "invoice_rows": 9825,
+    "is_india": false
+  },
+  {
+    "store_id": "SA208",
+    "city": "Johannnesburg",
+    "country": "SouthAfrica",
+    "invoice_rows": 9794,
+    "is_india": false
+  },
+  {
+    "store_id": "KO221",
+    "city": "Seoul",
+    "country": "SouthKorea",
+    "invoice_rows": 9680,
+    "is_india": false
+  },
+  {
+    "store_id": "KO222",
+    "city": "Ulsan",
+    "country": "SouthKorea",
+    "invoice_rows": 9706,
+    "is_india": false
+  },
+  {
+    "store_id": "SH120",
+    "city": "Stockholm",
+    "country": "Sweden",
+    "invoice_rows": 9717,
+    "is_india": false
+  },
+  {
+    "store_id": "SW244",
+    "city": "Basel",
+    "country": "Switzerland",
+    "invoice_rows": 9715,
+    "is_india": false
+  },
+  {
+    "store_id": "SW245",
+    "city": "Zurich",
+    "country": "Switzerland",
+    "invoice_rows": 9845,
+    "is_india": false
+  },
+  {
+    "store_id": "TW900",
+    "city": "Kaohsiung",
+    "country": "Taiwan",
+    "invoice_rows": 9645,
+    "is_india": false
+  },
+  {
+    "store_id": "TW992",
+    "city": "Taichung",
+    "country": "Taiwan",
+    "invoice_rows": 9612,
+    "is_india": false
+  },
+  {
+    "store_id": "TZ212",
+    "city": "DarEsSalaam",
+    "country": "Tanzania",
+    "invoice_rows": 9782,
+    "is_india": false
+  },
+  {
+    "store_id": "TU989",
+    "city": "Tunis",
+    "country": "Tunisia",
+    "invoice_rows": 9884,
+    "is_india": false
+  },
+  {
+    "store_id": "UA120",
+    "city": "Dubai",
+    "country": "UAE",
+    "invoice_rows": 9520,
+    "is_india": false
+  },
+  {
+    "store_id": "UA662",
+    "city": "Fujairah",
+    "country": "UAE",
+    "invoice_rows": 9717,
+    "is_india": false
+  },
+  {
+    "store_id": "UA664",
+    "city": "RasAlKhaimah",
+    "country": "UAE",
+    "invoice_rows": 9705,
+    "is_india": false
+  },
+  {
+    "store_id": "UA665",
+    "city": "AbuDhabi",
+    "country": "UAE",
+    "invoice_rows": 9628,
+    "is_india": false
+  },
+  {
+    "store_id": "UK121",
+    "city": "Bristol",
+    "country": "UK",
+    "invoice_rows": 9715,
+    "is_india": false
+  },
+  {
+    "store_id": "UK128",
+    "city": "Portsmouth",
+    "country": "UK",
+    "invoice_rows": 9711,
+    "is_india": false
+  },
+  {
+    "store_id": "UK129",
+    "city": "Plymouth",
+    "country": "UK",
+    "invoice_rows": 9714,
+    "is_india": false
+  },
+  {
+    "store_id": "UK130",
+    "city": "NewCastle",
+    "country": "UK",
+    "invoice_rows": 9741,
+    "is_india": false
+  },
+  {
+    "store_id": "US211",
+    "city": "OklahamaCity",
+    "country": "US",
+    "invoice_rows": 9653,
+    "is_india": false
+  },
+  {
+    "store_id": "US212",
+    "city": "Houston",
+    "country": "US",
+    "invoice_rows": 9890,
+    "is_india": false
+  },
+  {
+    "store_id": "US213",
+    "city": "Nashville",
+    "country": "US",
+    "invoice_rows": 9675,
+    "is_india": false
+  },
+  {
+    "store_id": "US214",
+    "city": "SaltlakeCity",
+    "country": "US",
+    "invoice_rows": 9608,
+    "is_india": false
+  },
+  {
+    "store_id": "US215",
+    "city": "Anchorage",
+    "country": "US",
+    "invoice_rows": 9766,
+    "is_india": false
+  },
+  {
+    "store_id": "US216",
+    "city": "Bakersfield",
+    "country": "US",
+    "invoice_rows": 9625,
+    "is_india": false
+  },
+  {
+    "store_id": "US217",
+    "city": "Louisville",
+    "country": "US",
+    "invoice_rows": 9644,
+    "is_india": false
+  },
+  {
+    "store_id": "US218",
+    "city": "Lafayette",
+    "country": "US",
+    "invoice_rows": 9540,
+    "is_india": false
+  },
+  {
+    "store_id": "US219",
+    "city": "Detroit",
+    "country": "US",
+    "invoice_rows": 9529,
+    "is_india": false
+  },
+  {
+    "store_id": "VZ310",
+    "city": "Valencia",
+    "country": "Venezuela",
+    "invoice_rows": 9847,
+    "is_india": false
+  },
+  {
+    "store_id": "VZ342",
+    "city": "Caracas",
+    "country": "Venezuela",
+    "invoice_rows": 9800,
+    "is_india": false
+  }
+]

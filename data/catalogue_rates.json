@@ -1,0 +1,39 @@
+{
+  "basis": "price_implied",
+  "anchor_type": "Excavator",
+  "anchor_day_rate_inr": 15000,
+  "anchor_median_price": 7039.0,
+  "scale_factor_k": 2.130985,
+  "formula": "day_rate = median(category SKU list price) * k, k = 15000 / 7039",
+  "caveat": "Grader has no category in the source; mapped to RoadPavers, which prices above an excavator. This is why price_implied is a cross-check column and not the default rate card.",
+  "rates": {
+    "Excavator": {
+      "category": "Excavators",
+      "median_sku_price": 7039.0,
+      "day_rate_inr": 15000,
+      "exact": 15000.0,
+      "sku_count": 12
+    },
+    "Bulldozer": {
+      "category": "Bulldozers",
+      "median_sku_price": 6139.5,
+      "day_rate_inr": 13000,
+      "exact": 13083.18,
+      "sku_count": 12
+    },
+    "Crane": {
+      "category": "Cranes",
+      "median_sku_price": 8351.5,
+      "day_rate_inr": 18000,
+      "exact": 17796.92,
+      "sku_count": 12
+    },
+    "Grader": {
+      "category": "RoadPavers",
+      "median_sku_price": 9171.5,
+      "day_rate_inr": 19500,
+      "exact": 19544.32,
+      "sku_count": 12
+    }
+  }
+}

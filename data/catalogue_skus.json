@@ -1,0 +1,2432 @@
+[
+  {
+    "product_key": "BB-892",
+    "description": "Skidsteer-Backhoe-loader-Heavy-Yellow",
+    "category": "Skidsteer",
+    "brand": "Bob Cat",
+    "duty_type": "HeavyDuty",
+    "color": "GreenWhite",
+    "cost": 7845,
+    "price": 6545
+  },
+  {
+    "product_key": "BB-898",
+    "description": "Skidsteer-Backhoe-loader-Standard-Orange",
+    "category": "Skidsteer",
+    "brand": "Bob Cat",
+    "duty_type": "Standard",
+    "color": "Orange",
+    "cost": 4545,
+    "price": 3545
+  },
+  {
+    "product_key": "BB-899",
+    "description": "Skidsteer-Backhoe-loader-Heavy-Red",
+    "category": "Skidsteer",
+    "brand": "Bob Cat",
+    "duty_type": "HeavyDuty",
+    "color": "Red",
+    "cost": 6464,
+    "price": 4356
+  },
+  {
+    "product_key": "BZ-801",
+    "description": "Bulldozers-JCB-HeavyDuty-Yellow",
+    "category": "Bulldozers",
+    "brand": "JCB",
+    "duty_type": "HeavyDuty",
+    "color": "Yellow",
+    "cost": 3013,
+    "price": 4007
+  },
+  {
+    "product_key": "BZ-802",
+    "description": "Bulldozers-IngersollRand-Standard-YellowBlack",
+    "category": "Bulldozers",
+    "brand": "IngersollRand",
+    "duty_type": "Standard",
+    "color": "YellowBlack",
+    "cost": 6958,
+    "price": 7375
+  },
+  {
+    "product_key": "BZ-803",
+    "description": "Bulldozers-BEML-LightDuty-Green",
+    "category": "Bulldozers",
+    "brand": "BEML",
+    "duty_type": "LightDuty",
+    "color": "Green",
+    "cost": 8341,
+    "price": 11677
+  },
+  {
+    "product_key": "BZ-804",
+    "description": "Bulldozers-Liebherr-LightDuty-GreenWhite",
+    "category": "Bulldozers",
+    "brand": "Liebherr",
+    "duty_type": "LightDuty",
+    "color": "GreenWhite",
+    "cost": 8901,
+    "price": 9524
+  },
+  {
+    "product_key": "BZ-805",
+    "description": "Bulldozers-Komatsu-LightDuty-Orange",
+    "category": "Bulldozers",
+    "brand": "Komatsu",
+    "duty_type": "LightDuty",
+    "color": "Orange",
+    "cost": 5768,
+    "price": 6691
+  },
+  {
+    "product_key": "BZ-806",
+    "description": "Bulldozers-AllisChalmers-HeavyDuty-White",
+    "category": "Bulldozers",
+    "brand": "AllisChalmers",
+    "duty_type": "HeavyDuty",
+    "color": "White",
+    "cost": 9872,
+    "price": 13327
+  },
+  {
+    "product_key": "BZ-807",
+    "description": "Bulldozers-Terex-Standard-Black",
+    "category": "Bulldozers",
+    "brand": "Terex",
+    "duty_type": "Standard",
+    "color": "Black",
+    "cost": 2652,
+    "price": 3527
+  },
+  {
+    "product_key": "BZ-808",
+    "description": "Bulldozers-Caterpillar-LightDuty-RedWhite",
+    "category": "Bulldozers",
+    "brand": "Caterpillar",
+    "duty_type": "LightDuty",
+    "color": "RedWhite",
+    "cost": 4017,
+    "price": 4298
+  },
+  {
+    "product_key": "BZ-809",
+    "description": "Bulldozers-International-Standard-Red",
+    "category": "Bulldozers",
+    "brand": "International",
+    "duty_type": "Standard",
+    "color": "Red",
+    "cost": 3803,
+    "price": 4754
+  },
+  {
+    "product_key": "BZ-810",
+    "description": "Bulldozers-Hitachi-LightDuty-WhiteYellow",
+    "category": "Bulldozers",
+    "brand": "Hitachi",
+    "duty_type": "LightDuty",
+    "color": "WhiteYellow",
+    "cost": 5080,
+    "price": 5588
+  },
+  {
+    "product_key": "BZ-811",
+    "description": "Bulldozers-Toyota-HeavyDuty-Green",
+    "category": "Bulldozers",
+    "brand": "Toyota",
+    "duty_type": "HeavyDuty",
+    "color": "Green",
+    "cost": 2917,
+    "price": 3034
+  },
+  {
+    "product_key": "BZ-812",
+    "description": "Bulldozers-Case-HeavyDuty-White",
+    "category": "Bulldozers",
+    "brand": "Case",
+    "duty_type": "HeavyDuty",
+    "color": "White",
+    "cost": 7396,
+    "price": 9171
+  },
+  {
+    "product_key": "CR-101",
+    "description": "Cranes-Xuzhou-HeavyDuty-RedWhite",
+    "category": "Cranes",
+    "brand": "Xuzhou",
+    "duty_type": "HeavyDuty",
+    "color": "RedWhite",
+    "cost": 5359,
+    "price": 6592
+  },
+  {
+    "product_key": "CR-102",
+    "description": "Cranes-TransGulf-Standard-Green",
+    "category": "Cranes",
+    "brand": "TransGulf",
+    "duty_type": "Standard",
+    "color": "Green",
+    "cost": 7085,
+    "price": 8573
+  },
+  {
+    "product_key": "CR-103",
+    "description": "Cranes-Columbus-Standard-Yellow",
+    "category": "Cranes",
+    "brand": "Columbus",
+    "duty_type": "Standard",
+    "color": "Yellow",
+    "cost": 5641,
+    "price": 5979
+  },
+  {
+    "product_key": "CR-104",
+    "description": "Cranes-Manitowoc-HeavyDuty-White",
+    "category": "Cranes",
+    "brand": "Manitowoc",
+    "duty_type": "HeavyDuty",
+    "color": "White",
+    "cost": 3161,
+    "price": 3256
+  },
+  {
+    "product_key": "CR-105",
+    "description": "Cranes-Kobelco-LightDuty-Orange",
+    "category": "Cranes",
+    "brand": "Kobelco",
+    "duty_type": "LightDuty",
+    "color": "Orange",
+    "cost": 2959,
+    "price": 3018
+  },
+  {
+    "product_key": "CR-106",
+    "description": "Cranes-Liebherr-Standard-Red",
+    "category": "Cranes",
+    "brand": "Liebherr",
+    "duty_type": "Standard",
+    "color": "Red",
+    "cost": 7945,
+    "price": 10408
+  },
+  {
+    "product_key": "CR-107",
+    "description": "Cranes-Kone-HeavyDuty-Red",
+    "category": "Cranes",
+    "brand": "KoneCranes",
+    "duty_type": "HeavyDuty",
+    "color": "Red",
+    "cost": 6832,
+    "price": 8130
+  },
+  {
+    "product_key": "CR-108",
+    "description": "Cranes-Hitachi-Standard-Red",
+    "category": "Cranes",
+    "brand": "Hitachi",
+    "duty_type": "Standard",
+    "color": "Red",
+    "cost": 7048,
+    "price": 9515
+  },
+  {
+    "product_key": "CR-109",
+    "description": "Cranes-Cargotec-LightDuty-White",
+    "category": "Cranes",
+    "brand": "Cargotec",
+    "duty_type": "LightDuty",
+    "color": "White",
+    "cost": 5087,
+    "price": 5952
+  },
+  {
+    "product_key": "CR-110",
+    "description": "Cranes-Terex-HeavyDuty-Red",
+    "category": "Cranes",
+    "brand": "Terex",
+    "duty_type": "HeavyDuty",
+    "color": "Red",
+    "cost": 8547,
+    "price": 10598
+  },
+  {
+    "product_key": "CR-111",
+    "description": "Cranes-Tadano-Standard-Orange",
+    "category": "Cranes",
+    "brand": "Tadano",
+    "duty_type": "Standard",
+    "color": "Orange",
+    "cost": 9947,
+    "price": 11340
+  },
+  {
+    "product_key": "CR-112",
+    "description": "Cranes-Palfinger-HeavyDuty-YellowBlack",
+    "category": "Cranes",
+    "brand": "Palfinger",
+    "duty_type": "HeavyDuty",
+    "color": "YellowBlack",
+    "cost": 9511,
+    "price": 10177
+  },
+  {
+    "product_key": "CT-710",
+    "description": "Compactors-BomMach-LightDuty-Orange",
+    "category": "Compactors",
+    "brand": "BomMach",
+    "duty_type": "LightDuty",
+    "color": "Orange",
+    "cost": 3200,
+    "price": 4096
+  },
+  {
+    "product_key": "CT-711",
+    "description": "Compactors-Bobcat-LightDuty-Green",
+    "category": "Compactors",
+    "brand": "Bobcat",
+    "duty_type": "LightDuty",
+    "color": "Green",
+    "cost": 2300,
+    "price": 3013
+  },
+  {
+    "product_key": "CT-712",
+    "description": "Compactors-JCB-Standard-Black",
+    "category": "Compactors",
+    "brand": "JCB",
+    "duty_type": "Standard",
+    "color": "Black",
+    "cost": 3146,
+    "price": 3303
+  },
+  {
+    "product_key": "CT-713",
+    "description": "Compactors-Vogele-LightDuty-YellowBlack",
+    "category": "Compactors",
+    "brand": "Vogele",
+    "duty_type": "LightDuty",
+    "color": "YellowBlack",
+    "cost": 2570,
+    "price": 2930
+  },
+  {
+    "product_key": "CT-714",
+    "description": "Compactors-Kleemann-LightDuty-Blue",
+    "category": "Compactors",
+    "brand": "Kleemann",
+    "duty_type": "LightDuty",
+    "color": "Blue",
+    "cost": 3275,
+    "price": 3832
+  },
+  {
+    "product_key": "CT-715",
+    "description": "Compactors-Honda-HeavyDuty-RedWhite",
+    "category": "Compactors",
+    "brand": "Honda",
+    "duty_type": "HeavyDuty",
+    "color": "RedWhite",
+    "cost": 4778,
+    "price": 5399
+  },
+  {
+    "product_key": "CT-716",
+    "description": "Compactors-Caterpillar-HeavyDuty-Yellow",
+    "category": "Compactors",
+    "brand": "Caterpillar",
+    "duty_type": "HeavyDuty",
+    "color": "Yellow",
+    "cost": 2931,
+    "price": 3693
+  },
+  {
+    "product_key": "CT-717",
+    "description": "Compactors-Wirtgen-HeavyDuty-Yellow",
+    "category": "Compactors",
+    "brand": "Wirtgen",
+    "duty_type": "HeavyDuty",
+    "color": "Yellow",
+    "cost": 3595,
+    "price": 4889
+  },
+  {
+    "product_key": "CT-718",
+    "description": "Compactors-Hamm-LightDuty-Green",
+    "category": "Compactors",
+    "brand": "Hamm",
+    "duty_type": "LightDuty",
+    "color": "Green",
+    "cost": 3454,
+    "price": 4076
+  },
+  {
+    "product_key": "CT-719",
+    "description": "Compactors-AtlasCopco-HeavyDuty-RedWhite",
+    "category": "Compactors",
+    "brand": "AtlasCopco",
+    "duty_type": "HeavyDuty",
+    "color": "RedWhite",
+    "cost": 3260,
+    "price": 3977
+  },
+  {
+    "product_key": "CT-720",
+    "description": "Compactors-IngersollRand-HeavyDuty-Red",
+    "category": "Compactors",
+    "brand": "IngersollRand",
+    "duty_type": "HeavyDuty",
+    "color": "Red",
+    "cost": 2769,
+    "price": 3046
+  },
+  {
+    "product_key": "CT-721",
+    "description": "Compactors-Bomag-Standard-Green",
+    "category": "Compactors",
+    "brand": "Bomag",
+    "duty_type": "Standard",
+    "color": "Green",
+    "cost": 2985,
+    "price": 3731
+  },
+  {
+    "product_key": "DD-300",
+    "description": "Dredgers-Rohr-HeavyDuty-White",
+    "category": "Dredgers",
+    "brand": "Rohr",
+    "duty_type": "HeavyDuty",
+    "color": "White",
+    "cost": 4961,
+    "price": 6648
+  },
+  {
+    "product_key": "DD-301",
+    "description": "Dredgers-Kesla-Standard-RedWhite",
+    "category": "Dredgers",
+    "brand": "Kesla",
+    "duty_type": "Standard",
+    "color": "RedWhite",
+    "cost": 8508,
+    "price": 10039
+  },
+  {
+    "product_key": "DD-302",
+    "description": "Dredgers-Valmet-LightDuty-RedWhite",
+    "category": "Dredgers",
+    "brand": "Valmet",
+    "duty_type": "LightDuty",
+    "color": "RedWhite",
+    "cost": 4093,
+    "price": 4748
+  },
+  {
+    "product_key": "DD-303",
+    "description": "Dredgers-Barko-Standard-WhiteYellow",
+    "category": "Dredgers",
+    "brand": "Barko",
+    "duty_type": "Standard",
+    "color": "WhiteYellow",
+    "cost": 5723,
+    "price": 6753
+  },
+  {
+    "product_key": "DD-304",
+    "description": "Dredgers-Tigercat-LightDuty-White",
+    "category": "Dredgers",
+    "brand": "Tigercat",
+    "duty_type": "LightDuty",
+    "color": "White",
+    "cost": 8272,
+    "price": 10505
+  },
+  {
+    "product_key": "DD-305",
+    "description": "Dredgers-Caterpillar-LightDuty-Yellow",
+    "category": "Dredgers",
+    "brand": "Caterpillar",
+    "duty_type": "LightDuty",
+    "color": "Yellow",
+    "cost": 8760,
+    "price": 11826
+  },
+  {
+    "product_key": "DD-306",
+    "description": "Dredgers-Ponsse-Standard-Orange",
+    "category": "Dredgers",
+    "brand": "Ponsse",
+    "duty_type": "Standard",
+    "color": "Orange",
+    "cost": 8268,
+    "price": 9508
+  },
+  {
+    "product_key": "DD-307",
+    "description": "Dredgers-DSC-Standard-Yellow",
+    "category": "Dredgers",
+    "brand": "DSC",
+    "duty_type": "Standard",
+    "color": "Yellow",
+    "cost": 8581,
+    "price": 10383
+  },
+  {
+    "product_key": "DD-308",
+    "description": "Dredgers-AFM-HeavyDuty-Black",
+    "category": "Dredgers",
+    "brand": "AFM",
+    "duty_type": "HeavyDuty",
+    "color": "Black",
+    "cost": 5881,
+    "price": 7410
+  },
+  {
+    "product_key": "DD-309",
+    "description": "Dredgers-Julong-LightDuty-GreenWhite",
+    "category": "Dredgers",
+    "brand": "Julong",
+    "duty_type": "LightDuty",
+    "color": "GreenWhite",
+    "cost": 4268,
+    "price": 4908
+  },
+  {
+    "product_key": "DD-310",
+    "description": "Dredgers-Damen-HeavyDuty-Green",
+    "category": "Dredgers",
+    "brand": "Damen",
+    "duty_type": "HeavyDuty",
+    "color": "Green",
+    "cost": 7720,
+    "price": 8801
+  },
+  {
+    "product_key": "DD-311",
+    "description": "Dredgers-DRH-HeavyDuty-WhiteYellow",
+    "category": "Dredgers",
+    "brand": "DRH",
+    "duty_type": "HeavyDuty",
+    "color": "WhiteYellow",
+    "cost": 4145,
+    "price": 5098
+  },
+  {
+    "product_key": "DT-799",
+    "description": "DumpTrucks-JCB-HeavyDuty-White",
+    "category": "DumpTrucks",
+    "brand": "JCB",
+    "duty_type": "HeavyDuty",
+    "color": "White",
+    "cost": 2988,
+    "price": 3078
+  },
+  {
+    "product_key": "DT-800",
+    "description": "DumpTrucks-Mercedes-HeavyDuty-GreenWhite",
+    "category": "DumpTrucks",
+    "brand": "Mercedes",
+    "duty_type": "HeavyDuty",
+    "color": "GreenWhite",
+    "cost": 4146,
+    "price": 4519
+  },
+  {
+    "product_key": "DT-801",
+    "description": "DumpTrucks-Volvo-Standard-WhiteYellow",
+    "category": "DumpTrucks",
+    "brand": "Volvo",
+    "duty_type": "Standard",
+    "color": "WhiteYellow",
+    "cost": 5169,
+    "price": 5376
+  },
+  {
+    "product_key": "DT-802",
+    "description": "DumpTrucks-Kraz-Standard-Yellow",
+    "category": "DumpTrucks",
+    "brand": "Kraz",
+    "duty_type": "Standard",
+    "color": "Yellow",
+    "cost": 7931,
+    "price": 8724
+  },
+  {
+    "product_key": "DT-803",
+    "description": "DumpTrucks-Volvo-LightDuty-White",
+    "category": "DumpTrucks",
+    "brand": "Volvo",
+    "duty_type": "LightDuty",
+    "color": "White",
+    "cost": 2981,
+    "price": 3726
+  },
+  {
+    "product_key": "DT-804",
+    "description": "DumpTrucks-Peterbilt-HeavyDuty-Black",
+    "category": "DumpTrucks",
+    "brand": "Peterbilt",
+    "duty_type": "HeavyDuty",
+    "color": "Black",
+    "cost": 7812,
+    "price": 9765
+  },
+  {
+    "product_key": "DT-805",
+    "description": "DumpTrucks-Hitachi-HeavyDuty-Green",
+    "category": "DumpTrucks",
+    "brand": "Hitachi",
+    "duty_type": "HeavyDuty",
+    "color": "Green",
+    "cost": 9182,
+    "price": 12120
+  },
+  {
+    "product_key": "DT-806",
+    "description": "DumpTrucks-Liebherr-LightDuty-Orange",
+    "category": "DumpTrucks",
+    "brand": "Liebherr",
+    "duty_type": "LightDuty",
+    "color": "Orange",
+    "cost": 3722,
+    "price": 3796
+  },
+  {
+    "product_key": "DT-807",
+    "description": "DumpTrucks-Valmet-LightDuty-Black",
+    "category": "DumpTrucks",
+    "brand": "Valmet",
+    "duty_type": "LightDuty",
+    "color": "Black",
+    "cost": 5984,
+    "price": 7121
+  },
+  {
+    "product_key": "DT-808",
+    "description": "DumpTrucks-Caterpillar-LightDuty-Green",
+    "category": "DumpTrucks",
+    "brand": "Caterpillar",
+    "duty_type": "LightDuty",
+    "color": "Green",
+    "cost": 5119,
+    "price": 6040
+  },
+  {
+    "product_key": "DT-809",
+    "description": "DumpTrucks-Mack-LightDuty-WhiteYellow",
+    "category": "DumpTrucks",
+    "brand": "Mack",
+    "duty_type": "LightDuty",
+    "color": "WhiteYellow",
+    "cost": 9926,
+    "price": 13400
+  },
+  {
+    "product_key": "DT-810",
+    "description": "DumpTrucks-Komatsu-HeavyDuty-YellowBlack",
+    "category": "DumpTrucks",
+    "brand": "Komatsu",
+    "duty_type": "HeavyDuty",
+    "color": "YellowBlack",
+    "cost": 6054,
+    "price": 8476
+  },
+  {
+    "product_key": "EM-691",
+    "description": "EarthMovers-Volvo-HeavyDuty-RedWhite",
+    "category": "EarthMovers",
+    "brand": "Volvo",
+    "duty_type": "HeavyDuty",
+    "color": "RedWhite",
+    "cost": 6263,
+    "price": 7703
+  },
+  {
+    "product_key": "EM-692",
+    "description": "EarthMovers-NewHolland-HeavyDuty-YellowBlack",
+    "category": "EarthMovers",
+    "brand": "NewHolland",
+    "duty_type": "HeavyDuty",
+    "color": "YellowBlack",
+    "cost": 4665,
+    "price": 6484
+  },
+  {
+    "product_key": "EM-693",
+    "description": "EarthMovers-Noram-LightDuty-Black",
+    "category": "EarthMovers",
+    "brand": "Noram",
+    "duty_type": "LightDuty",
+    "color": "Black",
+    "cost": 6278,
+    "price": 7973
+  },
+  {
+    "product_key": "EM-694",
+    "description": "EarthMovers-Komatsu-HeavyDuty-Green",
+    "category": "EarthMovers",
+    "brand": "Komatsu",
+    "duty_type": "HeavyDuty",
+    "color": "Green",
+    "cost": 7175,
+    "price": 7821
+  },
+  {
+    "product_key": "EM-695",
+    "description": "EarthMovers-Caterpillar-HeavyDuty-White",
+    "category": "EarthMovers",
+    "brand": "Caterpillar",
+    "duty_type": "HeavyDuty",
+    "color": "White",
+    "cost": 2464,
+    "price": 3080
+  },
+  {
+    "product_key": "EM-696",
+    "description": "EarthMovers-Takeuchi-HeavyDuty-Orange",
+    "category": "EarthMovers",
+    "brand": "Takeuchi",
+    "duty_type": "HeavyDuty",
+    "color": "Orange",
+    "cost": 6761,
+    "price": 7031
+  },
+  {
+    "product_key": "EM-697",
+    "description": "EarthMovers-Bobcat-LightDuty-RedWhite",
+    "category": "EarthMovers",
+    "brand": "Bobcat",
+    "duty_type": "LightDuty",
+    "color": "RedWhite",
+    "cost": 9496,
+    "price": 12535
+  },
+  {
+    "product_key": "EM-698",
+    "description": "EarthMovers-JCB-Standard-Red",
+    "category": "EarthMovers",
+    "brand": "JCB",
+    "duty_type": "Standard",
+    "color": "Red",
+    "cost": 7788,
+    "price": 9813
+  },
+  {
+    "product_key": "EM-699",
+    "description": "EarthMovers-Merlo-Standard-WhiteYellow",
+    "category": "EarthMovers",
+    "brand": "Merlo",
+    "duty_type": "Standard",
+    "color": "WhiteYellow",
+    "cost": 9780,
+    "price": 12616
+  },
+  {
+    "product_key": "EM-700",
+    "description": "EarthMovers-Hitachi-Standard-GreenWhite",
+    "category": "EarthMovers",
+    "brand": "Hitachi",
+    "duty_type": "Standard",
+    "color": "GreenWhite",
+    "cost": 3261,
+    "price": 3587
+  },
+  {
+    "product_key": "EM-701",
+    "description": "EarthMovers-IngersollRand-LightDuty-YellowBlack",
+    "category": "EarthMovers",
+    "brand": "IngersollRand",
+    "duty_type": "LightDuty",
+    "color": "YellowBlack",
+    "cost": 6232,
+    "price": 6731
+  },
+  {
+    "product_key": "EM-702",
+    "description": "EarthMovers-JohnDeere-Standard-Red",
+    "category": "EarthMovers",
+    "brand": "JohnDeere",
+    "duty_type": "Standard",
+    "color": "Red",
+    "cost": 6677,
+    "price": 8880
+  },
+  {
+    "product_key": "EX-200",
+    "description": "Excavators-Caterpillar-LightDuty-RedWhite",
+    "category": "Excavators",
+    "brand": "Caterpillar",
+    "duty_type": "LightDuty",
+    "color": "RedWhite",
+    "cost": 2576,
+    "price": 3014
+  },
+  {
+    "product_key": "EX-201",
+    "description": "Excavators-Hyundai-HeavyDuty-White",
+    "category": "Excavators",
+    "brand": "Hyundai",
+    "duty_type": "HeavyDuty",
+    "color": "White",
+    "cost": 6903,
+    "price": 7317
+  },
+  {
+    "product_key": "EX-202",
+    "description": "Excavators-IngersollRand-LightDuty-RedWhite",
+    "category": "Excavators",
+    "brand": "IngersollRand",
+    "duty_type": "LightDuty",
+    "color": "RedWhite",
+    "cost": 4656,
+    "price": 4935
+  },
+  {
+    "product_key": "EX-203",
+    "description": "Excavators-Volvo-HeavyDuty-Orange",
+    "category": "Excavators",
+    "brand": "Volvo",
+    "duty_type": "HeavyDuty",
+    "color": "Orange",
+    "cost": 4940,
+    "price": 6175
+  },
+  {
+    "product_key": "EX-204",
+    "description": "Excavators-Komatsu-Standard-RedWhite",
+    "category": "Excavators",
+    "brand": "Komatsu",
+    "duty_type": "Standard",
+    "color": "RedWhite",
+    "cost": 9108,
+    "price": 11021
+  },
+  {
+    "product_key": "EX-205",
+    "description": "Excavators-Poclain-HeavyDuty-GreenWhite",
+    "category": "Excavators",
+    "brand": "Poclain",
+    "duty_type": "HeavyDuty",
+    "color": "GreenWhite",
+    "cost": 5511,
+    "price": 7275
+  },
+  {
+    "product_key": "EX-206",
+    "description": "Excavators-Bobcat-Standard-YellowBlack",
+    "category": "Excavators",
+    "brand": "Bobcat",
+    "duty_type": "Standard",
+    "color": "YellowBlack",
+    "cost": 2606,
+    "price": 3284
+  },
+  {
+    "product_key": "EX-207",
+    "description": "Excavators-Hitachi-Standard-GreenWhite",
+    "category": "Excavators",
+    "brand": "Hitachi",
+    "duty_type": "Standard",
+    "color": "GreenWhite",
+    "cost": 3916,
+    "price": 4582
+  },
+  {
+    "product_key": "EX-208",
+    "description": "Excavators-JCB-LightDuty-RedWhite",
+    "category": "Excavators",
+    "brand": "JCB",
+    "duty_type": "LightDuty",
+    "color": "RedWhite",
+    "cost": 5916,
+    "price": 6803
+  },
+  {
+    "product_key": "EX-209",
+    "description": "Excavators-Hitachi-HeavyDuty-Black",
+    "category": "Excavators",
+    "brand": "Hitachi",
+    "duty_type": "HeavyDuty",
+    "color": "Black",
+    "cost": 5621,
+    "price": 7364
+  },
+  {
+    "product_key": "EX-210",
+    "description": "Excavators-JohnDeere-Standard-WhiteYellow",
+    "category": "Excavators",
+    "brand": "JohnDeere",
+    "duty_type": "Standard",
+    "color": "WhiteYellow",
+    "cost": 8018,
+    "price": 9060
+  },
+  {
+    "product_key": "EX-211",
+    "description": "Excavators-Liebherr-HeavyDuty-Yellow",
+    "category": "Excavators",
+    "brand": "Liebherr",
+    "duty_type": "HeavyDuty",
+    "color": "Yellow",
+    "cost": 9157,
+    "price": 9706
+  },
+  {
+    "product_key": "FL-120",
+    "description": "ForkLifts-Kalmar-LightDuty-Orange",
+    "category": "ForkLifts",
+    "brand": "Kalmar",
+    "duty_type": "LightDuty",
+    "color": "Orange",
+    "cost": 2899,
+    "price": 3305
+  },
+  {
+    "product_key": "FL-121",
+    "description": "ForkLifts-Mitsubishi-HeavyDuty-Orange",
+    "category": "ForkLifts",
+    "brand": "Mitsubishi",
+    "duty_type": "HeavyDuty",
+    "color": "Orange",
+    "cost": 2107,
+    "price": 2444
+  },
+  {
+    "product_key": "FL-122",
+    "description": "ForkLifts-Nissan-Standard-Black",
+    "category": "ForkLifts",
+    "brand": "Nissan",
+    "duty_type": "Standard",
+    "color": "Black",
+    "cost": 1421,
+    "price": 1606
+  },
+  {
+    "product_key": "FL-123",
+    "description": "ForkLifts-Raymond-LightDuty-WhiteYellow",
+    "category": "ForkLifts",
+    "brand": "Raymond",
+    "duty_type": "LightDuty",
+    "color": "WhiteYellow",
+    "cost": 5716,
+    "price": 6516
+  },
+  {
+    "product_key": "FL-124",
+    "description": "ForkLifts-Taylor-LightDuty-YellowBlack",
+    "category": "ForkLifts",
+    "brand": "Taylor",
+    "duty_type": "LightDuty",
+    "color": "YellowBlack",
+    "cost": 4097,
+    "price": 5613
+  },
+  {
+    "product_key": "FL-125",
+    "description": "ForkLifts-Bradshaw-HeavyDuty-YellowBlack",
+    "category": "ForkLifts",
+    "brand": "Bradshaw",
+    "duty_type": "HeavyDuty",
+    "color": "YellowBlack",
+    "cost": 1472,
+    "price": 1958
+  },
+  {
+    "product_key": "FL-126",
+    "description": "ForkLifts-Rocla-Standard-YellowBlack",
+    "category": "ForkLifts",
+    "brand": "Rocla",
+    "duty_type": "Standard",
+    "color": "YellowBlack",
+    "cost": 2395,
+    "price": 2467
+  },
+  {
+    "product_key": "FL-127",
+    "description": "ForkLifts-Svetruck-Standard-White",
+    "category": "ForkLifts",
+    "brand": "Svetruck",
+    "duty_type": "Standard",
+    "color": "White",
+    "cost": 6599,
+    "price": 7523
+  },
+  {
+    "product_key": "FL-128",
+    "description": "ForkLifts-Crown-HeavyDuty-YellowBlack",
+    "category": "ForkLifts",
+    "brand": "Crown",
+    "duty_type": "HeavyDuty",
+    "color": "YellowBlack",
+    "cost": 3532,
+    "price": 4945
+  },
+  {
+    "product_key": "FL-129",
+    "description": "ForkLifts-Ausa-Standard-GreenWhite",
+    "category": "ForkLifts",
+    "brand": "Ausa",
+    "duty_type": "Standard",
+    "color": "GreenWhite",
+    "cost": 9756,
+    "price": 11219
+  },
+  {
+    "product_key": "FL-130",
+    "description": "ForkLifts-Bobcat-HeavyDuty-Red",
+    "category": "ForkLifts",
+    "brand": "Bobcat",
+    "duty_type": "HeavyDuty",
+    "color": "Red",
+    "cost": 5531,
+    "price": 6748
+  },
+  {
+    "product_key": "FL-131",
+    "description": "ForkLifts-Caterpillar-Standard-RedWhite",
+    "category": "ForkLifts",
+    "brand": "Caterpillar",
+    "duty_type": "Standard",
+    "color": "RedWhite",
+    "cost": 4509,
+    "price": 5817
+  },
+  {
+    "product_key": "FT-300",
+    "description": "FarmTillers-Bertolini-LightDuty-GreenWhite",
+    "category": "FarmTillers",
+    "brand": "Bertolini",
+    "duty_type": "LightDuty",
+    "color": "GreenWhite",
+    "cost": 5068,
+    "price": 5473
+  },
+  {
+    "product_key": "FT-301",
+    "description": "FarmTillers-NewHolland-HeavyDuty-Yellow",
+    "category": "FarmTillers",
+    "brand": "NewHolland",
+    "duty_type": "HeavyDuty",
+    "color": "Yellow",
+    "cost": 6394,
+    "price": 8632
+  },
+  {
+    "product_key": "FT-302",
+    "description": "FarmTillers-Valtra-Standard-Orange",
+    "category": "FarmTillers",
+    "brand": "Valtra",
+    "duty_type": "Standard",
+    "color": "Orange",
+    "cost": 4243,
+    "price": 5813
+  },
+  {
+    "product_key": "FT-303",
+    "description": "FarmTillers-Kubota-LightDuty-Black",
+    "category": "FarmTillers",
+    "brand": "Kubota",
+    "duty_type": "LightDuty",
+    "color": "Black",
+    "cost": 5767,
+    "price": 7036
+  },
+  {
+    "product_key": "FT-304",
+    "description": "FarmTillers-Case-HeavyDuty-YellowBlack",
+    "category": "FarmTillers",
+    "brand": "Case",
+    "duty_type": "HeavyDuty",
+    "color": "YellowBlack",
+    "cost": 2335,
+    "price": 2452
+  },
+  {
+    "product_key": "FT-305",
+    "description": "FarmTillers-Gleaner-LightDuty-YellowBlack",
+    "category": "FarmTillers",
+    "brand": "Gleaner",
+    "duty_type": "LightDuty",
+    "color": "YellowBlack",
+    "cost": 3449,
+    "price": 3621
+  },
+  {
+    "product_key": "FT-306",
+    "description": "FarmTillers-Ausa-HeavyDuty-White",
+    "category": "FarmTillers",
+    "brand": "Ausa",
+    "duty_type": "HeavyDuty",
+    "color": "White",
+    "cost": 4159,
+    "price": 4700
+  },
+  {
+    "product_key": "FT-307",
+    "description": "FarmTillers-MasseyFerguson-Standard-White",
+    "category": "FarmTillers",
+    "brand": "MasseyFerguson",
+    "duty_type": "Standard",
+    "color": "White",
+    "cost": 3266,
+    "price": 3495
+  },
+  {
+    "product_key": "FT-308",
+    "description": "FarmTillers-Collari-HeavyDuty-Red",
+    "category": "FarmTillers",
+    "brand": "Collari",
+    "duty_type": "HeavyDuty",
+    "color": "Red",
+    "cost": 3998,
+    "price": 4918
+  },
+  {
+    "product_key": "FT-309",
+    "description": "FarmTillers-Enorossi-HeavyDuty-RedWhite",
+    "category": "FarmTillers",
+    "brand": "Enorossi",
+    "duty_type": "HeavyDuty",
+    "color": "RedWhite",
+    "cost": 6211,
+    "price": 7018
+  },
+  {
+    "product_key": "FT-310",
+    "description": "FarmTillers-Hidromek-Standard-White",
+    "category": "FarmTillers",
+    "brand": "Hidromek",
+    "duty_type": "Standard",
+    "color": "White",
+    "cost": 4199,
+    "price": 5039
+  },
+  {
+    "product_key": "FT-311",
+    "description": "FarmTillers-JohnDeere-HeavyDuty-Orange",
+    "category": "FarmTillers",
+    "brand": "JohnDeere",
+    "duty_type": "HeavyDuty",
+    "color": "Orange",
+    "cost": 3401,
+    "price": 4149
+  },
+  {
+    "product_key": "HV-519",
+    "description": "Harvesters-NewHolland-HeavyDuty-RedWhite",
+    "category": "Harvesters",
+    "brand": "NewHolland",
+    "duty_type": "HeavyDuty",
+    "color": "RedWhite",
+    "cost": 3165,
+    "price": 3830
+  },
+  {
+    "product_key": "HV-520",
+    "description": "Harvesters-Rysca-LightDuty-Yellow",
+    "category": "Harvesters",
+    "brand": "Rysca",
+    "duty_type": "LightDuty",
+    "color": "Yellow",
+    "cost": 3057,
+    "price": 3271
+  },
+  {
+    "product_key": "HV-521",
+    "description": "Harvesters-JohnDeere-LightDuty-White",
+    "category": "Harvesters",
+    "brand": "JohnDeere",
+    "duty_type": "LightDuty",
+    "color": "White",
+    "cost": 3820,
+    "price": 5081
+  },
+  {
+    "product_key": "HV-522",
+    "description": "Harvesters-DavidBrown-HeavyDuty-RedWhite",
+    "category": "Harvesters",
+    "brand": "DavidBrown",
+    "duty_type": "HeavyDuty",
+    "color": "RedWhite",
+    "cost": 3568,
+    "price": 3853
+  },
+  {
+    "product_key": "HV-523",
+    "description": "Harvesters-Bamford-LightDuty-Black",
+    "category": "Harvesters",
+    "brand": "Bamford",
+    "duty_type": "LightDuty",
+    "color": "Black",
+    "cost": 3109,
+    "price": 4135
+  },
+  {
+    "product_key": "HV-524",
+    "description": "Harvesters-DeutzFahr-LightDuty-Black",
+    "category": "Harvesters",
+    "brand": "DeutzFahr",
+    "duty_type": "LightDuty",
+    "color": "Black",
+    "cost": 3056,
+    "price": 3881
+  },
+  {
+    "product_key": "HV-525",
+    "description": "Harvesters-MasseyFerguson-LightDuty-Yellow",
+    "category": "Harvesters",
+    "brand": "MasseyFerguson",
+    "duty_type": "LightDuty",
+    "color": "Yellow",
+    "cost": 2495,
+    "price": 3094
+  },
+  {
+    "product_key": "HV-526",
+    "description": "Harvesters-Oliver-LightDuty-YellowBlack",
+    "category": "Harvesters",
+    "brand": "Oliver",
+    "duty_type": "LightDuty",
+    "color": "YellowBlack",
+    "cost": 2467,
+    "price": 3281
+  },
+  {
+    "product_key": "HV-527",
+    "description": "Harvesters-Laverda-HeavyDuty-White",
+    "category": "Harvesters",
+    "brand": "Laverda",
+    "duty_type": "HeavyDuty",
+    "color": "White",
+    "cost": 2689,
+    "price": 3738
+  },
+  {
+    "product_key": "HV-528",
+    "description": "Harvesters-Cockshutt-Standard-Red",
+    "category": "Harvesters",
+    "brand": "Cockshutt",
+    "duty_type": "Standard",
+    "color": "Red",
+    "cost": 2389,
+    "price": 3082
+  },
+  {
+    "product_key": "HV-529",
+    "description": "Harvesters-Volvo-LightDuty-Black",
+    "category": "Harvesters",
+    "brand": "Volvo",
+    "duty_type": "LightDuty",
+    "color": "Black",
+    "cost": 2778,
+    "price": 3584
+  },
+  {
+    "product_key": "HV-530",
+    "description": "Harvesters-Ford-Standard-RedWhite",
+    "category": "Harvesters",
+    "brand": "Ford",
+    "duty_type": "Standard",
+    "color": "RedWhite",
+    "cost": 3623,
+    "price": 4855
+  },
+  {
+    "product_key": "IB-400",
+    "description": "IceBreakers-Snowcat-Standard-Green",
+    "category": "IceBreakers",
+    "brand": "Snowcat",
+    "duty_type": "Standard",
+    "color": "Green",
+    "cost": 2410,
+    "price": 3013
+  },
+  {
+    "product_key": "IB-401",
+    "description": "IceBreakers-Bobcat-Standard-Black",
+    "category": "IceBreakers",
+    "brand": "Bobcat",
+    "duty_type": "Standard",
+    "color": "Black",
+    "cost": 2356,
+    "price": 2497
+  },
+  {
+    "product_key": "IB-402",
+    "description": "IceBreakers-BIM-Standard-GreenWhite",
+    "category": "IceBreakers",
+    "brand": "BIM",
+    "duty_type": "Standard",
+    "color": "GreenWhite",
+    "cost": 3264,
+    "price": 3362
+  },
+  {
+    "product_key": "IB-403",
+    "description": "IceBreakers-SnoWay-LightDuty-Black",
+    "category": "IceBreakers",
+    "brand": "SnoWay",
+    "duty_type": "LightDuty",
+    "color": "Black",
+    "cost": 3022,
+    "price": 3657
+  },
+  {
+    "product_key": "IB-404",
+    "description": "IceBreakers-Leitner-HeavyDuty-RedWhite",
+    "category": "IceBreakers",
+    "brand": "Leitner",
+    "duty_type": "HeavyDuty",
+    "color": "RedWhite",
+    "cost": 3809,
+    "price": 4266
+  },
+  {
+    "product_key": "IB-405",
+    "description": "IceBreakers-Tacoma-HeavyDuty-GreenWhite",
+    "category": "IceBreakers",
+    "brand": "Tacoma",
+    "duty_type": "HeavyDuty",
+    "color": "GreenWhite",
+    "cost": 2554,
+    "price": 3218
+  },
+  {
+    "product_key": "IB-406",
+    "description": "IceBreakers-SnowMan-LightDuty-Yellow",
+    "category": "IceBreakers",
+    "brand": "SnowMan",
+    "duty_type": "LightDuty",
+    "color": "Yellow",
+    "cost": 2774,
+    "price": 3800
+  },
+  {
+    "product_key": "IB-407",
+    "description": "IceBreakers-Boss-HeavyDuty-Yellow",
+    "category": "IceBreakers",
+    "brand": "Boss",
+    "duty_type": "HeavyDuty",
+    "color": "Yellow",
+    "cost": 3232,
+    "price": 3394
+  },
+  {
+    "product_key": "IB-408",
+    "description": "IceBreakers-Western-LightDuty-GreenWhite",
+    "category": "IceBreakers",
+    "brand": "Western",
+    "duty_type": "LightDuty",
+    "color": "GreenWhite",
+    "cost": 2421,
+    "price": 2445
+  },
+  {
+    "product_key": "IB-409",
+    "description": "IceBreakers-Toyota-LightDuty-Black",
+    "category": "IceBreakers",
+    "brand": "Toyota",
+    "duty_type": "LightDuty",
+    "color": "Black",
+    "cost": 2239,
+    "price": 3045
+  },
+  {
+    "product_key": "IB-410",
+    "description": "IceBreakers-Ford-LightDuty-Green",
+    "category": "IceBreakers",
+    "brand": "Ford",
+    "duty_type": "LightDuty",
+    "color": "Green",
+    "cost": 3727,
+    "price": 4025
+  },
+  {
+    "product_key": "IB-411",
+    "description": "IceBreakers-Chevrolet-HeavyDuty-WhiteYellow",
+    "category": "IceBreakers",
+    "brand": "Chevrolet",
+    "duty_type": "HeavyDuty",
+    "color": "WhiteYellow",
+    "cost": 3600,
+    "price": 4932
+  },
+  {
+    "product_key": "LC-199",
+    "description": "Locomotives-Hillside-HeavyDuty-Green",
+    "category": "Locomotives",
+    "brand": "Hillside",
+    "duty_type": "HeavyDuty",
+    "color": "Green",
+    "cost": 10299,
+    "price": 10608
+  },
+  {
+    "product_key": "LC-200",
+    "description": "Locomotives-Fablok-LightDuty-WhiteYellow",
+    "category": "Locomotives",
+    "brand": "Fablok",
+    "duty_type": "LightDuty",
+    "color": "WhiteYellow",
+    "cost": 10616,
+    "price": 13695
+  },
+  {
+    "product_key": "LC-201",
+    "description": "Locomotives-Kolomensky-HeavyDuty-GreenWhite",
+    "category": "Locomotives",
+    "brand": "Kolomensky",
+    "duty_type": "HeavyDuty",
+    "color": "GreenWhite",
+    "cost": 11664,
+    "price": 12947
+  },
+  {
+    "product_key": "LC-202",
+    "description": "Locomotives-Easttown-Standard-WhiteYellow",
+    "category": "Locomotives",
+    "brand": "Easttown",
+    "duty_type": "Standard",
+    "color": "WhiteYellow",
+    "cost": 11288,
+    "price": 14674
+  },
+  {
+    "product_key": "LC-203",
+    "description": "Locomotives-Electroputere-Standard-Red",
+    "category": "Locomotives",
+    "brand": "Electroputere",
+    "duty_type": "Standard",
+    "color": "Red",
+    "cost": 12321,
+    "price": 13553
+  },
+  {
+    "product_key": "LC-204",
+    "description": "Locomotives-Hutt-LightDuty-Green",
+    "category": "Locomotives",
+    "brand": "Hutt",
+    "duty_type": "LightDuty",
+    "color": "Green",
+    "cost": 10531,
+    "price": 11900
+  },
+  {
+    "product_key": "LC-205",
+    "description": "Locomotives-Transwerk-HeavyDuty-Yellow",
+    "category": "Locomotives",
+    "brand": "Transwerk",
+    "duty_type": "HeavyDuty",
+    "color": "Yellow",
+    "cost": 10135,
+    "price": 13074
+  },
+  {
+    "product_key": "LC-206",
+    "description": "Locomotives-BMZ-LightDuty-White",
+    "category": "Locomotives",
+    "brand": "BMZ",
+    "duty_type": "LightDuty",
+    "color": "White",
+    "cost": 9494,
+    "price": 9969
+  },
+  {
+    "product_key": "LC-207",
+    "description": "Locomotives-Pafawag-Standard-RedWhite",
+    "category": "Locomotives",
+    "brand": "Pafawag",
+    "duty_type": "Standard",
+    "color": "RedWhite",
+    "cost": 11284,
+    "price": 12074
+  },
+  {
+    "product_key": "LC-208",
+    "description": "Locomotives-Talgo-HeavyDuty-YellowBlack",
+    "category": "Locomotives",
+    "brand": "Talgo",
+    "duty_type": "HeavyDuty",
+    "color": "YellowBlack",
+    "cost": 10100,
+    "price": 11009
+  },
+  {
+    "product_key": "LC-209",
+    "description": "Locomotives-Avokov-LightDuty-Green",
+    "category": "Locomotives",
+    "brand": "Avokov",
+    "duty_type": "LightDuty",
+    "color": "Green",
+    "cost": 9849,
+    "price": 12902
+  },
+  {
+    "product_key": "LC-210",
+    "description": "Locomotives-Scott-Standard-Black",
+    "category": "Locomotives",
+    "brand": "Scott",
+    "duty_type": "Standard",
+    "color": "Black",
+    "cost": 12080,
+    "price": 14375
+  },
+  {
+    "product_key": "MT-470",
+    "description": "MiningTrucks-Volvo-Standard-Red",
+    "category": "MiningTrucks",
+    "brand": "Volvo",
+    "duty_type": "Standard",
+    "color": "Red",
+    "cost": 5316,
+    "price": 6273
+  },
+  {
+    "product_key": "MT-471",
+    "description": "MiningTrucks-General-Standard-YellowBlack",
+    "category": "MiningTrucks",
+    "brand": "General",
+    "duty_type": "Standard",
+    "color": "YellowBlack",
+    "cost": 6129,
+    "price": 8274
+  },
+  {
+    "product_key": "MT-472",
+    "description": "MiningTrucks-Isuzu-HeavyDuty-Orange",
+    "category": "MiningTrucks",
+    "brand": "Isuzu",
+    "duty_type": "HeavyDuty",
+    "color": "Orange",
+    "cost": 4099,
+    "price": 4427
+  },
+  {
+    "product_key": "MT-473",
+    "description": "MiningTrucks-Kenworth-Standard-WhiteYellow",
+    "category": "MiningTrucks",
+    "brand": "Kenworth",
+    "duty_type": "Standard",
+    "color": "WhiteYellow",
+    "cost": 6833,
+    "price": 7243
+  },
+  {
+    "product_key": "MT-474",
+    "description": "MiningTrucks-Peterbilt-Standard-Yellow",
+    "category": "MiningTrucks",
+    "brand": "Peterbilt",
+    "duty_type": "Standard",
+    "color": "Yellow",
+    "cost": 4991,
+    "price": 6838
+  },
+  {
+    "product_key": "MT-475",
+    "description": "MiningTrucks-Ford-LightDuty-Yellow",
+    "category": "MiningTrucks",
+    "brand": "Ford",
+    "duty_type": "LightDuty",
+    "color": "Yellow",
+    "cost": 7553,
+    "price": 9366
+  },
+  {
+    "product_key": "MT-476",
+    "description": "MiningTrucks-Renault-LightDuty-Orange",
+    "category": "MiningTrucks",
+    "brand": "Renault",
+    "duty_type": "LightDuty",
+    "color": "Orange",
+    "cost": 4258,
+    "price": 5152
+  },
+  {
+    "product_key": "MT-477",
+    "description": "MiningTrucks-Caterpillar-HeavyDuty-Yellow",
+    "category": "MiningTrucks",
+    "brand": "Caterpillar",
+    "duty_type": "HeavyDuty",
+    "color": "Yellow",
+    "cost": 2974,
+    "price": 3985
+  },
+  {
+    "product_key": "MT-478",
+    "description": "MiningTrucks-Mack-LightDuty-Orange",
+    "category": "MiningTrucks",
+    "brand": "Mack",
+    "duty_type": "LightDuty",
+    "color": "Orange",
+    "cost": 9864,
+    "price": 12725
+  },
+  {
+    "product_key": "MT-479",
+    "description": "MiningTrucks-Nissan-LightDuty-RedWhite",
+    "category": "MiningTrucks",
+    "brand": "Nissan",
+    "duty_type": "LightDuty",
+    "color": "RedWhite",
+    "cost": 2375,
+    "price": 2898
+  },
+  {
+    "product_key": "MT-480",
+    "description": "MiningTrucks-Mercedes-LightDuty-Yellow",
+    "category": "MiningTrucks",
+    "brand": "Mercedes",
+    "duty_type": "LightDuty",
+    "color": "Yellow",
+    "cost": 6975,
+    "price": 7463
+  },
+  {
+    "product_key": "MT-481",
+    "description": "MiningTrucks-Chevrolet-LightDuty-YellowBlack",
+    "category": "MiningTrucks",
+    "brand": "Chevrolet",
+    "duty_type": "LightDuty",
+    "color": "YellowBlack",
+    "cost": 3228,
+    "price": 3874
+  },
+  {
+    "product_key": "OR-889",
+    "description": "OilRigs-Mollier-LightDuty-RedWhite",
+    "category": "OilRigs",
+    "brand": "Mollier",
+    "duty_type": "LightDuty",
+    "color": "RedWhite",
+    "cost": 28663,
+    "price": 37262
+  },
+  {
+    "product_key": "OR-890",
+    "description": "OilRigs-Perc-LightDuty-WhiteYellow",
+    "category": "OilRigs",
+    "brand": "Perc",
+    "duty_type": "LightDuty",
+    "color": "WhiteYellow",
+    "cost": 20881,
+    "price": 21925
+  },
+  {
+    "product_key": "OR-891",
+    "description": "OilRigs-Transfor-LightDuty-Orange",
+    "category": "OilRigs",
+    "brand": "Transfor",
+    "duty_type": "LightDuty",
+    "color": "Orange",
+    "cost": 24826,
+    "price": 25571
+  },
+  {
+    "product_key": "OR-892",
+    "description": "OilRigs-Mobius-HeavyDuty-RedWhite",
+    "category": "OilRigs",
+    "brand": "Mobius",
+    "duty_type": "HeavyDuty",
+    "color": "RedWhite",
+    "cost": 17363,
+    "price": 20488
+  },
+  {
+    "product_key": "OR-893",
+    "description": "OilRigs-Oakford-LightDuty-White",
+    "category": "OilRigs",
+    "brand": "Oakford",
+    "duty_type": "LightDuty",
+    "color": "White",
+    "cost": 23616,
+    "price": 26450
+  },
+  {
+    "product_key": "OR-894",
+    "description": "OilRigs-Radoil-Standard-Red",
+    "category": "OilRigs",
+    "brand": "Radoil",
+    "duty_type": "Standard",
+    "color": "Red",
+    "cost": 23037,
+    "price": 27414
+  },
+  {
+    "product_key": "OR-895",
+    "description": "OilRigs-AtlasCopco-Standard-Red",
+    "category": "OilRigs",
+    "brand": "AtlasCopco",
+    "duty_type": "Standard",
+    "color": "Red",
+    "cost": 32414,
+    "price": 44731
+  },
+  {
+    "product_key": "OR-896",
+    "description": "OilRigs-Dabuccino-HeavyDuty-Red",
+    "category": "OilRigs",
+    "brand": "Dabuccino",
+    "duty_type": "HeavyDuty",
+    "color": "Red",
+    "cost": 27103,
+    "price": 34963
+  },
+  {
+    "product_key": "OR-897",
+    "description": "OilRigs-Warco-LightDuty-Green",
+    "category": "OilRigs",
+    "brand": "Warco",
+    "duty_type": "LightDuty",
+    "color": "Green",
+    "cost": 23080,
+    "price": 23542
+  },
+  {
+    "product_key": "OR-898",
+    "description": "OilRigs-DGFritt-LightDuty-Black",
+    "category": "OilRigs",
+    "brand": "DGFritt",
+    "duty_type": "LightDuty",
+    "color": "Black",
+    "cost": 33029,
+    "price": 37323
+  },
+  {
+    "product_key": "OR-899",
+    "description": "OilRigs-Polycrest-LightDuty-Green",
+    "category": "OilRigs",
+    "brand": "Polycrest",
+    "duty_type": "LightDuty",
+    "color": "Green",
+    "cost": 23584,
+    "price": 29244
+  },
+  {
+    "product_key": "OR-900",
+    "description": "OilRigs-Zeeco-LightDuty-WhiteYellow",
+    "category": "OilRigs",
+    "brand": "Zeeco",
+    "duty_type": "LightDuty",
+    "color": "WhiteYellow",
+    "cost": 22290,
+    "price": 25856
+  },
+  {
+    "product_key": "RD-511",
+    "description": "RockDrillers-AtlasCopco-Standard-Yellow",
+    "category": "RockDrillers",
+    "brand": "AtlasCopco",
+    "duty_type": "Standard",
+    "color": "Yellow",
+    "cost": 11288,
+    "price": 15126
+  },
+  {
+    "product_key": "RD-512",
+    "description": "RockDrillers-IngersollRand-Standard-White",
+    "category": "RockDrillers",
+    "brand": "IngersollRand",
+    "duty_type": "Standard",
+    "color": "White",
+    "cost": 10088,
+    "price": 13821
+  },
+  {
+    "product_key": "RD-513",
+    "description": "RockDrillers-Sandvik-Standard-GreenWhite",
+    "category": "RockDrillers",
+    "brand": "Sandvik",
+    "duty_type": "Standard",
+    "color": "GreenWhite",
+    "cost": 11841,
+    "price": 12078
+  },
+  {
+    "product_key": "RD-514",
+    "description": "RockDrillers-Bessac-HeavyDuty-Yellow",
+    "category": "RockDrillers",
+    "brand": "Bessac",
+    "duty_type": "HeavyDuty",
+    "color": "Yellow",
+    "cost": 10312,
+    "price": 12271
+  },
+  {
+    "product_key": "RD-515",
+    "description": "RockDrillers-Tamrock-Standard-RedWhite",
+    "category": "RockDrillers",
+    "brand": "Tamrock",
+    "duty_type": "Standard",
+    "color": "RedWhite",
+    "cost": 10917,
+    "price": 11245
+  },
+  {
+    "product_key": "RD-516",
+    "description": "RockDrillers-Tranter-LightDuty-White",
+    "category": "RockDrillers",
+    "brand": "Tranter",
+    "duty_type": "LightDuty",
+    "color": "White",
+    "cost": 10672,
+    "price": 12593
+  },
+  {
+    "product_key": "RD-517",
+    "description": "RockDrillers-Caterpillar-LightDuty-WhiteYellow",
+    "category": "RockDrillers",
+    "brand": "Caterpillar",
+    "duty_type": "LightDuty",
+    "color": "WhiteYellow",
+    "cost": 11438,
+    "price": 12696
+  },
+  {
+    "product_key": "RD-518",
+    "description": "RockDrillers-Akkerman-LightDuty-GreenWhite",
+    "category": "RockDrillers",
+    "brand": "Akkerman",
+    "duty_type": "LightDuty",
+    "color": "GreenWhite",
+    "cost": 11705,
+    "price": 12407
+  },
+  {
+    "product_key": "RD-519",
+    "description": "RockDrillers-Robbins-LightDuty-Orange",
+    "category": "RockDrillers",
+    "brand": "Robbins",
+    "duty_type": "LightDuty",
+    "color": "Orange",
+    "cost": 10043,
+    "price": 13859
+  },
+  {
+    "product_key": "RD-520",
+    "description": "RockDrillers-Tungaloy-Standard-YellowBlack",
+    "category": "RockDrillers",
+    "brand": "Tungaloy",
+    "duty_type": "Standard",
+    "color": "YellowBlack",
+    "cost": 11257,
+    "price": 14972
+  },
+  {
+    "product_key": "RD-521",
+    "description": "RockDrillers-GHH-HeavyDuty-YellowBlack",
+    "category": "RockDrillers",
+    "brand": "GHH",
+    "duty_type": "HeavyDuty",
+    "color": "YellowBlack",
+    "cost": 10654,
+    "price": 14170
+  },
+  {
+    "product_key": "RD-522",
+    "description": "RockDrillers-Furukawa-HeavyDuty-Yellow",
+    "category": "RockDrillers",
+    "brand": "Furukawa",
+    "duty_type": "HeavyDuty",
+    "color": "Yellow",
+    "cost": 11871,
+    "price": 13296
+  },
+  {
+    "product_key": "RP-234",
+    "description": "RoadPavers-Terex-LightDuty-RedWhite",
+    "category": "RoadPavers",
+    "brand": "Terex",
+    "duty_type": "LightDuty",
+    "color": "RedWhite",
+    "cost": 7205,
+    "price": 9078
+  },
+  {
+    "product_key": "RP-235",
+    "description": "RoadPavers-Vogele-Standard-Red",
+    "category": "RoadPavers",
+    "brand": "Vogele",
+    "duty_type": "Standard",
+    "color": "Red",
+    "cost": 5643,
+    "price": 7449
+  },
+  {
+    "product_key": "RP-236",
+    "description": "RoadPavers-Caterpillar-Standard-Yellow",
+    "category": "RoadPavers",
+    "brand": "Caterpillar",
+    "duty_type": "Standard",
+    "color": "Yellow",
+    "cost": 6089,
+    "price": 8342
+  },
+  {
+    "product_key": "RP-237",
+    "description": "RoadPavers-Allatt-HeavyDuty-Orange",
+    "category": "RoadPavers",
+    "brand": "Allatt",
+    "duty_type": "HeavyDuty",
+    "color": "Orange",
+    "cost": 7539,
+    "price": 10102
+  },
+  {
+    "product_key": "RP-238",
+    "description": "RoadPavers-Volvo-HeavyDuty-GreenWhite",
+    "category": "RoadPavers",
+    "brand": "Volvo",
+    "duty_type": "HeavyDuty",
+    "color": "GreenWhite",
+    "cost": 7967,
+    "price": 9799
+  },
+  {
+    "product_key": "RP-239",
+    "description": "RoadPavers-Wirtgen-Standard-Orange",
+    "category": "RoadPavers",
+    "brand": "Wirtgen",
+    "duty_type": "Standard",
+    "color": "Orange",
+    "cost": 6320,
+    "price": 7205
+  },
+  {
+    "product_key": "RP-240",
+    "description": "RoadPavers-Niigata-HeavyDuty-Orange",
+    "category": "RoadPavers",
+    "brand": "Niigata",
+    "duty_type": "HeavyDuty",
+    "color": "Orange",
+    "cost": 6188,
+    "price": 8230
+  },
+  {
+    "product_key": "RP-241",
+    "description": "RoadPavers-BlawKnox-HeavyDuty-Black",
+    "category": "RoadPavers",
+    "brand": "BlawKnox",
+    "duty_type": "HeavyDuty",
+    "color": "Black",
+    "cost": 8098,
+    "price": 9718
+  },
+  {
+    "product_key": "RP-242",
+    "description": "RoadPavers-Neal-Standard-White",
+    "category": "RoadPavers",
+    "brand": "Neal",
+    "duty_type": "Standard",
+    "color": "White",
+    "cost": 7167,
+    "price": 9962
+  },
+  {
+    "product_key": "RP-243",
+    "description": "RoadPavers-Raygo-LightDuty-WhiteYellow",
+    "category": "RoadPavers",
+    "brand": "Raygo",
+    "duty_type": "LightDuty",
+    "color": "WhiteYellow",
+    "cost": 6618,
+    "price": 9265
+  },
+  {
+    "product_key": "RP-244",
+    "description": "RoadPavers-LiuGong-LightDuty-Yellow",
+    "category": "RoadPavers",
+    "brand": "LiuGong",
+    "duty_type": "LightDuty",
+    "color": "Yellow",
+    "cost": 8701,
+    "price": 11398
+  },
+  {
+    "product_key": "RP-245",
+    "description": "RoadPavers-Dynapac-Standard-Green",
+    "category": "RoadPavers",
+    "brand": "Dynapac",
+    "duty_type": "Standard",
+    "color": "Green",
+    "cost": 7496,
+    "price": 9070
+  },
+  {
+    "product_key": "TB-244",
+    "description": "TunnelBores-Tungaloy-LightDuty-WhiteYellow",
+    "category": "TunnelBores",
+    "brand": "Tungaloy",
+    "duty_type": "LightDuty",
+    "color": "WhiteYellow",
+    "cost": 1729,
+    "price": 2386
+  },
+  {
+    "product_key": "TB-245",
+    "description": "TunnelBores-BBM-HeavyDuty-Yellow",
+    "category": "TunnelBores",
+    "brand": "BBM",
+    "duty_type": "HeavyDuty",
+    "color": "Yellow",
+    "cost": 2050,
+    "price": 2378
+  },
+  {
+    "product_key": "TB-246",
+    "description": "TunnelBores-Robbins-Standard-Black",
+    "category": "TunnelBores",
+    "brand": "Robbins",
+    "duty_type": "Standard",
+    "color": "Black",
+    "cost": 2349,
+    "price": 3007
+  },
+  {
+    "product_key": "TB-247",
+    "description": "TunnelBores-Mincon-LightDuty-Yellow",
+    "category": "TunnelBores",
+    "brand": "Mincon",
+    "duty_type": "LightDuty",
+    "color": "Yellow",
+    "cost": 2184,
+    "price": 2992
+  },
+  {
+    "product_key": "TB-248",
+    "description": "TunnelBores-Akkerman-LightDuty-Orange",
+    "category": "TunnelBores",
+    "brand": "Akkerman",
+    "duty_type": "LightDuty",
+    "color": "Orange",
+    "cost": 2778,
+    "price": 3500
+  },
+  {
+    "product_key": "TB-249",
+    "description": "TunnelBores-Caterpillar-LightDuty-YellowBlack",
+    "category": "TunnelBores",
+    "brand": "Caterpillar",
+    "duty_type": "LightDuty",
+    "color": "YellowBlack",
+    "cost": 2235,
+    "price": 2459
+  },
+  {
+    "product_key": "TB-250",
+    "description": "TunnelBores-Herrenknecht-LightDuty-YellowBlack",
+    "category": "TunnelBores",
+    "brand": "Herrenknecht",
+    "duty_type": "LightDuty",
+    "color": "YellowBlack",
+    "cost": 2958,
+    "price": 3520
+  },
+  {
+    "product_key": "TB-251",
+    "description": "TunnelBores-TCI-HeavyDuty-WhiteYellow",
+    "category": "TunnelBores",
+    "brand": "TCI",
+    "duty_type": "HeavyDuty",
+    "color": "WhiteYellow",
+    "cost": 2453,
+    "price": 3361
+  },
+  {
+    "product_key": "TB-252",
+    "description": "TunnelBores-Cimolai-LightDuty-YellowBlack",
+    "category": "TunnelBores",
+    "brand": "Cimolai",
+    "duty_type": "LightDuty",
+    "color": "YellowBlack",
+    "cost": 1429,
+    "price": 1715
+  },
+  {
+    "product_key": "TB-253",
+    "description": "TunnelBores-Bessac-Standard-Green",
+    "category": "TunnelBores",
+    "brand": "Bessac",
+    "duty_type": "Standard",
+    "color": "Green",
+    "cost": 4800,
+    "price": 6509
+  },
+  {
+    "product_key": "TB-254",
+    "description": "TunnelBores-Ascom-LightDuty-Green",
+    "category": "TunnelBores",
+    "brand": "Ascom",
+    "duty_type": "LightDuty",
+    "color": "Green",
+    "cost": 1309,
+    "price": 1649
+  },
+  {
+    "product_key": "TB-255",
+    "description": "TunnelBores-Doosan-HeavyDuty-Green",
+    "category": "TunnelBores",
+    "brand": "Doosan",
+    "duty_type": "HeavyDuty",
+    "color": "Green",
+    "cost": 2242,
+    "price": 2533
+  },
+  {
+    "product_key": "TC-120",
+    "description": "Tractors-Mahindra-Standard-White",
+    "category": "Tractors",
+    "brand": "Mahindra",
+    "duty_type": "Standard",
+    "color": "White",
+    "cost": 4520,
+    "price": 5469
+  },
+  {
+    "product_key": "TC-121",
+    "description": "Tractors-Eicher-LightDuty-Black",
+    "category": "Tractors",
+    "brand": "Eicher",
+    "duty_type": "LightDuty",
+    "color": "Black",
+    "cost": 6474,
+    "price": 7963
+  },
+  {
+    "product_key": "TC-122",
+    "description": "Tractors-Mitsubishi-HeavyDuty-Yellow",
+    "category": "Tractors",
+    "brand": "Mitsubishi",
+    "duty_type": "HeavyDuty",
+    "color": "Yellow",
+    "cost": 8445,
+    "price": 9965
+  },
+  {
+    "product_key": "TC-123",
+    "description": "Tractors-NewHolland-Standard-RedWhite",
+    "category": "Tractors",
+    "brand": "NewHolland",
+    "duty_type": "Standard",
+    "color": "RedWhite",
+    "cost": 7039,
+    "price": 8095
+  },
+  {
+    "product_key": "TC-124",
+    "description": "Tractors-Belarus-LightDuty-GreenWhite",
+    "category": "Tractors",
+    "brand": "Belarus",
+    "duty_type": "LightDuty",
+    "color": "GreenWhite",
+    "cost": 7658,
+    "price": 9190
+  },
+  {
+    "product_key": "TC-125",
+    "description": "Tractors-Kubota-HeavyDuty-GreenWhite",
+    "category": "Tractors",
+    "brand": "Kubota",
+    "duty_type": "HeavyDuty",
+    "color": "GreenWhite",
+    "cost": 6720,
+    "price": 8400
+  },
+  {
+    "product_key": "TC-126",
+    "description": "Tractors-JohnDeere-LightDuty-Green",
+    "category": "Tractors",
+    "brand": "JohnDeere",
+    "duty_type": "LightDuty",
+    "color": "Green",
+    "cost": 6103,
+    "price": 8117
+  },
+  {
+    "product_key": "TC-127",
+    "description": "Tractors-International-HeavyDuty-Red",
+    "category": "Tractors",
+    "brand": "International",
+    "duty_type": "HeavyDuty",
+    "color": "Red",
+    "cost": 5933,
+    "price": 7594
+  },
+  {
+    "product_key": "TC-128",
+    "description": "Tractors-MasseyFerguson-HeavyDuty-White",
+    "category": "Tractors",
+    "brand": "MasseyFerguson",
+    "duty_type": "HeavyDuty",
+    "color": "White",
+    "cost": 8192,
+    "price": 10732
+  },
+  {
+    "product_key": "TC-129",
+    "description": "Tractors-Ford-LightDuty-White",
+    "category": "Tractors",
+    "brand": "Ford",
+    "duty_type": "LightDuty",
+    "color": "White",
+    "cost": 6879,
+    "price": 7154
+  },
+  {
+    "product_key": "TC-130",
+    "description": "Tractors-JCB-HeavyDuty-White",
+    "category": "Tractors",
+    "brand": "JCB",
+    "duty_type": "HeavyDuty",
+    "color": "White",
+    "cost": 6650,
+    "price": 8778
+  },
+  {
+    "product_key": "TC-131",
+    "description": "Tractors-KMZ-LightDuty-White",
+    "category": "Tractors",
+    "brand": "KMZ",
+    "duty_type": "LightDuty",
+    "color": "White",
+    "cost": 6233,
+    "price": 8539
+  },
+  {
+    "product_key": "TR-664",
+    "description": "Trenchers-Bobcat-Standard-White",
+    "category": "Trenchers",
+    "brand": "Bobcat",
+    "duty_type": "Standard",
+    "color": "White",
+    "cost": 3208,
+    "price": 3625
+  },
+  {
+    "product_key": "TR-665",
+    "description": "Trenchers-Zeppelin-Standard-RedWhite",
+    "category": "Trenchers",
+    "brand": "Zeppelin",
+    "duty_type": "Standard",
+    "color": "RedWhite",
+    "cost": 3291,
+    "price": 4607
+  },
+  {
+    "product_key": "TR-666",
+    "description": "Trenchers-Davis-Standard-Red",
+    "category": "Trenchers",
+    "brand": "Davis",
+    "duty_type": "Standard",
+    "color": "Red",
+    "cost": 3499,
+    "price": 3674
+  },
+  {
+    "product_key": "TR-667",
+    "description": "Trenchers-Caterpillar-Standard-GreenWhite",
+    "category": "Trenchers",
+    "brand": "Caterpillar",
+    "duty_type": "Standard",
+    "color": "GreenWhite",
+    "cost": 3031,
+    "price": 4213
+  },
+  {
+    "product_key": "TR-668",
+    "description": "Trenchers-Toro-LightDuty-Red",
+    "category": "Trenchers",
+    "brand": "Toro",
+    "duty_type": "LightDuty",
+    "color": "Red",
+    "cost": 3688,
+    "price": 5126
+  },
+  {
+    "product_key": "TR-669",
+    "description": "Trenchers-Astec-LightDuty-White",
+    "category": "Trenchers",
+    "brand": "Astec",
+    "duty_type": "LightDuty",
+    "color": "White",
+    "cost": 3771,
+    "price": 3846
+  },
+  {
+    "product_key": "TR-670",
+    "description": "Trenchers-DitchWitch-HeavyDuty-Green",
+    "category": "Trenchers",
+    "brand": "DitchWitch",
+    "duty_type": "HeavyDuty",
+    "color": "Green",
+    "cost": 3551,
+    "price": 3942
+  },
+  {
+    "product_key": "TR-671",
+    "description": "Trenchers-Liebherr-HeavyDuty-GreenWhite",
+    "category": "Trenchers",
+    "brand": "Liebherr",
+    "duty_type": "HeavyDuty",
+    "color": "GreenWhite",
+    "cost": 3534,
+    "price": 4453
+  },
+  {
+    "product_key": "TR-672",
+    "description": "Trenchers-Tesmec-Standard-Red",
+    "category": "Trenchers",
+    "brand": "Tesmec",
+    "duty_type": "Standard",
+    "color": "Red",
+    "cost": 2960,
+    "price": 3670
+  },
+  {
+    "product_key": "TR-673",
+    "description": "Trenchers-Wylie-LightDuty-Red",
+    "category": "Trenchers",
+    "brand": "Wylie",
+    "duty_type": "LightDuty",
+    "color": "Red",
+    "cost": 3647,
+    "price": 4194
+  },
+  {
+    "product_key": "TR-674",
+    "description": "Trenchers-Lehnhoff-LightDuty-GreenWhite",
+    "category": "Trenchers",
+    "brand": "Lehnhoff",
+    "duty_type": "LightDuty",
+    "color": "GreenWhite",
+    "cost": 3834,
+    "price": 4793
+  },
+  {
+    "product_key": "TR-675",
+    "description": "Trenchers-Trencor-HeavyDuty-Orange",
+    "category": "Trenchers",
+    "brand": "Trencor",
+    "duty_type": "HeavyDuty",
+    "color": "Orange",
+    "cost": 3399,
+    "price": 4453
+  },
+  {
+    "product_key": "WT-212",
+    "description": "WindTurbines-Siemens-HeavyDuty-Black",
+    "category": "WindTurbines",
+    "brand": "Siemens",
+    "duty_type": "HeavyDuty",
+    "color": "Black",
+    "cost": 7013,
+    "price": 8836
+  },
+  {
+    "product_key": "WT-213",
+    "description": "WindTurbines-Sinovel-HeavyDuty-YellowBlack",
+    "category": "WindTurbines",
+    "brand": "Sinovel",
+    "duty_type": "HeavyDuty",
+    "color": "YellowBlack",
+    "cost": 6515,
+    "price": 8339
+  },
+  {
+    "product_key": "WT-214",
+    "description": "WindTurbines-GE-Standard-White",
+    "category": "WindTurbines",
+    "brand": "GE",
+    "duty_type": "Standard",
+    "color": "White",
+    "cost": 6184,
+    "price": 6246
+  },
+  {
+    "product_key": "WT-215",
+    "description": "WindTurbines-Gamesa-HeavyDuty-Orange",
+    "category": "WindTurbines",
+    "brand": "Gamesa",
+    "duty_type": "HeavyDuty",
+    "color": "Orange",
+    "cost": 6281,
+    "price": 7851
+  },
+  {
+    "product_key": "WT-216",
+    "description": "WindTurbines-Vestas-Standard-WhiteYellow",
+    "category": "WindTurbines",
+    "brand": "Vestas",
+    "duty_type": "Standard",
+    "color": "WhiteYellow",
+    "cost": 6694,
+    "price": 6962
+  },
+  {
+    "product_key": "WT-217",
+    "description": "WindTurbines-Hanjin-Standard-Red",
+    "category": "WindTurbines",
+    "brand": "Hanjin",
+    "duty_type": "Standard",
+    "color": "Red",
+    "cost": 5398,
+    "price": 6748
+  },
+  {
+    "product_key": "WT-218",
+    "description": "WindTurbines-Goldwind-Standard-Rust",
+    "category": "WindTurbines",
+    "brand": "Goldwind",
+    "duty_type": "Standard",
+    "color": "Rust",
+    "cost": 4938,
+    "price": 6568
+  },
+  {
+    "product_key": "WT-219",
+    "description": "WindTurbines-Suzlon-Standard-Black",
+    "category": "WindTurbines",
+    "brand": "Suzlon",
+    "duty_type": "Standard",
+    "color": "Black",
+    "cost": 4958,
+    "price": 5702
+  },
+  {
+    "product_key": "WT-220",
+    "description": "WindTurbines-Guodian-Standard-Red",
+    "category": "WindTurbines",
+    "brand": "Guodian",
+    "duty_type": "Standard",
+    "color": "Red",
+    "cost": 7119,
+    "price": 9682
+  },
+  {
+    "product_key": "WT-221",
+    "description": "WindTurbines-Mitsubishi-HeavyDuty-WhiteYellow",
+    "category": "WindTurbines",
+    "brand": "Mitsubishi",
+    "duty_type": "HeavyDuty",
+    "color": "WhiteYellow",
+    "cost": 7623,
+    "price": 8462
+  },
+  {
+    "product_key": "WT-222",
+    "description": "WindTurbines-Enercon-HeavyDuty-YellowBlack",
+    "category": "WindTurbines",
+    "brand": "Enercon",
+    "duty_type": "HeavyDuty",
+    "color": "YellowBlack",
+    "cost": 5839,
+    "price": 7999
+  },
+  {
+    "product_key": "WT-223",
+    "description": "WindTurbines-MingYang-LightDuty-Black",
+    "category": "WindTurbines",
+    "brand": "MingYang",
+    "duty_type": "LightDuty",
+    "color": "Black",
+    "cost": 6486,
+    "price": 8756
+  }
+]

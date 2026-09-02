@@ -1,0 +1,2 @@
+# Data prep only. The API does not need pandas - keep the deploy image small.
+pandas>=2.2

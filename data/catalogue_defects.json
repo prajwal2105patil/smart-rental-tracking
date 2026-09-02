@@ -1,0 +1,54 @@
+{
+  "negative_margin": [
+    {
+      "invoice": "E1878895",
+      "product": "Skidsteer-Backhoe-loader-Standard-Orange",
+      "cost": 4545,
+      "price": 3545,
+      "margin": -1000,
+      "city": "Caracas"
+    },
+    {
+      "invoice": "E1878896",
+      "product": "Skidsteer-Backhoe-loader-Heavy-Red",
+      "cost": 6464,
+      "price": 4356,
+      "margin": -2108,
+      "city": "Guadalajara"
+    },
+    {
+      "invoice": "E1878897",
+      "product": "Skidsteer-Backhoe-loader-Heavy-Yellow",
+      "cost": 7845,
+      "price": 6545,
+      "margin": -1300,
+      "city": "Caracas"
+    }
+  ],
+  "duplicate_invoice_ids": 174,
+  "duplicate_invoice_examples": [
+    "E1109328",
+    "E1143255",
+    "E1167760",
+    "E1180948",
+    "E1205444",
+    "E1260098",
+    "E1299671",
+    "E1371298",
+    "E1410880",
+    "E1465526"
+  ],
+  "stray_year_rows": [
+    {
+      "invoice": "E1878901",
+      "date": "2013-01-01",
+      "product": "Tractors-International-HeavyDuty-Red"
+    },
+    {
+      "invoice": "E1878902",
+      "date": "2013-01-02",
+      "product": "Bulldozers-Caterpillar-LightDuty-RedWhite"
+    }
+  ],
+  "note": "Found by cross-field validation over the source catalogue. Price < Cost cannot be true for a sold unit; this is the same class of contradiction as rule R4 (operating_days > rental window)."
+}

@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# Secrets
+.env
+
+# The source catalogue is 160 MB and lives outside the repo.
+# data/catalogue_*.json are its committed, extracted outputs - keep those.
+hmd_python.csv
+data/raw/
+
+# Front end
+node_modules/
+dist/
+.vite/
+.env.local

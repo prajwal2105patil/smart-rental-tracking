@@ -1,0 +1,1691 @@
+[
+  {
+    "event_id": "EV00025",
+    "timestamp": "2025-01-01T09:00:00",
+    "equipment_id": "EQX1005",
+    "event_type": "CHECK_OUT",
+    "actor": "seed",
+    "site_id": "S006",
+    "notes": "Dispatched from yard"
+  },
+  {
+    "event_id": "EV00026",
+    "timestamp": "2025-01-01T09:00:00",
+    "equipment_id": "EQX1005",
+    "event_type": "ASSIGN",
+    "actor": "seed",
+    "site_id": "S006",
+    "operator_id": "OP301"
+  },
+  {
+    "event_id": "EV00027",
+    "timestamp": "2025-01-02T09:00:00",
+    "equipment_id": "EQX1005",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "8h engine / 0h idle per day"
+  },
+  {
+    "event_id": "EV00028",
+    "timestamp": "2025-01-09T09:00:00",
+    "equipment_id": "EQX1005",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "8h engine / 0h idle per day"
+  },
+  {
+    "event_id": "EV00029",
+    "timestamp": "2025-01-16T09:00:00",
+    "equipment_id": "EQX1005",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "8h engine / 0h idle per day"
+  },
+  {
+    "event_id": "EV00030",
+    "timestamp": "2025-01-23T09:00:00",
+    "equipment_id": "EQX1005",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "8h engine / 0h idle per day"
+  },
+  {
+    "event_id": "EV00031",
+    "timestamp": "2025-01-30T09:00:00",
+    "equipment_id": "EQX1005",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "8h engine / 0h idle per day"
+  },
+  {
+    "event_id": "EV00032",
+    "timestamp": "2025-01-31T09:00:00",
+    "equipment_id": "EQX1005",
+    "event_type": "CHECK_IN",
+    "actor": "seed",
+    "condition_grade": "B",
+    "notes": "Returned by customer"
+  },
+  {
+    "event_id": "EV00033",
+    "timestamp": "2025-01-31T09:00:00",
+    "equipment_id": "EQX1005",
+    "event_type": "CONDITION_LOG",
+    "actor": "seed",
+    "condition_grade": "B",
+    "notes": "Return condition B; 240h since last service"
+  },
+  {
+    "event_id": "EV00034",
+    "timestamp": "2025-01-31T09:00:00",
+    "equipment_id": "EQX1005",
+    "event_type": "RETURN_TO_YARD",
+    "actor": "seed",
+    "site_id": "IN489",
+    "notes": "Back at branch"
+  },
+  {
+    "event_id": "EV00010",
+    "timestamp": "2025-02-15T09:00:00",
+    "equipment_id": "EQX1003",
+    "event_type": "CHECK_OUT",
+    "actor": "seed",
+    "site_id": "S002",
+    "notes": "Dispatched from yard"
+  },
+  {
+    "event_id": "EV00011",
+    "timestamp": "2025-02-15T09:00:00",
+    "equipment_id": "EQX1003",
+    "event_type": "ASSIGN",
+    "actor": "seed",
+    "site_id": "S002",
+    "operator_id": "OP203"
+  },
+  {
+    "event_id": "EV00012",
+    "timestamp": "2025-02-15T09:00:00",
+    "equipment_id": "EQX1003",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "7.5h engine / 0.5h idle per day"
+  },
+  {
+    "event_id": "EV00013",
+    "timestamp": "2025-02-22T09:00:00",
+    "equipment_id": "EQX1003",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "7.5h engine / 0.5h idle per day"
+  },
+  {
+    "event_id": "EV00014",
+    "timestamp": "2025-03-01T09:00:00",
+    "equipment_id": "EQX1003",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "7.5h engine / 0.5h idle per day"
+  },
+  {
+    "event_id": "EV00015",
+    "timestamp": "2025-03-08T09:00:00",
+    "equipment_id": "EQX1003",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "7.5h engine / 0.5h idle per day"
+  },
+  {
+    "event_id": "EV00006",
+    "timestamp": "2025-03-10T09:00:00",
+    "equipment_id": "EQX1002",
+    "event_type": "CHECK_OUT",
+    "actor": "seed",
+    "site_id": null,
+    "notes": "Dispatched from yard"
+  },
+  {
+    "event_id": "EV00007",
+    "timestamp": "2025-03-11T09:00:00",
+    "equipment_id": "EQX1002",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "0h engine / 11h idle per day"
+  },
+  {
+    "event_id": "EV00016",
+    "timestamp": "2025-03-11T09:00:00",
+    "equipment_id": "EQX1003",
+    "event_type": "CHECK_IN",
+    "actor": "seed",
+    "condition_grade": "A",
+    "notes": "Returned by customer"
+  },
+  {
+    "event_id": "EV00017",
+    "timestamp": "2025-03-11T09:00:00",
+    "equipment_id": "EQX1003",
+    "event_type": "CONDITION_LOG",
+    "actor": "seed",
+    "condition_grade": "A",
+    "notes": "Return condition A; 187.5h since last service"
+  },
+  {
+    "event_id": "EV00018",
+    "timestamp": "2025-03-11T09:00:00",
+    "equipment_id": "EQX1003",
+    "event_type": "RETURN_TO_YARD",
+    "actor": "seed",
+    "site_id": "IN487",
+    "notes": "Back at branch"
+  },
+  {
+    "event_id": "EV00190",
+    "timestamp": "2025-03-14T09:00:00",
+    "equipment_id": "EQX1027",
+    "event_type": "CHECK_OUT",
+    "actor": "seed",
+    "site_id": "S002",
+    "notes": "Dispatched from yard"
+  },
+  {
+    "event_id": "EV00191",
+    "timestamp": "2025-03-14T09:00:00",
+    "equipment_id": "EQX1027",
+    "event_type": "ASSIGN",
+    "actor": "seed",
+    "site_id": "S002",
+    "operator_id": "OP419"
+  },
+  {
+    "event_id": "EV00192",
+    "timestamp": "2025-03-14T09:00:00",
+    "equipment_id": "EQX1027",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "5.8h engine / 0.5h idle per day"
+  },
+  {
+    "event_id": "EV00066",
+    "timestamp": "2025-03-15T09:00:00",
+    "equipment_id": "EQX1011",
+    "event_type": "CHECK_OUT",
+    "actor": "seed",
+    "site_id": "S004",
+    "notes": "Dispatched from yard"
+  },
+  {
+    "event_id": "EV00067",
+    "timestamp": "2025-03-15T09:00:00",
+    "equipment_id": "EQX1011",
+    "event_type": "ASSIGN",
+    "actor": "seed",
+    "site_id": "S004",
+    "operator_id": "OP403"
+  },
+  {
+    "event_id": "EV00068",
+    "timestamp": "2025-03-15T09:00:00",
+    "equipment_id": "EQX1011",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "6.8h engine / 1.9h idle per day"
+  },
+  {
+    "event_id": "EV00008",
+    "timestamp": "2025-03-18T09:00:00",
+    "equipment_id": "EQX1002",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "0h engine / 11h idle per day"
+  },
+  {
+    "event_id": "EV00144",
+    "timestamp": "2025-03-18T09:00:00",
+    "equipment_id": "EQX1021",
+    "event_type": "CHECK_OUT",
+    "actor": "seed",
+    "site_id": "S002",
+    "notes": "Dispatched from yard"
+  },
+  {
+    "event_id": "EV00145",
+    "timestamp": "2025-03-18T09:00:00",
+    "equipment_id": "EQX1021",
+    "event_type": "ASSIGN",
+    "actor": "seed",
+    "site_id": "S002",
+    "operator_id": "OP413"
+  },
+  {
+    "event_id": "EV00146",
+    "timestamp": "2025-03-18T09:00:00",
+    "equipment_id": "EQX1021",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "5.7h engine / 0.5h idle per day"
+  },
+  {
+    "event_id": "EV00043",
+    "timestamp": "2025-03-20T09:00:00",
+    "equipment_id": "EQX1007",
+    "event_type": "CHECK_OUT",
+    "actor": "seed",
+    "site_id": null,
+    "notes": "Dispatched from yard"
+  },
+  {
+    "event_id": "EV00044",
+    "timestamp": "2025-03-21T09:00:00",
+    "equipment_id": "EQX1007",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "0h engine / 12h idle per day"
+  },
+  {
+    "event_id": "EV00096",
+    "timestamp": "2025-03-21T09:00:00",
+    "equipment_id": "EQX1015",
+    "event_type": "CHECK_OUT",
+    "actor": "seed",
+    "site_id": "S002",
+    "notes": "Dispatched from yard"
+  },
+  {
+    "event_id": "EV00097",
+    "timestamp": "2025-03-21T09:00:00",
+    "equipment_id": "EQX1015",
+    "event_type": "ASSIGN",
+    "actor": "seed",
+    "site_id": "S002",
+    "operator_id": "OP407"
+  },
+  {
+    "event_id": "EV00098",
+    "timestamp": "2025-03-21T09:00:00",
+    "equipment_id": "EQX1015",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "6.6h engine / 2.1h idle per day"
+  },
+  {
+    "event_id": "EV00114",
+    "timestamp": "2025-03-21T09:00:00",
+    "equipment_id": "EQX1017",
+    "event_type": "CHECK_OUT",
+    "actor": "seed",
+    "site_id": "S004",
+    "notes": "Dispatched from yard"
+  },
+  {
+    "event_id": "EV00115",
+    "timestamp": "2025-03-21T09:00:00",
+    "equipment_id": "EQX1017",
+    "event_type": "ASSIGN",
+    "actor": "seed",
+    "site_id": "S004",
+    "operator_id": "OP409"
+  },
+  {
+    "event_id": "EV00116",
+    "timestamp": "2025-03-21T09:00:00",
+    "equipment_id": "EQX1017",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "8.0h engine / 2.6h idle per day"
+  },
+  {
+    "event_id": "EV00193",
+    "timestamp": "2025-03-21T09:00:00",
+    "equipment_id": "EQX1027",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "5.8h engine / 0.5h idle per day"
+  },
+  {
+    "event_id": "EV00069",
+    "timestamp": "2025-03-22T09:00:00",
+    "equipment_id": "EQX1011",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "6.8h engine / 1.9h idle per day"
+  },
+  {
+    "event_id": "EV00087",
+    "timestamp": "2025-03-23T09:00:00",
+    "equipment_id": "EQX1014",
+    "event_type": "CHECK_OUT",
+    "actor": "seed",
+    "site_id": "S001",
+    "notes": "Dispatched from yard"
+  },
+  {
+    "event_id": "EV00088",
+    "timestamp": "2025-03-23T09:00:00",
+    "equipment_id": "EQX1014",
+    "event_type": "ASSIGN",
+    "actor": "seed",
+    "site_id": "S001",
+    "operator_id": "OP406"
+  },
+  {
+    "event_id": "EV00089",
+    "timestamp": "2025-03-23T09:00:00",
+    "equipment_id": "EQX1014",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "8.4h engine / 2.1h idle per day"
+  },
+  {
+    "event_id": "EV00009",
+    "timestamp": "2025-03-25T09:00:00",
+    "equipment_id": "EQX1002",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "0h engine / 11h idle per day"
+  },
+  {
+    "event_id": "EV00147",
+    "timestamp": "2025-03-25T09:00:00",
+    "equipment_id": "EQX1021",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "5.7h engine / 0.5h idle per day"
+  },
+  {
+    "event_id": "EV00174",
+    "timestamp": "2025-03-25T09:00:00",
+    "equipment_id": "EQX1025",
+    "event_type": "CHECK_OUT",
+    "actor": "seed",
+    "site_id": "S006",
+    "notes": "Dispatched from yard"
+  },
+  {
+    "event_id": "EV00175",
+    "timestamp": "2025-03-25T09:00:00",
+    "equipment_id": "EQX1025",
+    "event_type": "ASSIGN",
+    "actor": "seed",
+    "site_id": "S006",
+    "operator_id": "OP417"
+  },
+  {
+    "event_id": "EV00176",
+    "timestamp": "2025-03-25T09:00:00",
+    "equipment_id": "EQX1025",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "6.0h engine / 1.9h idle per day"
+  },
+  {
+    "event_id": "EV00045",
+    "timestamp": "2025-03-28T09:00:00",
+    "equipment_id": "EQX1007",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "0h engine / 12h idle per day"
+  },
+  {
+    "event_id": "EV00070",
+    "timestamp": "2025-03-28T09:00:00",
+    "equipment_id": "EQX1011",
+    "event_type": "CHECK_IN",
+    "actor": "seed",
+    "condition_grade": "B",
+    "notes": "Returned by customer"
+  },
+  {
+    "event_id": "EV00071",
+    "timestamp": "2025-03-28T09:00:00",
+    "equipment_id": "EQX1011",
+    "event_type": "CONDITION_LOG",
+    "actor": "seed",
+    "condition_grade": "B",
+    "notes": "Return condition B; 135.2h since last service"
+  },
+  {
+    "event_id": "EV00072",
+    "timestamp": "2025-03-28T09:00:00",
+    "equipment_id": "EQX1011",
+    "event_type": "RETURN_TO_YARD",
+    "actor": "seed",
+    "site_id": "IN487",
+    "notes": "Back at branch"
+  },
+  {
+    "event_id": "EV00099",
+    "timestamp": "2025-03-28T09:00:00",
+    "equipment_id": "EQX1015",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "6.6h engine / 2.1h idle per day"
+  },
+  {
+    "event_id": "EV00117",
+    "timestamp": "2025-03-28T09:00:00",
+    "equipment_id": "EQX1017",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "8.0h engine / 2.6h idle per day"
+  },
+  {
+    "event_id": "EV00132",
+    "timestamp": "2025-03-28T09:00:00",
+    "equipment_id": "EQX1019",
+    "event_type": "CHECK_OUT",
+    "actor": "seed",
+    "site_id": "S006",
+    "notes": "Dispatched from yard"
+  },
+  {
+    "event_id": "EV00133",
+    "timestamp": "2025-03-28T09:00:00",
+    "equipment_id": "EQX1019",
+    "event_type": "ASSIGN",
+    "actor": "seed",
+    "site_id": "S006",
+    "operator_id": "OP411"
+  },
+  {
+    "event_id": "EV00134",
+    "timestamp": "2025-03-28T09:00:00",
+    "equipment_id": "EQX1019",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "6.6h engine / 0.4h idle per day"
+  },
+  {
+    "event_id": "EV00181",
+    "timestamp": "2025-03-28T09:00:00",
+    "equipment_id": "EQX1026",
+    "event_type": "CHECK_OUT",
+    "actor": "seed",
+    "site_id": "S001",
+    "notes": "Dispatched from yard"
+  },
+  {
+    "event_id": "EV00182",
+    "timestamp": "2025-03-28T09:00:00",
+    "equipment_id": "EQX1026",
+    "event_type": "ASSIGN",
+    "actor": "seed",
+    "site_id": "S001",
+    "operator_id": "OP418"
+  },
+  {
+    "event_id": "EV00183",
+    "timestamp": "2025-03-28T09:00:00",
+    "equipment_id": "EQX1026",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "7.3h engine / 1.6h idle per day"
+  },
+  {
+    "event_id": "EV00194",
+    "timestamp": "2025-03-28T09:00:00",
+    "equipment_id": "EQX1027",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "5.8h engine / 0.5h idle per day"
+  },
+  {
+    "event_id": "EV00124",
+    "timestamp": "2025-03-29T09:00:00",
+    "equipment_id": "EQX1018",
+    "event_type": "CHECK_OUT",
+    "actor": "seed",
+    "site_id": "S005",
+    "notes": "Dispatched from yard"
+  },
+  {
+    "event_id": "EV00125",
+    "timestamp": "2025-03-29T09:00:00",
+    "equipment_id": "EQX1018",
+    "event_type": "ASSIGN",
+    "actor": "seed",
+    "site_id": "S005",
+    "operator_id": "OP410"
+  },
+  {
+    "event_id": "EV00126",
+    "timestamp": "2025-03-29T09:00:00",
+    "equipment_id": "EQX1018",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "7.6h engine / 2.7h idle per day"
+  },
+  {
+    "event_id": "EV00090",
+    "timestamp": "2025-03-30T09:00:00",
+    "equipment_id": "EQX1014",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "8.4h engine / 2.1h idle per day"
+  },
+  {
+    "event_id": "EV00001",
+    "timestamp": "2025-04-01T09:00:00",
+    "equipment_id": "EQX1001",
+    "event_type": "CHECK_OUT",
+    "actor": "seed",
+    "site_id": "S003",
+    "notes": "Dispatched from yard"
+  },
+  {
+    "event_id": "EV00002",
+    "timestamp": "2025-04-01T09:00:00",
+    "equipment_id": "EQX1001",
+    "event_type": "ASSIGN",
+    "actor": "seed",
+    "site_id": "S003",
+    "operator_id": "OP101"
+  },
+  {
+    "event_id": "EV00148",
+    "timestamp": "2025-04-01T09:00:00",
+    "equipment_id": "EQX1021",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "5.7h engine / 0.5h idle per day"
+  },
+  {
+    "event_id": "EV00177",
+    "timestamp": "2025-04-01T09:00:00",
+    "equipment_id": "EQX1025",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "6.0h engine / 1.9h idle per day"
+  },
+  {
+    "event_id": "EV00003",
+    "timestamp": "2025-04-02T09:00:00",
+    "equipment_id": "EQX1001",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "1.5h engine / 10h idle per day"
+  },
+  {
+    "event_id": "EV00100",
+    "timestamp": "2025-04-04T09:00:00",
+    "equipment_id": "EQX1015",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "6.6h engine / 2.1h idle per day"
+  },
+  {
+    "event_id": "EV00118",
+    "timestamp": "2025-04-04T09:00:00",
+    "equipment_id": "EQX1017",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "8.0h engine / 2.6h idle per day"
+  },
+  {
+    "event_id": "EV00135",
+    "timestamp": "2025-04-04T09:00:00",
+    "equipment_id": "EQX1019",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "6.6h engine / 0.4h idle per day"
+  },
+  {
+    "event_id": "EV00178",
+    "timestamp": "2025-04-04T09:00:00",
+    "equipment_id": "EQX1025",
+    "event_type": "CHECK_IN",
+    "actor": "seed",
+    "condition_grade": "C",
+    "notes": "Returned by customer"
+  },
+  {
+    "event_id": "EV00179",
+    "timestamp": "2025-04-04T09:00:00",
+    "equipment_id": "EQX1025",
+    "event_type": "CONDITION_LOG",
+    "actor": "seed",
+    "condition_grade": "C",
+    "notes": "Return condition C; 83.5h since last service"
+  },
+  {
+    "event_id": "EV00180",
+    "timestamp": "2025-04-04T09:00:00",
+    "equipment_id": "EQX1025",
+    "event_type": "RETURN_TO_YARD",
+    "actor": "seed",
+    "site_id": "IN489",
+    "notes": "Back at branch"
+  },
+  {
+    "event_id": "EV00184",
+    "timestamp": "2025-04-04T09:00:00",
+    "equipment_id": "EQX1026",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "7.3h engine / 1.6h idle per day"
+  },
+  {
+    "event_id": "EV00195",
+    "timestamp": "2025-04-04T09:00:00",
+    "equipment_id": "EQX1027",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "5.8h engine / 0.5h idle per day"
+  },
+  {
+    "event_id": "EV00035",
+    "timestamp": "2025-04-05T09:00:00",
+    "equipment_id": "EQX1006",
+    "event_type": "CHECK_OUT",
+    "actor": "seed",
+    "site_id": "S001",
+    "notes": "Dispatched from yard"
+  },
+  {
+    "event_id": "EV00036",
+    "timestamp": "2025-04-05T09:00:00",
+    "equipment_id": "EQX1006",
+    "event_type": "ASSIGN",
+    "actor": "seed",
+    "site_id": "S001",
+    "operator_id": "OP114"
+  },
+  {
+    "event_id": "EV00052",
+    "timestamp": "2025-04-05T09:00:00",
+    "equipment_id": "EQX1009",
+    "event_type": "CHECK_OUT",
+    "actor": "seed",
+    "site_id": "S002",
+    "notes": "Dispatched from yard"
+  },
+  {
+    "event_id": "EV00053",
+    "timestamp": "2025-04-05T09:00:00",
+    "equipment_id": "EQX1009",
+    "event_type": "ASSIGN",
+    "actor": "seed",
+    "site_id": "S002",
+    "operator_id": "OP401"
+  },
+  {
+    "event_id": "EV00054",
+    "timestamp": "2025-04-05T09:00:00",
+    "equipment_id": "EQX1009",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "7.5h engine / 0.7h idle per day"
+  },
+  {
+    "event_id": "EV00127",
+    "timestamp": "2025-04-05T09:00:00",
+    "equipment_id": "EQX1018",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "7.6h engine / 2.7h idle per day"
+  },
+  {
+    "event_id": "EV00149",
+    "timestamp": "2025-04-05T09:00:00",
+    "equipment_id": "EQX1021",
+    "event_type": "CHECK_IN",
+    "actor": "seed",
+    "condition_grade": "A",
+    "notes": "Returned by customer"
+  },
+  {
+    "event_id": "EV00150",
+    "timestamp": "2025-04-05T09:00:00",
+    "equipment_id": "EQX1021",
+    "event_type": "CONDITION_LOG",
+    "actor": "seed",
+    "condition_grade": "A",
+    "notes": "Return condition A; 55.1h since last service"
+  },
+  {
+    "event_id": "EV00151",
+    "timestamp": "2025-04-05T09:00:00",
+    "equipment_id": "EQX1021",
+    "event_type": "RETURN_TO_YARD",
+    "actor": "seed",
+    "site_id": "IN487",
+    "notes": "Back at branch"
+  },
+  {
+    "event_id": "EV00160",
+    "timestamp": "2025-04-05T09:00:00",
+    "equipment_id": "EQX1023",
+    "event_type": "CHECK_OUT",
+    "actor": "seed",
+    "site_id": "S004",
+    "notes": "Dispatched from yard"
+  },
+  {
+    "event_id": "EV00161",
+    "timestamp": "2025-04-05T09:00:00",
+    "equipment_id": "EQX1023",
+    "event_type": "ASSIGN",
+    "actor": "seed",
+    "site_id": "S004",
+    "operator_id": "OP415"
+  },
+  {
+    "event_id": "EV00162",
+    "timestamp": "2025-04-05T09:00:00",
+    "equipment_id": "EQX1023",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "7.7h engine / 1.5h idle per day"
+  },
+  {
+    "event_id": "EV00037",
+    "timestamp": "2025-04-06T09:00:00",
+    "equipment_id": "EQX1006",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "3h engine / 6h idle per day"
+  },
+  {
+    "event_id": "EV00091",
+    "timestamp": "2025-04-06T09:00:00",
+    "equipment_id": "EQX1014",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "8.4h engine / 2.1h idle per day"
+  },
+  {
+    "event_id": "EV00106",
+    "timestamp": "2025-04-08T09:00:00",
+    "equipment_id": "EQX1016",
+    "event_type": "CHECK_OUT",
+    "actor": "seed",
+    "site_id": "S003",
+    "notes": "Dispatched from yard"
+  },
+  {
+    "event_id": "EV00107",
+    "timestamp": "2025-04-08T09:00:00",
+    "equipment_id": "EQX1016",
+    "event_type": "ASSIGN",
+    "actor": "seed",
+    "site_id": "S003",
+    "operator_id": "OP408"
+  },
+  {
+    "event_id": "EV00108",
+    "timestamp": "2025-04-08T09:00:00",
+    "equipment_id": "EQX1016",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "8.5h engine / 0.9h idle per day"
+  },
+  {
+    "event_id": "EV00004",
+    "timestamp": "2025-04-09T09:00:00",
+    "equipment_id": "EQX1001",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "1.5h engine / 10h idle per day"
+  },
+  {
+    "event_id": "EV00073",
+    "timestamp": "2025-04-11T09:00:00",
+    "equipment_id": "EQX1012",
+    "event_type": "CHECK_OUT",
+    "actor": "seed",
+    "site_id": "S005",
+    "notes": "Dispatched from yard"
+  },
+  {
+    "event_id": "EV00074",
+    "timestamp": "2025-04-11T09:00:00",
+    "equipment_id": "EQX1012",
+    "event_type": "ASSIGN",
+    "actor": "seed",
+    "site_id": "S005",
+    "operator_id": "OP404"
+  },
+  {
+    "event_id": "EV00075",
+    "timestamp": "2025-04-11T09:00:00",
+    "equipment_id": "EQX1012",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "6.5h engine / 2.1h idle per day"
+  },
+  {
+    "event_id": "EV00101",
+    "timestamp": "2025-04-11T09:00:00",
+    "equipment_id": "EQX1015",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "6.6h engine / 2.1h idle per day"
+  },
+  {
+    "event_id": "EV00119",
+    "timestamp": "2025-04-11T09:00:00",
+    "equipment_id": "EQX1017",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "8.0h engine / 2.6h idle per day"
+  },
+  {
+    "event_id": "EV00136",
+    "timestamp": "2025-04-11T09:00:00",
+    "equipment_id": "EQX1019",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "6.6h engine / 0.4h idle per day"
+  },
+  {
+    "event_id": "EV00185",
+    "timestamp": "2025-04-11T09:00:00",
+    "equipment_id": "EQX1026",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "7.3h engine / 1.6h idle per day"
+  },
+  {
+    "event_id": "EV00196",
+    "timestamp": "2025-04-11T09:00:00",
+    "equipment_id": "EQX1027",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "5.8h engine / 0.5h idle per day"
+  },
+  {
+    "event_id": "EV00197",
+    "timestamp": "2025-04-11T09:00:00",
+    "equipment_id": "EQX1027",
+    "event_type": "CHECK_IN",
+    "actor": "seed",
+    "condition_grade": "A",
+    "notes": "Returned by customer"
+  },
+  {
+    "event_id": "EV00198",
+    "timestamp": "2025-04-11T09:00:00",
+    "equipment_id": "EQX1027",
+    "event_type": "CONDITION_LOG",
+    "actor": "seed",
+    "condition_grade": "A",
+    "notes": "Return condition A; 76.1h since last service"
+  },
+  {
+    "event_id": "EV00199",
+    "timestamp": "2025-04-11T09:00:00",
+    "equipment_id": "EQX1027",
+    "event_type": "RETURN_TO_YARD",
+    "actor": "seed",
+    "site_id": "IN487",
+    "notes": "Back at branch"
+  },
+  {
+    "event_id": "EV00055",
+    "timestamp": "2025-04-12T09:00:00",
+    "equipment_id": "EQX1009",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "7.5h engine / 0.7h idle per day"
+  },
+  {
+    "event_id": "EV00128",
+    "timestamp": "2025-04-12T09:00:00",
+    "equipment_id": "EQX1018",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "7.6h engine / 2.7h idle per day"
+  },
+  {
+    "event_id": "EV00137",
+    "timestamp": "2025-04-12T09:00:00",
+    "equipment_id": "EQX1019",
+    "event_type": "CHECK_IN",
+    "actor": "seed",
+    "condition_grade": "C",
+    "notes": "Returned by customer"
+  },
+  {
+    "event_id": "EV00138",
+    "timestamp": "2025-04-12T09:00:00",
+    "equipment_id": "EQX1019",
+    "event_type": "CONDITION_LOG",
+    "actor": "seed",
+    "condition_grade": "C",
+    "notes": "Return condition C; 133.0h since last service"
+  },
+  {
+    "event_id": "EV00139",
+    "timestamp": "2025-04-12T09:00:00",
+    "equipment_id": "EQX1019",
+    "event_type": "RETURN_TO_YARD",
+    "actor": "seed",
+    "site_id": "IN489",
+    "notes": "Back at branch"
+  },
+  {
+    "event_id": "EV00163",
+    "timestamp": "2025-04-12T09:00:00",
+    "equipment_id": "EQX1023",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "7.7h engine / 1.5h idle per day"
+  },
+  {
+    "event_id": "EV00038",
+    "timestamp": "2025-04-13T09:00:00",
+    "equipment_id": "EQX1006",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "3h engine / 6h idle per day"
+  },
+  {
+    "event_id": "EV00092",
+    "timestamp": "2025-04-13T09:00:00",
+    "equipment_id": "EQX1014",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "8.4h engine / 2.1h idle per day"
+  },
+  {
+    "event_id": "EV00129",
+    "timestamp": "2025-04-13T09:00:00",
+    "equipment_id": "EQX1018",
+    "event_type": "CHECK_IN",
+    "actor": "seed",
+    "condition_grade": "B",
+    "notes": "Returned by customer"
+  },
+  {
+    "event_id": "EV00130",
+    "timestamp": "2025-04-13T09:00:00",
+    "equipment_id": "EQX1018",
+    "event_type": "CONDITION_LOG",
+    "actor": "seed",
+    "condition_grade": "B",
+    "notes": "Return condition B; 47.0h since last service"
+  },
+  {
+    "event_id": "EV00131",
+    "timestamp": "2025-04-13T09:00:00",
+    "equipment_id": "EQX1018",
+    "event_type": "RETURN_TO_YARD",
+    "actor": "seed",
+    "site_id": "IN488",
+    "notes": "Back at branch"
+  },
+  {
+    "event_id": "EV00109",
+    "timestamp": "2025-04-15T09:00:00",
+    "equipment_id": "EQX1016",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "8.5h engine / 0.9h idle per day"
+  },
+  {
+    "event_id": "EV00005",
+    "timestamp": "2025-04-16T09:00:00",
+    "equipment_id": "EQX1001",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "1.5h engine / 10h idle per day"
+  },
+  {
+    "event_id": "EV00021",
+    "timestamp": "2025-04-18T09:00:00",
+    "equipment_id": "EQX1004",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "2h engine / 9h idle per day"
+  },
+  {
+    "event_id": "EV00046",
+    "timestamp": "2025-04-18T09:00:00",
+    "equipment_id": "EQX1008",
+    "event_type": "CHECK_OUT",
+    "actor": "seed",
+    "site_id": "S001",
+    "notes": "Dispatched from yard"
+  },
+  {
+    "event_id": "EV00047",
+    "timestamp": "2025-04-18T09:00:00",
+    "equipment_id": "EQX1008",
+    "event_type": "ASSIGN",
+    "actor": "seed",
+    "site_id": "S001",
+    "operator_id": "OP400"
+  },
+  {
+    "event_id": "EV00048",
+    "timestamp": "2025-04-18T09:00:00",
+    "equipment_id": "EQX1008",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "7.4h engine / 2.8h idle per day"
+  },
+  {
+    "event_id": "EV00076",
+    "timestamp": "2025-04-18T09:00:00",
+    "equipment_id": "EQX1012",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "6.5h engine / 2.1h idle per day"
+  },
+  {
+    "event_id": "EV00102",
+    "timestamp": "2025-04-18T09:00:00",
+    "equipment_id": "EQX1015",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "6.6h engine / 2.1h idle per day"
+  },
+  {
+    "event_id": "EV00120",
+    "timestamp": "2025-04-18T09:00:00",
+    "equipment_id": "EQX1017",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "8.0h engine / 2.6h idle per day"
+  },
+  {
+    "event_id": "EV00186",
+    "timestamp": "2025-04-18T09:00:00",
+    "equipment_id": "EQX1026",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "7.3h engine / 1.6h idle per day"
+  },
+  {
+    "event_id": "EV00056",
+    "timestamp": "2025-04-19T09:00:00",
+    "equipment_id": "EQX1009",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "7.5h engine / 0.7h idle per day"
+  },
+  {
+    "event_id": "EV00093",
+    "timestamp": "2025-04-19T09:00:00",
+    "equipment_id": "EQX1014",
+    "event_type": "CHECK_IN",
+    "actor": "seed",
+    "condition_grade": "A",
+    "notes": "Returned by customer"
+  },
+  {
+    "event_id": "EV00094",
+    "timestamp": "2025-04-19T09:00:00",
+    "equipment_id": "EQX1014",
+    "event_type": "CONDITION_LOG",
+    "actor": "seed",
+    "condition_grade": "A",
+    "notes": "Return condition A; 166.1h since last service"
+  },
+  {
+    "event_id": "EV00095",
+    "timestamp": "2025-04-19T09:00:00",
+    "equipment_id": "EQX1014",
+    "event_type": "RETURN_TO_YARD",
+    "actor": "seed",
+    "site_id": "IN288",
+    "notes": "Back at branch"
+  },
+  {
+    "event_id": "EV00164",
+    "timestamp": "2025-04-19T09:00:00",
+    "equipment_id": "EQX1023",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "7.7h engine / 1.5h idle per day"
+  },
+  {
+    "event_id": "EV00039",
+    "timestamp": "2025-04-20T09:00:00",
+    "equipment_id": "EQX1006",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "3h engine / 6h idle per day"
+  },
+  {
+    "event_id": "EV00060",
+    "timestamp": "2025-04-20T09:00:00",
+    "equipment_id": "EQX1010",
+    "event_type": "CHECK_OUT",
+    "actor": "seed",
+    "site_id": "S003",
+    "notes": "Dispatched from yard"
+  },
+  {
+    "event_id": "EV00061",
+    "timestamp": "2025-04-20T09:00:00",
+    "equipment_id": "EQX1010",
+    "event_type": "ASSIGN",
+    "actor": "seed",
+    "site_id": "S003",
+    "operator_id": "OP402"
+  },
+  {
+    "event_id": "EV00062",
+    "timestamp": "2025-04-20T09:00:00",
+    "equipment_id": "EQX1010",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "6.2h engine / 1.3h idle per day"
+  },
+  {
+    "event_id": "EV00077",
+    "timestamp": "2025-04-22T09:00:00",
+    "equipment_id": "EQX1012",
+    "event_type": "CHECK_IN",
+    "actor": "seed",
+    "condition_grade": "B",
+    "notes": "Returned by customer"
+  },
+  {
+    "event_id": "EV00078",
+    "timestamp": "2025-04-22T09:00:00",
+    "equipment_id": "EQX1012",
+    "event_type": "CONDITION_LOG",
+    "actor": "seed",
+    "condition_grade": "B",
+    "notes": "Return condition B; 35.3h since last service"
+  },
+  {
+    "event_id": "EV00079",
+    "timestamp": "2025-04-22T09:00:00",
+    "equipment_id": "EQX1012",
+    "event_type": "RETURN_TO_YARD",
+    "actor": "seed",
+    "site_id": "IN488",
+    "notes": "Back at branch"
+  },
+  {
+    "event_id": "EV00110",
+    "timestamp": "2025-04-22T09:00:00",
+    "equipment_id": "EQX1016",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "8.5h engine / 0.9h idle per day"
+  },
+  {
+    "event_id": "EV00040",
+    "timestamp": "2025-04-23T09:00:00",
+    "equipment_id": "EQX1006",
+    "event_type": "CHECK_IN",
+    "actor": "seed",
+    "condition_grade": "A",
+    "notes": "Returned by customer"
+  },
+  {
+    "event_id": "EV00041",
+    "timestamp": "2025-04-23T09:00:00",
+    "equipment_id": "EQX1006",
+    "event_type": "CONDITION_LOG",
+    "actor": "seed",
+    "condition_grade": "A",
+    "notes": "Return condition A; 54h since last service"
+  },
+  {
+    "event_id": "EV00042",
+    "timestamp": "2025-04-23T09:00:00",
+    "equipment_id": "EQX1006",
+    "event_type": "RETURN_TO_YARD",
+    "actor": "seed",
+    "site_id": "IN288",
+    "notes": "Back at branch"
+  },
+  {
+    "event_id": "EV00152",
+    "timestamp": "2025-04-23T09:00:00",
+    "equipment_id": "EQX1022",
+    "event_type": "CHECK_OUT",
+    "actor": "seed",
+    "site_id": "S003",
+    "notes": "Dispatched from yard"
+  },
+  {
+    "event_id": "EV00153",
+    "timestamp": "2025-04-23T09:00:00",
+    "equipment_id": "EQX1022",
+    "event_type": "ASSIGN",
+    "actor": "seed",
+    "site_id": "S003",
+    "operator_id": "OP414"
+  },
+  {
+    "event_id": "EV00154",
+    "timestamp": "2025-04-23T09:00:00",
+    "equipment_id": "EQX1022",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "7.0h engine / 0.7h idle per day"
+  },
+  {
+    "event_id": "EV00111",
+    "timestamp": "2025-04-24T09:00:00",
+    "equipment_id": "EQX1016",
+    "event_type": "CHECK_IN",
+    "actor": "seed",
+    "condition_grade": "A",
+    "notes": "Returned by customer"
+  },
+  {
+    "event_id": "EV00112",
+    "timestamp": "2025-04-24T09:00:00",
+    "equipment_id": "EQX1016",
+    "event_type": "CONDITION_LOG",
+    "actor": "seed",
+    "condition_grade": "A",
+    "notes": "Return condition A; 94.8h since last service"
+  },
+  {
+    "event_id": "EV00113",
+    "timestamp": "2025-04-24T09:00:00",
+    "equipment_id": "EQX1016",
+    "event_type": "RETURN_TO_YARD",
+    "actor": "seed",
+    "site_id": "IN288",
+    "notes": "Back at branch"
+  },
+  {
+    "event_id": "EV00022",
+    "timestamp": "2025-04-25T09:00:00",
+    "equipment_id": "EQX1004",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "2h engine / 9h idle per day"
+  },
+  {
+    "event_id": "EV00049",
+    "timestamp": "2025-04-25T09:00:00",
+    "equipment_id": "EQX1008",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "7.4h engine / 2.8h idle per day"
+  },
+  {
+    "event_id": "EV00103",
+    "timestamp": "2025-04-25T09:00:00",
+    "equipment_id": "EQX1015",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "6.6h engine / 2.1h idle per day"
+  },
+  {
+    "event_id": "EV00121",
+    "timestamp": "2025-04-25T09:00:00",
+    "equipment_id": "EQX1017",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "8.0h engine / 2.6h idle per day"
+  },
+  {
+    "event_id": "EV00187",
+    "timestamp": "2025-04-25T09:00:00",
+    "equipment_id": "EQX1026",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "7.3h engine / 1.6h idle per day"
+  },
+  {
+    "event_id": "EV00057",
+    "timestamp": "2025-04-26T09:00:00",
+    "equipment_id": "EQX1009",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "7.5h engine / 0.7h idle per day"
+  },
+  {
+    "event_id": "EV00165",
+    "timestamp": "2025-04-26T09:00:00",
+    "equipment_id": "EQX1023",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "7.7h engine / 1.5h idle per day"
+  },
+  {
+    "event_id": "EV00063",
+    "timestamp": "2025-04-27T09:00:00",
+    "equipment_id": "EQX1010",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "6.2h engine / 1.3h idle per day"
+  },
+  {
+    "event_id": "EV00169",
+    "timestamp": "2025-04-27T09:00:00",
+    "equipment_id": "EQX1024",
+    "event_type": "CHECK_OUT",
+    "actor": "seed",
+    "site_id": "S005",
+    "notes": "Dispatched from yard"
+  },
+  {
+    "event_id": "EV00170",
+    "timestamp": "2025-04-27T09:00:00",
+    "equipment_id": "EQX1024",
+    "event_type": "ASSIGN",
+    "actor": "seed",
+    "site_id": "S005",
+    "operator_id": "OP416"
+  },
+  {
+    "event_id": "EV00171",
+    "timestamp": "2025-04-27T09:00:00",
+    "equipment_id": "EQX1024",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "6.2h engine / 0.4h idle per day"
+  },
+  {
+    "event_id": "EV00080",
+    "timestamp": "2025-04-30T09:00:00",
+    "equipment_id": "EQX1013",
+    "event_type": "CHECK_OUT",
+    "actor": "seed",
+    "site_id": "S006",
+    "notes": "Dispatched from yard"
+  },
+  {
+    "event_id": "EV00081",
+    "timestamp": "2025-04-30T09:00:00",
+    "equipment_id": "EQX1013",
+    "event_type": "ASSIGN",
+    "actor": "seed",
+    "site_id": "S006",
+    "operator_id": "OP405"
+  },
+  {
+    "event_id": "EV00082",
+    "timestamp": "2025-04-30T09:00:00",
+    "equipment_id": "EQX1013",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "5.8h engine / 0.6h idle per day"
+  },
+  {
+    "event_id": "EV00140",
+    "timestamp": "2025-04-30T09:00:00",
+    "equipment_id": "EQX1020",
+    "event_type": "CHECK_OUT",
+    "actor": "seed",
+    "site_id": "S001",
+    "notes": "Dispatched from yard"
+  },
+  {
+    "event_id": "EV00141",
+    "timestamp": "2025-04-30T09:00:00",
+    "equipment_id": "EQX1020",
+    "event_type": "ASSIGN",
+    "actor": "seed",
+    "site_id": "S001",
+    "operator_id": "OP412"
+  },
+  {
+    "event_id": "EV00142",
+    "timestamp": "2025-04-30T09:00:00",
+    "equipment_id": "EQX1020",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "8.0h engine / 1.0h idle per day"
+  },
+  {
+    "event_id": "EV00155",
+    "timestamp": "2025-04-30T09:00:00",
+    "equipment_id": "EQX1022",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "7.0h engine / 0.7h idle per day"
+  },
+  {
+    "event_id": "EV00166",
+    "timestamp": "2025-05-01T09:00:00",
+    "equipment_id": "EQX1023",
+    "event_type": "CHECK_IN",
+    "actor": "seed",
+    "condition_grade": "B",
+    "notes": "Returned by customer"
+  },
+  {
+    "event_id": "EV00167",
+    "timestamp": "2025-05-01T09:00:00",
+    "equipment_id": "EQX1023",
+    "event_type": "CONDITION_LOG",
+    "actor": "seed",
+    "condition_grade": "B",
+    "notes": "Return condition B; 85.9h since last service"
+  },
+  {
+    "event_id": "EV00168",
+    "timestamp": "2025-05-01T09:00:00",
+    "equipment_id": "EQX1023",
+    "event_type": "RETURN_TO_YARD",
+    "actor": "seed",
+    "site_id": "IN487",
+    "notes": "Back at branch"
+  },
+  {
+    "event_id": "EV00023",
+    "timestamp": "2025-05-02T09:00:00",
+    "equipment_id": "EQX1004",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "2h engine / 9h idle per day"
+  },
+  {
+    "event_id": "EV00050",
+    "timestamp": "2025-05-02T09:00:00",
+    "equipment_id": "EQX1008",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "7.4h engine / 2.8h idle per day"
+  },
+  {
+    "event_id": "EV00104",
+    "timestamp": "2025-05-02T09:00:00",
+    "equipment_id": "EQX1015",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "6.6h engine / 2.1h idle per day"
+  },
+  {
+    "event_id": "EV00122",
+    "timestamp": "2025-05-02T09:00:00",
+    "equipment_id": "EQX1017",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "8.0h engine / 2.6h idle per day"
+  },
+  {
+    "event_id": "EV00188",
+    "timestamp": "2025-05-02T09:00:00",
+    "equipment_id": "EQX1026",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "7.3h engine / 1.6h idle per day"
+  },
+  {
+    "event_id": "EV00058",
+    "timestamp": "2025-05-03T09:00:00",
+    "equipment_id": "EQX1009",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "7.5h engine / 0.7h idle per day"
+  },
+  {
+    "event_id": "EV00064",
+    "timestamp": "2025-05-04T09:00:00",
+    "equipment_id": "EQX1010",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "6.2h engine / 1.3h idle per day"
+  },
+  {
+    "event_id": "EV00172",
+    "timestamp": "2025-05-04T09:00:00",
+    "equipment_id": "EQX1024",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "6.2h engine / 0.4h idle per day"
+  },
+  {
+    "event_id": "EV00019",
+    "timestamp": "2025-05-05T09:00:00",
+    "equipment_id": "EQX1004",
+    "event_type": "CHECK_OUT",
+    "actor": "seed",
+    "site_id": "S004",
+    "notes": "Dispatched from yard"
+  },
+  {
+    "event_id": "EV00020",
+    "timestamp": "2025-05-05T09:00:00",
+    "equipment_id": "EQX1004",
+    "event_type": "ASSIGN",
+    "actor": "seed",
+    "site_id": "S004",
+    "operator_id": "OP106"
+  },
+  {
+    "event_id": "EV00083",
+    "timestamp": "2025-05-07T09:00:00",
+    "equipment_id": "EQX1013",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "5.8h engine / 0.6h idle per day"
+  },
+  {
+    "event_id": "EV00143",
+    "timestamp": "2025-05-07T09:00:00",
+    "equipment_id": "EQX1020",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "8.0h engine / 1.0h idle per day"
+  },
+  {
+    "event_id": "EV00156",
+    "timestamp": "2025-05-07T09:00:00",
+    "equipment_id": "EQX1022",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "7.0h engine / 0.7h idle per day"
+  },
+  {
+    "event_id": "EV00024",
+    "timestamp": "2025-05-09T09:00:00",
+    "equipment_id": "EQX1004",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "2h engine / 9h idle per day"
+  },
+  {
+    "event_id": "EV00051",
+    "timestamp": "2025-05-09T09:00:00",
+    "equipment_id": "EQX1008",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "7.4h engine / 2.8h idle per day"
+  },
+  {
+    "event_id": "EV00105",
+    "timestamp": "2025-05-09T09:00:00",
+    "equipment_id": "EQX1015",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "6.6h engine / 2.1h idle per day"
+  },
+  {
+    "event_id": "EV00123",
+    "timestamp": "2025-05-09T09:00:00",
+    "equipment_id": "EQX1017",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "8.0h engine / 2.6h idle per day"
+  },
+  {
+    "event_id": "EV00157",
+    "timestamp": "2025-05-09T09:00:00",
+    "equipment_id": "EQX1022",
+    "event_type": "CHECK_IN",
+    "actor": "seed",
+    "condition_grade": "A",
+    "notes": "Returned by customer"
+  },
+  {
+    "event_id": "EV00158",
+    "timestamp": "2025-05-09T09:00:00",
+    "equipment_id": "EQX1022",
+    "event_type": "CONDITION_LOG",
+    "actor": "seed",
+    "condition_grade": "A",
+    "notes": "Return condition A; 43.0h since last service"
+  },
+  {
+    "event_id": "EV00159",
+    "timestamp": "2025-05-09T09:00:00",
+    "equipment_id": "EQX1022",
+    "event_type": "RETURN_TO_YARD",
+    "actor": "seed",
+    "site_id": "IN288",
+    "notes": "Back at branch"
+  },
+  {
+    "event_id": "EV00189",
+    "timestamp": "2025-05-09T09:00:00",
+    "equipment_id": "EQX1026",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "7.3h engine / 1.6h idle per day"
+  },
+  {
+    "event_id": "EV00059",
+    "timestamp": "2025-05-10T09:00:00",
+    "equipment_id": "EQX1009",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "7.5h engine / 0.7h idle per day"
+  },
+  {
+    "event_id": "EV00065",
+    "timestamp": "2025-05-11T09:00:00",
+    "equipment_id": "EQX1010",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "6.2h engine / 1.3h idle per day"
+  },
+  {
+    "event_id": "EV00173",
+    "timestamp": "2025-05-11T09:00:00",
+    "equipment_id": "EQX1024",
+    "event_type": "USAGE_LOG",
+    "actor": "seed",
+    "notes": "6.2h engine / 0.4h idle per day"
+  },
+  {
+    "event_id": "EV00084",
+    "timestamp": "2025-05-22T09:00:00",
+    "equipment_id": "EQX1013",
+    "event_type": "CHECK_IN",
+    "actor": "seed",
+    "condition_grade": "C",
+    "notes": "Returned by customer"
+  },
+  {
+    "event_id": "EV00085",
+    "timestamp": "2025-05-22T09:00:00",
+    "equipment_id": "EQX1013",
+    "event_type": "CONDITION_LOG",
+    "actor": "seed",
+    "condition_grade": "C",
+    "notes": "Return condition C; 108.5h since last service"
+  },
+  {
+    "event_id": "EV00086",
+    "timestamp": "2025-05-22T09:00:00",
+    "equipment_id": "EQX1013",
+    "event_type": "RETURN_TO_YARD",
+    "actor": "seed",
+    "site_id": "IN489",
+    "notes": "Back at branch"
+  }
+]

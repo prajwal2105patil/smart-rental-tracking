@@ -1,0 +1,25 @@
+# Render blueprint. Deploy this BEFORE polishing anything - the first deploy always
+# fails for a boring reason, and you want it to fail while you still have hours.
+services:
+  - type: web
+    name: smart-rental-api
+    runtime: python
+    rootDir: api
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11.9"
+      # Set both in the Render dashboard before the demo. Without them the deployed
+      # API is world-writable: any web page can POST /reset and wipe demo state.
+      - key: ADMIN_TOKEN          # then send X-Admin-Token on /reset and PUT /config
+        sync: false
+      - key: ALLOWED_ORIGINS      # the Vercel URL, e.g. https://your-app.vercel.app
+        sync: false
+      # Without this the assistant still answers - it falls back to the deterministic
+      # rules path and the badge reads "offline mode" - but the model never runs.
+      # Paste the ROTATED key here in the dashboard, never in this file.
+      - key: GROQ_API_KEY
+        sync: false

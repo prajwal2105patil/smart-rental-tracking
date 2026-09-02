@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+/*
+  Design language taken from the reference boards: precision hardware photographed
+  against near-black, machined white and silver surfaces, technical annotation set in
+  mono, and one hazard-yellow accent used the way it appears on real equipment - as a
+  warning mark, never as decoration.
+*/
+@theme {
+  --color-ground: #05070d;
+  --color-surface: #0a0e15;
+  --color-raised: #10151e;
+  --color-hairline: #1b2230;
+  --color-hairline-bright: #2a3444;
+
+  --color-chalk: #f2f4f8;
+  --color-steel: #9aa5b6;
+  /* Measured 3.83:1 on the ground at #616d7e - below the 4.5:1 AA floor, and this
+     is the colour of nearly every field label. #8b95a5 measures ~5.9:1. */
+  --color-slate: #8b95a5;
+
+  --color-hazard: #ffcd11;
+  --color-hazard-dim: #8a6f0b;
+
+  --color-critical: #ff5b45;
+  --color-warning: #ffab2e;
+  --color-nominal: #3ddc97;
+  --color-info: #6ea8ff;
+
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-cond: "IBM Plex Sans Condensed", "IBM Plex Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root { height: 100%; }
+
+body {
+  margin: 0;
+  background: var(--color-ground);
+  color: var(--color-chalk);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "tnum" 1;
+}
+
+/* The blueprint grid the hardware sits on. Very low contrast on purpose - it should
+   read as a surface, not a pattern. */
+.blueprint {
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.028) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.028) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+.tick-rule {
+  background-image: repeating-linear-gradient(
+    to right,
+    var(--color-hairline-bright) 0 1px,
+    transparent 1px 12px
+  );
+}
+
+/* Uppercase mono labels - the annotation voice from the reference boards. */
+.label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-slate);
+}
+
+.num { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+
+::selection { background: var(--color-hazard); color: #05070d; }
+
+:focus-visible {
+  outline: 2px solid var(--color-hazard);
+  outline-offset: 2px;
+}
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--color-ground); }
+::-webkit-scrollbar-thumb { background: var(--color-hairline-bright); border-radius: 0; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-slate); }
+
+@keyframes scan-sweep {
+  0%   { transform: translateY(-100%); opacity: 0; }
+  50%  { opacity: 1; }
+  100% { transform: translateY(100%); opacity: 0; }
+}
+@keyframes pulse-mark {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.35; }
+}
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.rise-in { animation: rise-in 0.5s cubic-bezier(0.2, 0.7, 0.3, 1) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Tailwind provides sr-only; this is the paired focus escape used by the skip link. */
+.focus\:not-sr-only:focus {
+  position: absolute;
+  width: auto; height: auto;
+  padding: inherit; margin: 0;
+  overflow: visible; clip: auto; white-space: normal;
+}

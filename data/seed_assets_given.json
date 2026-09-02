@@ -1,0 +1,65 @@
+[
+  {
+    "equipment_id": "EQX1001", "type": "Excavator", "model": "320 GC", "serial_number": "CAT0320GCPX01001",
+    "site_id": "S003", "operator_id": "OP101", "on_rent": true,
+    "check_out_date": "2025-04-01", "check_in_date": "2025-04-16",
+    "engine_hours_day": 1.5, "idle_hours_day": 10, "operating_days": 15,
+    "cumulative_operating_hours": 22.5, "hours_since_service": 22.5,
+    "day_rate": 15000, "condition_grade": "B",
+    "_read": "13% utilisation, 26 days past scheduled return. Idle burn + overdue."
+  },
+  {
+    "equipment_id": "EQX1002", "type": "Crane", "model": "CR-50T", "serial_number": "CAT0CR50TX01002",
+    "site_id": null, "operator_id": null, "on_rent": true,
+    "check_out_date": "2025-03-10", "check_in_date": "2025-03-30",
+    "engine_hours_day": 0, "idle_hours_day": 11, "operating_days": 20,
+    "cumulative_operating_hours": 0, "hours_since_service": 0,
+    "day_rate": 22000, "condition_grade": "A",
+    "_read": "GHOST ASSET. No site, no operator, zero output, 43 days past return."
+  },
+  {
+    "equipment_id": "EQX1003", "type": "Bulldozer", "model": "D6", "serial_number": "CAT00D6XPX01003",
+    "site_id": "S002", "operator_id": "OP203", "on_rent": false,
+    "check_out_date": "2025-02-15", "check_in_date": "2025-03-11",
+    "engine_hours_day": 7.5, "idle_hours_day": 0.5, "operating_days": 25,
+    "cumulative_operating_hours": 187.5, "hours_since_service": 187.5,
+    "day_rate": 18000, "condition_grade": "A",
+    "_read": "94% utilisation. The healthy benchmark. Returned to yard, available."
+  },
+  {
+    "equipment_id": "EQX1004", "type": "Excavator", "model": "320", "serial_number": "CAT00320PX01004",
+    "site_id": "S004", "operator_id": "OP106", "on_rent": true,
+    "check_out_date": "2025-05-05", "check_in_date": "2025-05-15",
+    "engine_hours_day": 2, "idle_hours_day": 9, "operating_days": 25,
+    "cumulative_operating_hours": 50, "hours_since_service": 50,
+    "day_rate": 15000, "condition_grade": "B",
+    "_read": "DATA CONFLICT: 25 operating days claimed inside an 11-day rental window. Due back 05-15."
+  },
+  {
+    "equipment_id": "EQX1005", "type": "Bulldozer", "model": "D6", "serial_number": "CAT00D6XPX01005",
+    "site_id": "S006", "operator_id": "OP301", "on_rent": false,
+    "check_out_date": "2025-01-01", "check_in_date": "2025-01-31",
+    "engine_hours_day": 8, "idle_hours_day": 0, "operating_days": 30,
+    "cumulative_operating_hours": 240, "hours_since_service": 240,
+    "day_rate": 18000, "condition_grade": "B",
+    "_read": "100% utilisation - the judge praised this one. Also 240h since service and a rising coolant trend. Service risk."
+  },
+  {
+    "equipment_id": "EQX1006", "type": "Grader", "model": "140", "serial_number": "CAT00140PX01006",
+    "site_id": "S001", "operator_id": "OP114", "on_rent": false,
+    "check_out_date": "2025-04-05", "check_in_date": "2025-04-23",
+    "engine_hours_day": 3, "idle_hours_day": 6, "operating_days": 18,
+    "cumulative_operating_hours": 54, "hours_since_service": 54,
+    "day_rate": 12000, "condition_grade": "A",
+    "_read": "33% utilisation. Under-used. Returned to yard, available."
+  },
+  {
+    "equipment_id": "EQX1007", "type": "Excavator", "model": "320 GC", "serial_number": "CAT0320GCPX01007",
+    "site_id": null, "operator_id": null, "on_rent": true,
+    "check_out_date": "2025-03-20", "check_in_date": "2025-04-01",
+    "engine_hours_day": 0, "idle_hours_day": 12, "operating_days": 12,
+    "cumulative_operating_hours": 0, "hours_since_service": 0,
+    "day_rate": 15000, "condition_grade": "A",
+    "_read": "THE DEMO HERO. No site, no operator, zero output, 41 days past return. Also the answer to the Monday booking."
+  }
+]

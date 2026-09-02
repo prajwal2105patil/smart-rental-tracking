@@ -1,0 +1,11 @@
+[
+  {
+    "booking_id": "BK001",
+    "customer": "Harwilll Worsham",
+    "equipment_type": "Excavator",
+    "site_id": "S003",
+    "needed_from": "2025-05-19",
+    "days": 10,
+    "status": "REQUESTED"
+  }
+]
