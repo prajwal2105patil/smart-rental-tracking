@@ -1,0 +1,8 @@
+# Supabase project config, read by the CLI and by the GitHub integration.
+# The integration looks for a `supabase/` folder at the working directory you set in
+# the dashboard, and applies everything under `migrations/` in filename order when the
+# production branch is merged.
+project_id = "smart-rental-tracking"
+
+[db]
+major_version = 15
