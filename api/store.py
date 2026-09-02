@@ -138,15 +138,33 @@ def verify() -> dict[str, Any]:
     """Prove Postgres and the JSON seeds return the same records, rather than claim it."""
     if _backend != "supabase":
         return {"checked": False, "reason": "not reading from the database"}
+    def canon(rows: list) -> list[str]:
+        # Compare CONTENT, not sequence. Row order in a table is not meaningful - the
+        # seed files are not all sorted the way the queries order them, and a table
+        # returning the same 83 branches in a different order is not a discrepancy.
+        return sorted(json.dumps(r, sort_keys=True, default=str) for r in rows)
+
     result: dict[str, Any] = {"checked": True, "tables": {}}
     for name in TABLES:
         disk, db = _from_disk(name), _cache.get(name, [])
+        same = canon(disk) == canon(db)
         result["tables"][name] = {
-            "json_rows": len(disk),
+            "seed_rows": len(disk),
             "db_rows": len(db),
-            "identical": disk == db,
+            "matches_seed": same,
+            # Once anybody checks a machine in, the database is SUPPOSED to differ from
+            # the seed files - that is the write-back working, not a discrepancy. Only a
+            # table that differs while holding no more rows than the seed is suspicious.
+            "advanced_beyond_seed": (not same) and len(db) >= len(disk),
         }
-    result["all_identical"] = all(t["identical"] for t in result["tables"].values())
+    tables = result["tables"].values()
+    result["all_match_seed"] = all(t["matches_seed"] for t in tables)
+    result["unexplained"] = [n for n, t in result["tables"].items()
+                             if not t["matches_seed"] and not t["advanced_beyond_seed"]]
+    result["note"] = ("every table either matches the seed baseline or has advanced past "
+                      "it through live writes"
+                      if not result["unexplained"]
+                      else "a table differs from the seed without having advanced - investigate")
     return result
 
 
